@@ -1,16 +1,14 @@
-openapi: '3.0.2'
+openapi: "3.0.2"
 info:
   title: Web Engineering Music API
-  version: '1.0'
+  version: "1.0"
   description: |
     This is the API for the Web Engineering Music API.
     It is a simple API for managing a music library.
 
-
 servers:
   - url: http://localhost:8080
     description: Big things
-
 
 components:
   schemas:
@@ -27,9 +25,12 @@ components:
           type: string
           description: The title of the song
           readOnly: true
-        artistId:
-          type: integer
-          description: The ID of the artist who wrote the song
+        artist-ids:
+          type: array
+          description: The IDs of the artists who wrote the song
+          items:
+            type: integer
+            description: The ID of one of the artists who wrote the song
         popularity:
           type: integer
           description: The popularity of the song
@@ -40,11 +41,6 @@ components:
           type: string
           description: The year the song was released
           format: date
-        artists:
-          type: array
-          description: The artists who wrote the song
-          items:
-            $ref: '#/components/schemas/ArtistSummary' # TODO: look at this one
 
     Artist:
       type: object
@@ -61,7 +57,7 @@ components:
         songs:
           type: array
           items:
-            $ref: '#/components/schemas/Song'
+            $ref: "#/components/schemas/Song"
         popularity:
           type: integer
           description: The popularity of the artist
@@ -149,7 +145,7 @@ components:
     song-filter-title:
       name: title
       in: query
-      required: false
+      required: true
       description: Title of the song
       schema:
         type: string
@@ -157,7 +153,7 @@ components:
     song-filter-year:
       name: year
       in: query
-      required: false
+      required: true
       description: Filtering the results by year
       schema:
         type: integer
@@ -165,12 +161,12 @@ components:
     limit:
       name: limit
       in: query
-      required: false
+      required: true
       description: Limit the number of returned items
       schema:
         type: integer
         enum: [10, 20, 50, 100]
-        
+
     content-type:
       name: content-type
       in: query
@@ -182,69 +178,94 @@ components:
 ###############################################################################
 
 paths:
-  /songs:
-    get: # get song by title, or year (desc popularity, limit)
+  /songs/title:
+    get: # get song by title
       tags:
         - Songs
-      description: Retrieves a list of songs by title, or the top songs of a year ordered by descending popularity, with the given limit
-      summary: Retrieve a list of (selected) songs
+      description: Retrieves a list of songs by title
+      summary: Retrieve list of songs matching a title
       parameters:
-        - $ref: '#/components/parameters/song-filter-title'
-        - $ref: '#/components/parameters/song-filter-year'
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/content-type'
-        # TODO: Ask Mo about splitting this endpoint, since right now
-        # doesn't always make sense because you can just filter
-        # by limit and nothing else 
+        - $ref: "#/components/parameters/song-filter-title"
+        - $ref: "#/components/parameters/content-type"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Song'
+                  $ref: "#/components/schemas/Song"
             text/csv:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Song'
-        '204':
-          $ref: '#/components/responses/NoResults'
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
+                  $ref: "#/components/schemas/Song"
+        "204":
+          $ref: "#/components/responses/NoResults"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
+  /songs/year:
+    get: # get top songs of a year (desc popularity, limit)
+      tags:
+        - Songs
+      description: Retrieves a list of the top songs of a year ordered by descending popularity, with the given limit
+      summary: Retrieve list of top songs of a year
+      parameters:
+        - $ref: "#/components/parameters/song-filter-year"
+        - $ref: "#/components/parameters/limit"
+        - $ref: "#/components/parameters/content-type"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Song"
+            text/csv:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Song"
+        "204":
+          $ref: "#/components/responses/NoResults"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
   /songs/{id}:
     parameters:
-      - $ref: '#/components/parameters/song-id'
+      - $ref: "#/components/parameters/song-id"
 
     get: # get song by id ✔
       tags:
         - Songs
       summary: Retrieve a song
       description: Retrieves the song with the given id
-      parameters: 
-        - $ref: '#/components/parameters/content-type'
+      parameters:
+        - $ref: "#/components/parameters/content-type"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Song'
+                $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                $ref: '#/components/schemas/Song'
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
+                $ref: "#/components/schemas/Song"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
     post: # create song by id ✔
       tags:
@@ -252,29 +273,29 @@ paths:
       summary: Create a song
       description: Creates a song with the given id
       parameters:
-        - $ref: '#/components/parameters/content-type'
+        - $ref: "#/components/parameters/content-type"
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Song'
+              $ref: "#/components/schemas/Song"
       responses:
-        '200':
-          description: 'Song added, returns the new state'
+        "200":
+          description: "Song added, returns the new state"
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Song'
+                $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                $ref: '#/components/schemas/Song'
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '409':
-          $ref: '#/components/responses/Conflict'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
+                $ref: "#/components/schemas/Song"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
     put: # update song by id ✔
       tags:
@@ -282,29 +303,29 @@ paths:
       summary: Update a song
       description: Updates the song with the given id
       parameters:
-        - $ref: '#/components/parameters/content-type'
+        - $ref: "#/components/parameters/content-type"
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Song'
+              $ref: "#/components/schemas/Song"
       responses:
-        '200':
-          description: 'Song updated, returns the new state'
+        "200":
+          description: "Song updated, returns the new state"
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Song'
+                $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                $ref: '#/components/schemas/Song'
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
+                $ref: "#/components/schemas/Song"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
     delete: # delete song by id ✔
       tags:
@@ -312,19 +333,18 @@ paths:
       summary: Delete a song
       description: Deletes the song with the given id
       responses:
-        '204':
+        "204":
           description: Song deleted successfully
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
-
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
   /artists/{id}:
     parameters:
-      - $ref: '#/components/parameters/artist-id'
+      - $ref: "#/components/parameters/artist-id"
 
     get: # get artist summary by id ✔
       tags:
@@ -332,28 +352,27 @@ paths:
       summary: Retrieve an artist summary
       description: Retrieves a summary of the artist with the given ID
       parameters:
-        - $ref: '#/components/parameters/content-type'
+        - $ref: "#/components/parameters/content-type"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ArtistSummary'
+                $ref: "#/components/schemas/ArtistSummary"
             text/csv:
               schema:
-                $ref: '#/components/schemas/ArtistSummary'
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
-
+                $ref: "#/components/schemas/ArtistSummary"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
   /artists/{name}:
     parameters:
-      - $ref : '#/components/parameters/artist-name'
+      - $ref: "#/components/parameters/artist-name"
 
     get: # get artist summary by name ✔
       tags:
@@ -361,28 +380,27 @@ paths:
       summary: Retrieve an artist summary
       description: Retrieves a summary of the artist with the given name
       parameters:
-        - $ref: '#/components/parameters/content-type'
+        - $ref: "#/components/parameters/content-type"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ArtistSummary'
+                $ref: "#/components/schemas/ArtistSummary"
             text/csv:
               schema:
-                $ref: '#/components/schemas/ArtistSummary'
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
-
+                $ref: "#/components/schemas/ArtistSummary"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
   /artists/{id}/songs:
     parameters:
-      - $ref: '#/components/parameters/artist-id'
+      - $ref: "#/components/parameters/artist-id"
 
     get: # get all songs from artist by id ✔
       tags:
@@ -390,27 +408,27 @@ paths:
       summary: Retrieve all songs from an artist
       description: Retrieves a list of all songs from the artist with the given ID
       parameters:
-        - $ref: '#/components/parameters/content-type'
+        - $ref: "#/components/parameters/content-type"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Song'
+                  $ref: "#/components/schemas/Song"
             text/csv:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Song'
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
+                  $ref: "#/components/schemas/Song"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
     delete: # delete all songs from artist by id ✔
       tags:
@@ -418,19 +436,18 @@ paths:
       summary: Delete all songs from an artist by ID
       description: Deletes all songs from the artist with the given ID
       responses:
-        '204':
+        "204":
           description: All songs deleted successfully
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
-
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
   /artists/{name}/songs:
     parameters:
-      - $ref: '#/components/parameters/artist-name'
+      - $ref: "#/components/parameters/artist-name"
 
     get: # get all songs from artist by name ✔
       tags:
@@ -438,27 +455,27 @@ paths:
       summary: Retrieve all songs from an artist
       description: Retrieves a list of all songs from the artist with the given name
       parameters:
-        - $ref: '#/components/parameters/content-type'
+        - $ref: "#/components/parameters/content-type"
       responses:
-        '200':
+        "200":
           description: OK
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Song'
+                  $ref: "#/components/schemas/Song"
             text/csv:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Song'
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
+                  $ref: "#/components/schemas/Song"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
 
     delete: # delete all songs from artist by name ✔
       tags:
@@ -466,11 +483,11 @@ paths:
       summary: Delete all songs from an artist
       description: Deletes all songs from the artist with the given name
       responses:
-        '204':
+        "204":
           description: All songs deleted successfully
-        '400':
-          $ref: '#/components/responses/BadRequest'
-        '404':
-          $ref: '#/components/responses/NotFound'
-        '5XX':
-          $ref: '#/components/responses/ServerError'
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
