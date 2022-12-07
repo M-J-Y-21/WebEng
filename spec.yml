@@ -20,6 +20,7 @@ components:
       properties:
         songId:
           type: integer
+          readOnly: true
           description: The ID of the song
         title:
           type: string
@@ -28,6 +29,7 @@ components:
         artist-ids:
           type: array
           description: The IDs of the artists who wrote the song
+          readOnly: true
           items:
             type: integer
             description: The ID of one of the artists who wrote the song
@@ -49,8 +51,8 @@ components:
       properties:
         id:
           type: integer
-          description: The ID of the artist
           readOnly: true
+          description: The ID of the artist
         name:
           type: string
           description: The name of the artist
@@ -126,6 +128,14 @@ components:
       schema:
         type: integer
 
+    song-title:
+      name: title
+      in: query
+      required: false
+      description: Title of the song
+      schema:
+        type: string
+
     artist-id:
       name: id
       in: path
@@ -142,26 +152,18 @@ components:
       schema:
         type: string
 
-    song-filter-title:
-      name: title
-      in: query
-      required: true
-      description: Title of the song
-      schema:
-        type: string
-
-    song-filter-year:
+    song-year:
       name: year
       in: query
-      required: true
-      description: Filtering the results by year
+      required: false
+      description: The year the song was released in
       schema:
         type: integer
 
     limit:
       name: limit
       in: query
-      required: true
+      required: false
       description: Limit the number of returned items
       schema:
         type: integer
@@ -178,44 +180,15 @@ components:
 ###############################################################################
 
 paths:
-  /songs/title:
-    get: # get song by title
+  /songs:
+    get: # get song by title or year ✔
       tags:
         - Songs
-      description: Retrieves a list of songs by title
-      summary: Retrieve list of songs matching a title
+      description: Retrieves a list of songs, filtered by title, or the list of top songs of a given year, ordered by descending popularity, with the given limit
+      summary: Retrieve songs by title or year
       parameters:
-        - $ref: "#/components/parameters/song-filter-title"
-        - $ref: "#/components/parameters/content-type"
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Song"
-            text/csv:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Song"
-        "204":
-          $ref: "#/components/responses/NoResults"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "5XX":
-          $ref: "#/components/responses/ServerError"
-
-  /songs/year:
-    get: # get top songs of a year (desc popularity, limit)
-      tags:
-        - Songs
-      description: Retrieves a list of the top songs of a year ordered by descending popularity, with the given limit
-      summary: Retrieve list of top songs of a year
-      parameters:
-        - $ref: "#/components/parameters/song-filter-year"
+        - $ref: "#/components/parameters/song-title"
+        - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
         - $ref: "#/components/parameters/content-type"
       responses:
@@ -236,34 +209,6 @@ paths:
           $ref: "#/components/responses/NoResults"
         "400":
           $ref: "#/components/responses/BadRequest"
-        "5XX":
-          $ref: "#/components/responses/ServerError"
-
-  /songs/{id}:
-    parameters:
-      - $ref: "#/components/parameters/song-id"
-
-    get: # get song by id ✔
-      tags:
-        - Songs
-      summary: Retrieve a song
-      description: Retrieves the song with the given id
-      parameters:
-        - $ref: "#/components/parameters/content-type"
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Song"
-            text/csv:
-              schema:
-                $ref: "#/components/schemas/Song"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -294,6 +239,34 @@ paths:
           $ref: "#/components/responses/BadRequest"
         "409":
           $ref: "#/components/responses/Conflict"
+        "5XX":
+          $ref: "#/components/responses/ServerError"
+
+  /songs/{id}:
+    parameters:
+      - $ref: "#/components/parameters/song-id"
+
+    get: # get song by id ✔
+      tags:
+        - Songs
+      summary: Retrieve a song
+      description: Retrieves the song with the given id
+      parameters:
+        - $ref: "#/components/parameters/content-type"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Song"
+            text/csv:
+              schema:
+                $ref: "#/components/schemas/Song"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -342,72 +315,17 @@ paths:
         "5XX":
           $ref: "#/components/responses/ServerError"
 
-  /artists/{id}:
-    parameters:
-      - $ref: "#/components/parameters/artist-id"
-
-    get: # get artist summary by id ✔
+  /artists/songs:
+    get: # get all/top songs of an artist (desc popularity, limit)
       tags:
         - Artists
-      summary: Retrieve an artist summary
-      description: Retrieves a summary of the artist with the given ID
+      description: Retrieves a list of the (top) songs of an artist (ordered by descending popularity, with the given limit)
+      summary: Retrieve list of all/top songs of an artist
       parameters:
-        - $ref: "#/components/parameters/content-type"
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ArtistSummary"
-            text/csv:
-              schema:
-                $ref: "#/components/schemas/ArtistSummary"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "5XX":
-          $ref: "#/components/responses/ServerError"
-
-  /artists/{name}:
-    parameters:
-      - $ref: "#/components/parameters/artist-name"
-
-    get: # get artist summary by name ✔
-      tags:
-        - Artists
-      summary: Retrieve an artist summary
-      description: Retrieves a summary of the artist with the given name
-      parameters:
-        - $ref: "#/components/parameters/content-type"
-      responses:
-        "200":
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ArtistSummary"
-            text/csv:
-              schema:
-                $ref: "#/components/schemas/ArtistSummary"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "5XX":
-          $ref: "#/components/responses/ServerError"
-
-  /artists/{id}/songs:
-    parameters:
-      - $ref: "#/components/parameters/artist-id"
-
-    get: # get all songs from artist by id ✔
-      tags:
-        - Artists
-      summary: Retrieve all songs from an artist
-      description: Retrieves a list of all songs from the artist with the given ID
-      parameters:
+        - $ref: "#/components/parameters/artist-id"
+        - $ref: "#/components/parameters/artist-name"
+        - $ref: "#/components/parameters/song-year"
+        - $ref: "#/components/parameters/limit"
         - $ref: "#/components/parameters/content-type"
       responses:
         "200":
@@ -423,38 +341,38 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Song"
+        "204":
+          $ref: "#/components/responses/NoResults"
         "400":
           $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
-
-    delete: # delete all songs from artist by id ✔
+    delete:
       tags:
         - Artists
-      summary: Delete all songs from an artist by ID
-      description: Deletes all songs from the artist with the given ID
+      description: Deletes all songs of an artist
+      summary: Delete all songs of an artist
+      parameters:
+        - $ref: "#/components/parameters/artist-id"
+        - $ref: "#/components/parameters/artist-name"
+
       responses:
         "204":
-          description: All songs deleted successfully
+          description: Songs deleted successfully
         "400":
           $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
-  /artists/{name}/songs:
-    parameters:
-      - $ref: "#/components/parameters/artist-name"
-
-    get: # get all songs from artist by name ✔
+  /artists/summary:
+    get: # get artist summary (desc popularity, limit)
       tags:
         - Artists
-      summary: Retrieve all songs from an artist
-      description: Retrieves a list of all songs from the artist with the given name
+      description: Retrieves number of songs, earliest and latest release by date, highest popularity among all songs) for a specific artist by artist ID or artist name
+      summary: Retrieve artist summary
       parameters:
+        - $ref: "#/components/parameters/artist-id"
+        - $ref: "#/components/parameters/artist-name"
         - $ref: "#/components/parameters/content-type"
       responses:
         "200":
@@ -464,30 +382,15 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Song"
+                  $ref: "#/components/schemas/ArtistSummary"
             text/csv:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Song"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
-        "5XX":
-          $ref: "#/components/responses/ServerError"
-
-    delete: # delete all songs from artist by name ✔
-      tags:
-        - Artists
-      summary: Delete all songs from an artist
-      description: Deletes all songs from the artist with the given name
-      responses:
+                  $ref: "#/components/schemas/ArtistSummary"
         "204":
-          description: All songs deleted successfully
+          $ref: "#/components/responses/NoResults"
         "400":
           $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
