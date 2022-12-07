@@ -10,175 +10,6 @@ servers:
   - url: http://localhost:8080
     description: Big things
 
-components:
-  schemas:
-    Song:
-      type: object
-      required:
-        - title
-        - year
-      properties:
-        songId:
-          type: integer
-          readOnly: true
-          description: The ID of the song
-        title:
-          type: string
-          description: The title of the song
-          readOnly: true
-        artist-ids:
-          type: array
-          description: The IDs of the artists who wrote the song
-          readOnly: true
-          items:
-            type: integer
-            description: The ID of one of the artists who wrote the song
-        popularity:
-          type: integer
-          description: The popularity of the song
-          readOnly: true
-          minimum: 0
-          maximum: 100
-        year:
-          type: string
-          description: The year the song was released
-          format: date
-
-    Artist:
-      type: object
-      required:
-        - name
-      properties:
-        id:
-          type: integer
-          readOnly: true
-          description: The ID of the artist
-        name:
-          type: string
-          description: The name of the artist
-        songs:
-          type: array
-          items:
-            $ref: "#/components/schemas/Song"
-        popularity:
-          type: integer
-          description: The popularity of the artist
-          readOnly: true
-          minimum: 0
-          maximum: 100
-
-    ArtistSummary:
-      type: object
-      required:
-        - name
-      properties:
-        id:
-          type: integer
-          description: The ID of the artist
-        name:
-          type: string
-          description: The name of the artist
-        numSongs:
-          type: integer
-          description: The number of songs the artist has written
-        mostPopularSong:
-          type: object
-          description: The most popular song the artist has written
-        earliestSong:
-          type: object
-          description: The earliest song the artist has written
-        latestSong:
-          type: object
-          description: The latest song the artist has written
-
-  #############################################################################
-
-  responses:
-    BadRequest:
-      description: Request was not well-formed, see error details
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error-message:
-                type: string
-                description: Error message detailing the problem with the request
-
-    NotFound:
-      description: Resource not found
-
-    NoResults:
-      description: List empty; no results
-
-    Conflict:
-      description: Resource already exists
-
-    ServerError:
-      description: Server error, try again later
-
-  #############################################################################
-
-  parameters:
-    song-id:
-      name: id
-      in: path
-      required: true
-      description: Name of the song
-      schema:
-        type: integer
-
-    song-title:
-      name: title
-      in: query
-      required: false
-      description: Title of the song
-      schema:
-        type: string
-
-    artist-id:
-      name: id
-      in: path
-      required: true
-      description: ID of the artist
-      schema:
-        type: integer
-
-    artist-name:
-      name: name
-      in: path
-      required: true
-      description: Name of the artist
-      schema:
-        type: string
-
-    song-year:
-      name: year
-      in: query
-      required: false
-      description: The year the song was released in
-      schema:
-        type: integer
-
-    limit:
-      name: limit
-      in: query
-      required: false
-      description: Limit the number of returned items
-      schema:
-        type: integer
-        enum: [10, 20, 50, 100]
-
-    content-type:
-      name: content-type
-      in: query
-      description: Content type of the request
-      schema:
-        type: string
-        enum: [application/json, text/csv]
-
-###############################################################################
-
 paths:
   /songs:
     get: # get song by title or year ✔
@@ -347,6 +178,7 @@ paths:
           $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
+
     delete:
       tags:
         - Artists
@@ -394,3 +226,166 @@ paths:
           $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
+
+components:
+  schemas:
+    Song:
+      type: object
+      required:
+        - title
+        - year
+      properties:
+        songId:
+          type: integer
+          readOnly: true
+          description: The ID of the song
+        title:
+          type: string
+          description: The title of the song
+          readOnly: true
+        artist-ids:
+          type: array
+          description: The IDs of the artists who wrote the song
+          readOnly: true
+          items:
+            type: integer
+            description: The ID of one of the artists who wrote the song
+        popularity:
+          type: integer
+          description: The popularity of the song
+          readOnly: true
+          minimum: 0
+          maximum: 100
+        year:
+          type: string
+          description: The year the song was released
+          format: date
+
+    Artist:
+      type: object
+      required:
+        - name
+      properties:
+        id:
+          type: integer
+          readOnly: true
+          description: The ID of the artist
+        name:
+          type: string
+          description: The name of the artist
+        songs:
+          type: array
+          items:
+            $ref: "#/components/schemas/Song"
+        popularity:
+          type: integer
+          description: The popularity of the artist
+          readOnly: true
+          minimum: 0
+          maximum: 100
+
+    ArtistSummary:
+      type: object
+      required:
+        - name
+      properties:
+        id:
+          type: integer
+          description: The ID of the artist
+        name:
+          type: string
+          description: The name of the artist
+        numSongs:
+          type: integer
+          description: The number of songs the artist has written
+        mostPopularSong:
+          type: object
+          description: The most popular song the artist has written
+        earliestSong:
+          type: object
+          description: The earliest song the artist has written
+        latestSong:
+          type: object
+          description: The latest song the artist has written
+
+  responses:
+    BadRequest:
+      description: Request was not well-formed, see error details
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error-message:
+                type: string
+                description: Error message detailing the problem with the request
+
+    NotFound:
+      description: Resource not found
+
+    NoResults:
+      description: List empty; no results
+
+    Conflict:
+      description: Resource already exists
+
+    ServerError:
+      description: Server error, try again later
+
+  parameters:
+    song-id:
+      name: id
+      in: path
+      required: true
+      description: Name of the song
+      schema:
+        type: integer
+
+    song-title:
+      name: title
+      in: query
+      required: false
+      description: Title of the song
+      schema:
+        type: string
+
+    artist-id:
+      name: id
+      in: path
+      required: true
+      description: ID of the artist
+      schema:
+        type: integer
+
+    artist-name:
+      name: name
+      in: path
+      required: true
+      description: Name of the artist
+      schema:
+        type: string
+
+    song-year:
+      name: year
+      in: query
+      required: false
+      description: The year the song was released in
+      schema:
+        type: integer
+
+    limit:
+      name: limit
+      in: query
+      required: false
+      description: Limit the number of returned items
+      schema:
+        type: integer
+        enum: [10, 20, 50, 100]
+
+    content-type:
+      name: content-type
+      in: query
+      description: Content type of the request
+      schema:
+        type: string
+        enum: [application/json, text/csv]
