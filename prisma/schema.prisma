@@ -11,32 +11,14 @@ datasource db {
 }
 
 model Song {
-  id         Int      @id @default(autoincrement())
-  title      String
-  artistIDs  Int[]
-  popularity Int?
-  year       Int
-  artist     Artist[]
+  id            String    @id @default(cuid())
+  name          String
+  artist_ids    Int[]
+  popularity    Int
+  release_date  DateTime
 }
 
 model Artist {
-  id              Int            @id @default(autoincrement())
-  name            String
-  songs           Song[]
-  popularity      Int?
-  artistSummary   ArtistSummary   @relation(fields: artistSummaryID, references: id)
-  artistSummaryID Int             @unique
-}
-
-model ArtistSummary {
-  id                Int      @id @default(autoincrement())
-  name              String
-  numSongs          Int?
-  //mostPopularSong   Song     @relation()
-  //mostPopularSongId Int
-  //earliestSong      Song     @relation()
-  //earliestSongId    Int
-  //latestSong        Song     @relation()
-  //latestSongId      Int
-  artist            Artist?
+  id          String    @id @default(cuid())
+  name        String
 }
