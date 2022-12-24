@@ -39,7 +39,7 @@ export class SeedingController {
         });
 
         const query =
-          "INSERT INTO song (id, name, artist_ids, popularity, release_date) VALUES ($1, $2, $3, $4, $5)";
+          `INSERT INTO "Song"(id, name, artist_ids, popularity, release_date) VALUES ($1, $2, $3, $4, $5)`;
 
         pool.connect((err, client, done) => {
           if (err) throw err;
@@ -85,7 +85,7 @@ export class SeedingController {
         });
 
         const query =
-          "INSERT INTO artist (id, name) VALUES ($1, $2)";
+          `INSERT INTO "Artist" (id, name) VALUES ($1, $2)`;
 
         pool.connect((err, client, done) => {
           if (err) throw err;
