@@ -1,112 +1,117 @@
 import { Controller, Get } from '@nestjs/common';
 
 const fs = require('fs');
-const Artist = require("pg").Artist;
-const Song = require("pg").Song;
 const fastcsv = require('fast-csv');
-const Pool = require("pg").Pool;
+const Pool = require('pg').Pool;
 const { PrismaClient } = require('@prisma/client');
-
-const prisma = new PrismaClient();
 
 @Controller('seed')
 export class SeedingController {
   @Get()
   async seed(): Promise<void> {
-    
     console.log('Seeding database...');
-    
+
     // seed songs
-    
-    let stream = fs.createReadStream("songs.csv");
-    let csvData = [];
+
+    let streamSongs = fs.createReadStream('songs.csv');
+    let csvDataSongs = [];
     let csvStreamSongs = fastcsv
       .parse()
-      .on("data", function (data) {
-        csvData.push(data);
+      .on('data', function (data) {
+        csvDataSongs.push(data);
       })
-      .on("end", function () {
+      .on('end', function () {
         // remove the first line: header
-        csvData.shift();
+        csvDataSongs.shift();
 
         // create a new connection pool to the database
         const pool = new Pool({
-          host: "localhost",
-          user: "postgres",
-          database: "nest",
-          password: "123",
-          port: 5434
+          host: 'localhost',
+          user: 'postgres',
+          database: 'nest',
+          password: '123',
+          port: 5434,
         });
 
-        const query =
-          `INSERT INTO "Song"(id, name, artist_ids, popularity, release_date) VALUES ($1, $2, $3, $4, $5)`;
+        let querySongs =
+          'INSERT INTO "Song" (id, name, artist_ids, popularity, release_date) VALUES ($1, $2, temp, $4, $5)';
+        console.log(querySongs);
 
+        // ['3BiJGZsyX9sJchTqcSA7Su', '58wzyK6DupVsypvs3QV2Fo', '6lXiGaWjISZnER53ZJe6QO']
+        // {'3BiJGZsyX9sJchTqcSA7Su', '58wzyK6DupVsypvs3QV2Fo', '6lXiGaWjISZnER53ZJe6QO'}
+        let arrayString : String;
         pool.connect((err, client, done) => {
           if (err) throw err;
           try {
-            csvData.forEach(row => {
-              client.query(query, row, (err, res) => {
+            csvDataSongs.forEach((row) => {
+              arrayString = row[2]
+                .toString()
+                .replace(/\[/g, '{')
+                .replace(/\]/g, '}');
+              // console.log("arrayString: " + arrayString);
+              querySongs = querySongs.replace('temp', arrayString.toString());
+              // console.log("querySongs: " + querySongs);
+              client.query(querySongs, row, (err, res) => {
                 if (err) {
                   console.log(err.stack);
                 } else {
-                  console.log("inserted " + res.rowCount + " row:", row);
+                  console.log('inserted ' + res.rowCount + ' row:', row);
                 }
               });
             });
           } finally {
             done();
+            console.log('Seeded songs!');
           }
         });
-        
-        console.log('Seeded songs!');
       });
-    stream.pipe(csvStreamSongs);
+    streamSongs.pipe(csvStreamSongs);
 
     // for artists
 
-    let streamArtists = fs.createReadStream("artists.csv");
+    let streamArtists = fs.createReadStream('artists.csv');
     let csvDataArtists = [];
     let csvStreamArtists = fastcsv
       .parse()
-      .on("data", function (data) {
+      .on('data', function (data) {
         csvDataArtists.push(data);
       })
-      .on("end", function () {
+      .on('end', function () {
         // remove the first line: header
-        csvData.shift();
+        csvDataArtists.shift();
+        console.log(csvDataArtists.length);
 
         // create a new connection pool to the database
         const pool = new Pool({
-          host: "localhost",
-          user: "postgres",
-          database: "nest",
-          password: "123",
-          port: 5434
+          host: 'localhost',
+          user: 'postgres',
+          database: 'nest',
+          password: '123',
+          port: 5434,
         });
 
-        const query =
-          `INSERT INTO "Artist" (id, name) VALUES ($1, $2)`;
+        const queryArtists = 'INSERT INTO "Artist" (id, name) VALUES ($1, $2)';
 
         pool.connect((err, client, done) => {
           if (err) throw err;
           try {
-            csvData.forEach(row => {
-              client.query(query, row, (err, res) => {
+            csvDataArtists.forEach((row) => {
+              client.query(queryArtists, row, (err, res) => {
                 if (err) {
                   console.log(err.stack);
                 } else {
-                  console.log("inserted " + res.rowCount + " row:", row);
+                  console.log('inserted ' + res.rowCount + ' row:', row);
                 }
               });
             });
           } finally {
             done();
+            console.log('Seeded artists!');
           }
         });
-
-        console.log('Seeded artists!');
       });
-    stream.pipe(csvStreamArtists);
+    streamArtists.pipe(csvStreamArtists);
+    console.log('Seeding fully complete!');
 
     /*
     // seed songs
