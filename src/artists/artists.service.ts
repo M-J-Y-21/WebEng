@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Song } from '@prisma/client';
+import { Song, ArtistSummary } from '@prisma/client';
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
@@ -106,5 +106,28 @@ export class ArtistsService {
       return 'Songs with name: ' + idOrName + ' deleted successfully';
     }
     return 'No songs with id or name: ' + idOrName + ' found';
+  }
+  
+  async getSummary(
+    id: string,
+    name: string,
+    contentType: string,
+  ): Promise<ArtistSummary> {
+    let artist = await prisma.artist.findUnique({
+      where: {
+        id: id,
+      },
+    });
+    
+    if (!artist) {
+      artist = await prisma.artist.findUnique({
+        where: {
+          name: name,
+        },
+      });
+    }
+    
+    return new ArtistSummary(artist, contentType);
+    // is this right?
   }
 }

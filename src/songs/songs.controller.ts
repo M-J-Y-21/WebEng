@@ -6,7 +6,6 @@ import { Query } from '@nestjs/common/decorators';
 import { UpdateSongDto } from './dto/update-songs.dto/update-songs.dto';
 import { CreateSongDto } from './dto/create-songs.dto/create-songs.dto';
 
-@ApiTags('songs')
 @Controller('songs')
 export class SongsController {
   constructor(private readonly songsService: SongsService) {}
