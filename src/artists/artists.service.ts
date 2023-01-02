@@ -49,5 +49,62 @@ export class ArtistsService {
       }
       return songs;
     }
+    // Should probably add here in case somebody enters a song not in db!
+  }
+
+  async deleteSongsByArtist(idOrName: string) {
+    // Count the number of songs before the delete operation
+    const beforeCount = await prisma.song.count({
+      where: {
+        artist_ids: {
+          has: idOrName,
+        },
+      },
+    });
+    // Delete all songs of artist given an artist Id
+    await prisma.song.deleteMany({
+      where: {
+        artist_ids: {
+          has: idOrName,
+        },
+      },
+    });
+    // Count the number of songs after the delete operation
+    const afterCount = await prisma.song.count({
+      where: {
+        artist_ids: {
+          has: idOrName,
+        },
+      },
+    });
+    if (beforeCount > afterCount) {
+      return 'Songs with id: ' + idOrName + ' deleted successfully';
+    }
+
+    /**
+     * If the idOrName is not an id, it is a name.
+     * Convert name of artist to aritst id
+     * Then delete by artist id like done above
+     */
+    const idArtistByName = await prisma.artist.findMany({
+      where: {
+        name: idOrName,
+      },
+    });
+    if (idArtistByName.length > 0) {
+      const artistIds = idArtistByName
+        .map((artist) => artist.id)
+        .map((id) => id.toString());
+
+      await prisma.song.deleteMany({
+        where: {
+          artist_ids: {
+            hasSome: artistIds,
+          },
+        },
+      });
+      return 'Songs with name: ' + idOrName + ' deleted successfully';
+    }
+    return 'No songs with id or name: ' + idOrName + ' found';
   }
 }
