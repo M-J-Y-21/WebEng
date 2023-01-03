@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Song {
-  id            String    @id @default(cuid())
+  id            String          @id @default(cuid())
   name          String
   artist_ids    String[]
   popularity    Int
@@ -19,6 +19,15 @@ model Song {
 }
 
 model Artist {
-  id          String    @id @default(cuid())
-  name        String
+  id   String @id @default(cuid())
+  name String
 }
+
+//model ArtistSummary {
+//  id                String @id @default(cuid())
+//  name              String
+//  numSongs          Int
+//  mostPopularSong   Song @relation("mostPopularSong")
+//  earliestSong      Song @relation("earliestSong")
+//  latestSong        Song @relation("latestSong")
+//}

@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { Song } from '../songs/entities/song.entity';
-import { ArtistSummary } from './entities/artist-summary.entity';
+import { Song } from '@prisma/client';
+import { ArtistSummary, Artist } from '@prisma/client';
 import { PrismaClient } from '@prisma/client';
+import * as _ from 'lodash';
 const prisma = new PrismaClient();
 
 @Injectable()
@@ -113,22 +114,71 @@ export class ArtistsService {
     id: string,
     name: string,
     contentType: string,
-  ): Promise<ArtistSummary> {
-    let artist = await prisma.artist.findUnique({
+  ): Promise<ArtistSummary[]> {
+    let artists = await prisma.artist.findMany({
       where: {
         id: id,
       },
     });
     
-    if (!artist) {
-      artist = await prisma.artist.findUnique({
+    if (artists.length == 0) {
+      artists = await prisma.artist.findMany({
         where: {
           name: name,
         },
       });
     }
     
-    return new ArtistSummary(artist, contentType);
+    let summaries: ArtistSummary[];
+    for (let i = 0; i < artists.length; i++) {
+      const artist = artists[i];
+      summaries[i] = new ArtistSummary(artist);
+    }
+    
+    return summaries;
     // is this right?
+  }
+  
+  // Assignment M1 Req Point 6
+  async getTopArtists(year: number, n: number, m: number): Promise<Artist[]> {
+    const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
+    const endDate = new Date(`${year}-12-31T23:59:59.999Z`);
+    // Retrieve all songs released by all artists in a given year
+    const songs = await prisma.song.findMany({
+      where: {
+        release_date: {
+          gte: startDate,
+          lte: endDate
+        }
+      }
+    });
+    const songsByArtist = _.groupBy(songs, (song) => _.flatten(song.artist_ids));
+
+    const artistPopularities = _.map(songsByArtist, (songs, artistId) => {
+      const popularitySum = _.sumBy(songs, 'popularity');
+      const numSongs = songs.length;
+      const popularity = numSongs > 0 ? popularitySum / numSongs : 0;
+      return { artistId, popularity };
+    });
+
+    // Sort artist popularities in descending order
+    const sortedArtistPopularities = _.sortBy(artistPopularities, 'popularity').reverse();
+
+    // Retrieve top N artists, why does this splice function not work?
+    // doesn't return n artists when used in the following where clause
+    const topArtists = _.slice(sortedArtistPopularities, m, m + n);
+
+    // Retrieve artist documents from the database
+    const artists = await prisma.artist.findMany({
+      where: {
+        id: {
+          in: _.map(sortedArtistPopularities, 'artistId')
+        }
+      },
+      skip: m,
+      take: n,
+    });
+
+    return artists;
   }
 }
