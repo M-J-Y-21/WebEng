@@ -4,10 +4,11 @@ import { Song } from './entities/song.entity';
 import { CreateSongDto } from './dto/create-songs.dto/create-songs.dto';
 import { UpdateSongDto } from './dto/update-songs.dto/update-songs.dto';
 import { PrismaClient } from '@prisma/client';
+import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class SongsService {
-  private prisma = new PrismaClient();
+  private prisma = new PrismaService();
 
   async getTopSongs(year: number, n: number, m: number) {
     const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
@@ -78,11 +79,24 @@ export class SongsService {
     return this.songs;
   }
 
-  update(id: number, updateSongDto: UpdateSongDto) {
-    return `This action updates a #${id} song`;
+  updateSongById(id: string, updateSongDto: UpdateSongDto) {
+    return this.prisma.song.update({
+      where: {id},
+      data:updateSongDto
+    });
+  }
+  /**
+   * Finds one song by id.
+   * @param id 
+   * @returns the song
+   */
+  findOne(id : string) {  
+    console.log("Getting info");
+    return this.prisma.song.findUnique({where : {id}});
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} song`;
+  removeById(id : string) {
+      return this.prisma.song.delete({where : {id}});
+      console.log(`Song with ${id} removed`);
   }
 }

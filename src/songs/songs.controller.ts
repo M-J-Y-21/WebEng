@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, ParseIntPipe } from 
 import { SongsService } from './songs.service';
 import { ApiTags } from '@nestjs/swagger';
 import { Song } from './entities/song.entity';
-import { Query } from '@nestjs/common/decorators';
+import { Put, Query } from '@nestjs/common/decorators';
 import { UpdateSongDto } from './dto/update-songs.dto/update-songs.dto';
 import { CreateSongDto } from './dto/create-songs.dto/create-songs.dto';
 
@@ -44,19 +44,20 @@ export class SongsController {
     return this.songsService.findAll(title, year, limit, contentType);
   }
 
-  @Get('/test1')
-  findByYear(@Query() query: { year: number }): Song[] {
-    console.log(query.year);
-    return this.songsService.findAll(undefined, query.year);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateSongDto: UpdateSongDto) {
-    return this.songsService.update(+id, updateSongDto);
+  @Get(':id') 
+  findOne(@Param('id') id:string) {
+    console.log(`The id is ${id}`);
+    return this.songsService.findOne(id);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.songsService.remove(+id);
+  remove(@Param('id') id:string) {
+    console.log(`The id is ${id}`);
+    return this.songsService.removeById(id);
+  }
+
+  @Put(':id')
+  update(@Param('id') id, @Body() updateSongDto : UpdateSongDto) {
+    return this.songsService.updateSongById(id,updateSongDto);
   }
 }

@@ -11,10 +11,10 @@ export class CreateSongDto {
     year: number;
 
     @ApiProperty({required: false})
-    songID?: number;
+    songID?: string;
 
     @ApiProperty({required: false})
-    artistIDs?: number[];
+    artistIDs?: string[];
 
     @ApiProperty({required: false})
     @Max(100)
