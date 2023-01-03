@@ -1,9 +1,9 @@
 import { ApiProperty } from "@nestjs/swagger";
 
-export class Song {
+export class Artist {
     @ApiProperty()
-    year: number;
+    name: string;
     
     @ApiProperty()
-    title: string;
+    popularity: number;
 }

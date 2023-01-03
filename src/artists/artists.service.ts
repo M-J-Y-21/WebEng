@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Song, ArtistSummary } from '@prisma/client';
+import { Song } from '../songs/entities/song.entity';
+import { ArtistSummary } from './entities/artist-summary.entity';
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
