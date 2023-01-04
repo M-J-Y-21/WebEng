@@ -1,12 +1,45 @@
 import { Injectable } from '@nestjs/common';
 import { Song } from '@prisma/client';
-import { ArtistSummary, Artist } from '@prisma/client';
+import { Artist } from '@prisma/client';
 import { PrismaClient } from '@prisma/client';
 import * as _ from 'lodash';
 const prisma = new PrismaClient();
 
 @Injectable()
 export class ArtistsService {
+  async getSummary(id?: string, name?: string) {
+    const where = id ? { id } : { name };
+
+    const artists = await prisma.artist.findMany({ where });
+    if (artists.length === 0) {
+      throw new Error('Artist not found');
+    }
+
+    // Calculate summary information for each artist
+    const summaries = await Promise.all(
+      artists.map(async (artist) => {
+        // Get all songs for the artist
+        const artistSongs = await this.getSongsByArtist(artist.id);
+
+        // Calculate summary information for the artist's songs
+        const numSongs = artistSongs.length;
+        const earliestRelease = artistSongs.sort((a, b) => a.release_date.getTime() - b.release_date.getTime())[0];
+        const latestRelease = artistSongs.sort((a, b) => b.release_date.getTime() - a.release_date.getTime())[0];
+        const highestPopularity = artistSongs.sort((a, b) => b.popularity - a.popularity)[0];
+
+        return {
+          artist,
+          numSongs,
+          earliestRelease,
+          latestRelease,
+          highestPopularity
+        };
+      })
+    );
+
+    return summaries;
+  }
+
   /**
    * In first part of function we assume that the idOrName is an id.
    * If it is not an id, we assume it is a name.
@@ -18,9 +51,9 @@ export class ArtistsService {
     const songsById = await prisma.song.findMany({
       where: {
         artist_ids: {
-          has: idOrName,
-        },
-      },
+          has: idOrName
+        }
+      }
     });
     if (songsById.length > 0) {
       return songsById;
@@ -31,22 +64,20 @@ export class ArtistsService {
      */
     const idArtistByName = await prisma.artist.findMany({
       where: {
-        name: idOrName,
-      },
+        name: idOrName
+      }
     });
     if (idArtistByName.length > 0) {
-      const artistIds = idArtistByName
-        .map((artist) => artist.id)
-        .map((id) => id.toString());
+      const artistIds = idArtistByName.map((artist) => artist.id).map((id) => id.toString());
 
       for (let index = 0; index < artistIds.length; index++) {
         songs = songs.concat(
           await prisma.song.findMany({
             where: {
               artist_ids: { has: artistIds[index] },
-              name: { notIn: songs.map((song) => song.name) },
-            },
-          }),
+              name: { notIn: songs.map((song) => song.name) }
+            }
+          })
         );
       }
       return songs;
@@ -59,25 +90,25 @@ export class ArtistsService {
     const beforeCount = await prisma.song.count({
       where: {
         artist_ids: {
-          has: idOrName,
-        },
-      },
+          has: idOrName
+        }
+      }
     });
     // Delete all songs of artist given an artist Id
     await prisma.song.deleteMany({
       where: {
         artist_ids: {
-          has: idOrName,
-        },
-      },
+          has: idOrName
+        }
+      }
     });
     // Count the number of songs after the delete operation
     const afterCount = await prisma.song.count({
       where: {
         artist_ids: {
-          has: idOrName,
-        },
-      },
+          has: idOrName
+        }
+      }
     });
     if (beforeCount > afterCount) {
       return 'Songs with id: ' + idOrName + ' deleted successfully';
@@ -90,55 +121,53 @@ export class ArtistsService {
      */
     const idArtistByName = await prisma.artist.findMany({
       where: {
-        name: idOrName,
-      },
+        name: idOrName
+      }
     });
     if (idArtistByName.length > 0) {
-      const artistIds = idArtistByName
-        .map((artist) => artist.id)
-        .map((id) => id.toString());
+      const artistIds = idArtistByName.map((artist) => artist.id).map((id) => id.toString());
 
       await prisma.song.deleteMany({
         where: {
           artist_ids: {
-            hasSome: artistIds,
-          },
-        },
+            hasSome: artistIds
+          }
+        }
       });
       return 'Songs with name: ' + idOrName + ' deleted successfully';
     }
     return 'No songs with id or name: ' + idOrName + ' found';
   }
-  
-  async getSummary(
-    id: string,
-    name: string,
-    contentType: string,
-  ): Promise<ArtistSummary[]> {
-    let artists = await prisma.artist.findMany({
-      where: {
-        id: id,
-      },
-    });
-    
-    if (artists.length == 0) {
-      artists = await prisma.artist.findMany({
-        where: {
-          name: name,
-        },
-      });
-    }
-    
-    let summaries: ArtistSummary[];
-    for (let i = 0; i < artists.length; i++) {
-      const artist = artists[i];
-      summaries[i] = new ArtistSummary(artist);
-    }
-    
-    return summaries;
-    // is this right?
-  }
-  
+
+  // async getSummary(
+  //   id: string,
+  //   name: string,
+  //   contentType: string,
+  // ): Promise<ArtistSummary[]> {
+  //   let artists = await prisma.artist.findMany({
+  //     where: {
+  //       id: id,
+  //     },
+  //   });
+
+  //   if (artists.length == 0) {
+  //     artists = await prisma.artist.findMany({
+  //       where: {
+  //         name: name,
+  //       },
+  //     });
+  //   }
+
+  //   let summaries: ArtistSummary[];
+  //   for (let i = 0; i < artists.length; i++) {
+  //     const artist = artists[i];
+  //     summaries[i] = new ArtistSummary(artist);
+  //   }
+
+  //   return summaries;
+  //   // is this right?
+  // }
+
   // Assignment M1 Req Point 6
   async getTopArtists(year: number, n: number, m: number): Promise<Artist[]> {
     const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
@@ -176,7 +205,7 @@ export class ArtistsService {
         }
       },
       skip: m,
-      take: n,
+      take: n
     });
 
     return artists;

@@ -3,11 +3,10 @@ import { ArtistsService } from './artists.service';
 
 @Controller('artists')
 export class ArtistsController {
-
-  constructor(private readonly artistsService: ArtistsService) { }
+  constructor(private readonly artistsService: ArtistsService) {}
 
   @Get('songs')
-  async getSongs(@Query('id') idOrName: string) {
+  async getSongs(@Query('idOrName') idOrName: string) {
     return await this.artistsService.getSongsByArtist(idOrName);
   }
 
@@ -18,14 +17,19 @@ export class ArtistsController {
   }
 
   @Get('summary')
-  async getSummary(
-    @Param('id') id: string,
-    @Param('name') name: string,
-    @Param('content-type') contentType: string
-  ) {
-    return await this.artistsService.getSummary(id, name, contentType);
+  async getSummary(@Query('id') id?: string, @Query('name') name?: string) {
+    return await this.artistsService.getSummary(id, name);
   }
-  
+
+  // @Get('summary')
+  // async getSummary(
+  //   @Param('id') id: string,
+  //   @Param('name') name: string,
+  //   @Param('content-type') contentType: string
+  // ) {
+  //   return await this.artistsService.getSummary(id, name, contentType);
+  // }
+
   @Get()
   async getTopArtists(@Query('year') year: number, @Query('n') n: number, @Query('m') m: number) {
     return await this.artistsService.getTopArtists(year, n, m);
