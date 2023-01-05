@@ -8,7 +8,12 @@ import { CreateSongDto } from './dto/create-songs.dto/create-songs.dto';
 
 @Controller('songs')
 export class SongsController {
-  constructor(private readonly songsService: SongsService) {}
+  constructor(private readonly songsService: SongsService) { }
+  
+  @Get()
+  async getSongsByName(@Query('name') name: string) {
+    return await this.songsService.getSongsByName(name);
+  }
 
   @Get()
   async getTopSongs(@Query('year') year: number, @Query('n') n: number, @Query('m') m: number) {

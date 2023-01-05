@@ -10,6 +10,23 @@ import { PrismaService } from 'src/prisma/prisma.service';
 export class SongsService {
   private prisma = new PrismaService();
 
+  async getSongsByName(name: string) {
+    const songs = await this.prisma.song.findMany({
+      where: {
+        name: {
+          equals: name
+        }
+      }
+    });
+    if (songs.length > 0) {
+      return songs;
+    }
+    return {
+      status: 'success',
+      message: `No songs found with the name: ${name}`
+    };
+  }
+
   async getTopSongs(year: number, n: number, m: number) {
     const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
     const endDate = new Date(`${year}-12-31T23:59:59.999Z`);
@@ -81,22 +98,22 @@ export class SongsService {
 
   updateSongById(id: string, updateSongDto: UpdateSongDto) {
     return this.prisma.song.update({
-      where: {id},
-      data:updateSongDto
+      where: { id },
+      data: updateSongDto
     });
   }
   /**
    * Finds one song by id.
-   * @param id 
+   * @param id
    * @returns the song
    */
-  findOne(id : string) {  
-    console.log("Getting info");
-    return this.prisma.song.findUnique({where : {id}});
+  findOne(id: string) {
+    console.log('Getting info');
+    return this.prisma.song.findUnique({ where: { id } });
   }
 
-  removeById(id : string) {
-      return this.prisma.song.delete({where : {id}});
-      console.log(`Song with ${id} removed`);
+  removeById(id: string) {
+    return this.prisma.song.delete({ where: { id } });
+    console.log(`Song with ${id} removed`);
   }
 }
