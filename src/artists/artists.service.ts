@@ -75,7 +75,7 @@ export class ArtistsService {
           await prisma.song.findMany({
             where: {
               artist_ids: { has: artistIds[index] },
-              name: { notIn: songs.map((song) => song.name) }
+              title: { notIn: songs.map((song) => song.title) }
             }
           })
         );

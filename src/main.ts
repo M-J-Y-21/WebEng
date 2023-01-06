@@ -1,7 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
-import { HttpException } from '@nestjs/common/exceptions';
 
 const handleNotFound = (request, response) => {
   response.status(404).send({ error: 'Not found' });

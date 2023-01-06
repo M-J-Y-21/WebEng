@@ -12,7 +12,7 @@ datasource db {
 
 model Song {
   id            String          @id @default(cuid())
-  name          String
+  title         String
   artist_ids    String[]
   popularity    Int
   release_date  DateTime
