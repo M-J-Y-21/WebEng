@@ -5,6 +5,8 @@ import { CreateSongDto } from './dto/create-songs.dto/create-songs.dto';
 import { UpdateSongDto } from './dto/update-songs.dto/update-songs.dto';
 import { PrismaClient } from '@prisma/client';
 import { PrismaService } from 'src/prisma/prisma.service';
+import { Catch, HttpCode } from '@nestjs/common/decorators';
+import { HttpException } from '@nestjs/common/exceptions';
 
 @Injectable()
 export class SongsService {
@@ -95,7 +97,7 @@ export class SongsService {
 
     return this.songs;
   }
-
+  
   updateSongById(id: string, updateSongDto: UpdateSongDto) {
     return this.prisma.song.update({
       where: { id },
