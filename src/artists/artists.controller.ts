@@ -1,37 +1,46 @@
-import { Controller, Delete, Get, Param, Query } from '@nestjs/common';
+import { Controller, Delete, Get, Query } from '@nestjs/common';
 import { ArtistsService } from './artists.service';
 
 @Controller('artists')
 export class ArtistsController {
-  constructor(private readonly artistsService: ArtistsService) {}
+  constructor(private readonly artistsService: ArtistsService) { }
 
+  // REQ 3 Retrieval, 6
+  /**
+   * Retrieves a list of songs by an artist (id or name), sorted by popularity,
+   * optionally filtered by year and limited to a number of results.
+   * Satisfies requirements 3 and 6.
+   * @param id Artist ID
+   * @param name Artist name
+   * @param year Year to filter by
+   * @param limit Number of results to limit to
+   * @returns The array of songs.
+   */
   @Get('songs')
-  async getSongs(@Query('idOrName') idOrName: string) {
-    return await this.artistsService.getSongsByArtist(idOrName);
+  async getTopSongs(
+    @Query('id') id: string,
+    @Query('name') name: string,
+    @Query('year') year: number,
+    @Query('limit') limit: number
+  ) {
+    return await this.artistsService.getTopSongsByArtist(id, name, year, limit);
   }
 
+  // REQ 3 Delete
   @Delete('songs')
-  async deleteSongsByArtist(@Query('id') idOrName: string) {
-    return await this.artistsService.deleteSongsByArtist(idOrName);
-    // made this return await, and the function async
+  async deleteSongsByArtist(
+    @Query('id') id: string,
+    @Query('name') name: string
+  ) {
+    return await this.artistsService.deleteSongsByArtist(id, name);
   }
 
+  // REQ 4
   @Get('summary')
-  async getSummary(@Query('id') id?: string, @Query('name') name?: string) {
+  async getSummary(
+    @Query('id') id: string,
+    @Query('name') name: string
+  ) {
     return await this.artistsService.getSummary(id, name);
   }
-
-  // @Get('summary')
-  // async getSummary(
-  //   @Param('id') id: string,
-  //   @Param('name') name: string,
-  //   @Param('content-type') contentType: string
-  // ) {
-  //   return await this.artistsService.getSummary(id, name, contentType);
-  // }
-
-  @Get()
-  async getTopArtists(@Query('year') year: number, @Query('n') n: number, @Query('m') m: number) {
-    return await this.artistsService.getTopArtists(year, n, m);
-  } // TODO: look at this, is it according to the spec?
 }

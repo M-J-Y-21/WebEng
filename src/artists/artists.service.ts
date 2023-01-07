@@ -1,31 +1,33 @@
 import { Injectable } from '@nestjs/common';
-import { Song } from '@prisma/client';
-import { Artist } from '@prisma/client';
 import { PrismaClient } from '@prisma/client';
-import * as _ from 'lodash';
 const prisma = new PrismaClient();
 
 @Injectable()
 export class ArtistsService {
-  async getSummary(id?: string, name?: string) {
-    const where = id ? { id } : { name };
 
-    const artists = await prisma.artist.findMany({ where });
-    if (artists.length === 0) {
-      throw new Error('Artist not found');
-    }
+  private async getArtistsByIdName(id: string, name: string) {
+    const where = id ? { id } : { name };
+    return await prisma.artist.findMany({ where });
+  }
+
+  async getSummary(id: string, name: string) {
+    // first, get all artists with the given id or name
+    const artists = await this.getArtistsByIdName(id, name);
 
     // Calculate summary information for each artist
     const summaries = await Promise.all(
       artists.map(async (artist) => {
         // Get all songs for the artist
-        const artistSongs = await this.getSongsByArtist(artist.id);
+        const artistSongs = await this.getTopSongsByArtist(id, name, undefined, undefined);
 
         // Calculate summary information for the artist's songs
         const numSongs = artistSongs.length;
-        const earliestRelease = artistSongs.sort((a, b) => a.release_date.getTime() - b.release_date.getTime())[0];
-        const latestRelease = artistSongs.sort((a, b) => b.release_date.getTime() - a.release_date.getTime())[0];
-        const highestPopularity = artistSongs.sort((a, b) => b.popularity - a.popularity)[0];
+        const earliestRelease = artistSongs.sort(
+          (a, b) => a.release_date.getTime() - b.release_date.getTime())[0];
+        const latestRelease = artistSongs.sort(
+          (a, b) => b.release_date.getTime() - a.release_date.getTime())[0];
+        const highestPopularity = artistSongs.sort(
+          (a, b) => b.popularity - a.popularity)[0];
 
         return {
           artist,
@@ -40,174 +42,59 @@ export class ArtistsService {
     return summaries;
   }
 
+  // REQ 6
   /**
-   * In first part of function we assume that the idOrName is an id.
-   * If it is not an id, we assume it is a name.
-   * @param idOrName
-   * @returns
+   * Returns the top songs from the artist with the given id or name.
+   * @param id
+   * @param name
+   * @param year
+   * @param limit
+   * @returns Songs by the artist, sorted by popularity, with the given limit.
    */
-  async getSongsByArtist(idOrName: string): Promise<Song[]> {
-    let songs: Song[] = [];
-    const songsById = await prisma.song.findMany({
+  async getTopSongsByArtist(
+    id: string,
+    name: string,
+    year: number,
+    limit: number
+  ) {
+
+    // first, get all artists with the given id or name
+    const artists = await this.getArtistsByIdName(id, name);
+
+    // get all songs where at least one artist_id is in the list of artists
+    return await prisma.song.findMany({
       where: {
         artist_ids: {
-          has: idOrName
-        }
-      }
-    });
-    if (songsById.length > 0) {
-      return songsById;
-    }
-    /**
-     * If the idOrName is not an id, it is a name.
-     * Return songs of all artists with matching name.
-     */
-    const idArtistByName = await prisma.artist.findMany({
-      where: {
-        name: idOrName
-      }
-    });
-    if (idArtistByName.length > 0) {
-      const artistIds = idArtistByName.map((artist) => artist.id).map((id) => id.toString());
-
-      for (let index = 0; index < artistIds.length; index++) {
-        songs = songs.concat(
-          await prisma.song.findMany({
-            where: {
-              artist_ids: { has: artistIds[index] },
-              title: { notIn: songs.map((song) => song.title) }
-            }
-          })
-        );
-      }
-      return songs;
-    }
-    // Should probably add here in case somebody enters a song not in db!
-  }
-
-  async deleteSongsByArtist(idOrName: string) {
-    // Count the number of songs before the delete operation
-    const beforeCount = await prisma.song.count({
-      where: {
-        artist_ids: {
-          has: idOrName
-        }
-      }
-    });
-    // Delete all songs of artist given an artist Id
-    await prisma.song.deleteMany({
-      where: {
-        artist_ids: {
-          has: idOrName
-        }
-      }
-    });
-    // Count the number of songs after the delete operation
-    const afterCount = await prisma.song.count({
-      where: {
-        artist_ids: {
-          has: idOrName
-        }
-      }
-    });
-    if (beforeCount > afterCount) {
-      return 'Songs with id: ' + idOrName + ' deleted successfully';
-    }
-
-    /**
-     * If the idOrName is not an id, it is a name.
-     * Convert name of artist to aritst id
-     * Then delete by artist id like done above
-     */
-    const idArtistByName = await prisma.artist.findMany({
-      where: {
-        name: idOrName
-      }
-    });
-    if (idArtistByName.length > 0) {
-      const artistIds = idArtistByName.map((artist) => artist.id).map((id) => id.toString());
-
-      await prisma.song.deleteMany({
-        where: {
-          artist_ids: {
-            hasSome: artistIds
-          }
-        }
-      });
-      return 'Songs with name: ' + idOrName + ' deleted successfully';
-    }
-    return 'No songs with id or name: ' + idOrName + ' found';
-  }
-
-  // async getSummary(
-  //   id: string,
-  //   name: string,
-  //   contentType: string,
-  // ): Promise<ArtistSummary[]> {
-  //   let artists = await prisma.artist.findMany({
-  //     where: {
-  //       id: id,
-  //     },
-  //   });
-
-  //   if (artists.length == 0) {
-  //     artists = await prisma.artist.findMany({
-  //       where: {
-  //         name: name,
-  //       },
-  //     });
-  //   }
-
-  //   let summaries: ArtistSummary[];
-  //   for (let i = 0; i < artists.length; i++) {
-  //     const artist = artists[i];
-  //     summaries[i] = new ArtistSummary(artist);
-  //   }
-
-  //   return summaries;
-  //   // is this right?
-  // }
-
-  // Assignment M1 Req Point 6
-  async getTopArtists(year: number, n: number, m: number): Promise<Artist[]> {
-    const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
-    const endDate = new Date(`${year}-12-31T23:59:59.999Z`);
-    // Retrieve all songs released by all artists in a given year
-    const songs = await prisma.song.findMany({
-      where: {
+          hasSome: artists.map((artist) => artist.id)
+        },
         release_date: {
-          gte: startDate,
-          lte: endDate
-        }
-      }
-    });
-    const songsByArtist = _.groupBy(songs, (song) => _.flatten(song.artist_ids));
-
-    const artistPopularities = _.map(songsByArtist, (songs, artistId) => {
-      const popularitySum = _.sumBy(songs, 'popularity');
-      const numSongs = songs.length;
-      const popularity = numSongs > 0 ? popularitySum / numSongs : 0;
-      return { artistId, popularity };
-    });
-
-    // Sort artist popularities in descending order
-    const sortedArtistPopularities = _.sortBy(artistPopularities, 'popularity').reverse();
-
-    // Retrieve top N artists, why does this splice function not work?
-    // doesn't return n artists when used in the following where clause
-    const topArtists = _.slice(sortedArtistPopularities, m, m + n);
-
-    // Retrieve artist documents from the database
-    const artists = await prisma.artist.findMany({
-      where: {
-        id: {
-          in: _.map(sortedArtistPopularities, 'artistId')
+          ...(year ? {
+            gte: new Date(`${year}-01-01T00:00:00.000Z`),
+            lte: new Date(`${year}-12-31T23:59:59.999Z`)
+          } : {})
         }
       },
-      skip: m,
-      take: n
+      take: (limit ? limit : undefined),
+      orderBy: { popularity: 'desc' }
     });
+  }
 
-    return artists;
+  // REQ 3
+  async deleteSongsByArtist(
+    id: string,
+    name: string
+  ) {
+
+    // first, get all artists with the given id or name
+    const artists = await this.getArtistsByIdName(id, name);
+
+    // delete all songs where at least one artist_id is in the list of artists
+    return await prisma.song.deleteMany({
+      where: {
+        artist_ids: {
+          hasSome: artists.map((artist) => artist.id)
+        }
+      }
+    });
   }
 }

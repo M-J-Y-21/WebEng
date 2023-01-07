@@ -1,10 +1,1001 @@
 id,title,artist_ids,popularity,release_date
-35iwgR4jXetI318WEWsa1Q,Carve,['45tIt06XoI0Iio4LBEVpls'],6,1922-02-22
-021ht4sdgPcrDgSk7JTbKY,Capítulo 2.16 - Banquero Anarquista,['14jtPCOoNZwquk5wd9DxrY'],0,1922-06-01
-07A5yehtSnoedViJAZkNnc,Vivo para Quererte - Remasterizado,['5LiOoJbxVSAMkBS2fUm3X2'],0,1922-03-21
-08FmqUhxtyLTn6pAh6bk45,El Prisionero - Remasterizado,['5LiOoJbxVSAMkBS2fUm3X2'],0,1922-03-21
-08y9GfoqCWfOGsKdwojr5e,Lady of the Evening,['3BiJGZsyX9sJchTqcSA7Su'],20,1922
-0BRXJHRNGQ3W4v9frnSfhu,Ave Maria,['3BiJGZsyX9sJchTqcSA7Su'],0,1922
-0Dd9ImXtAtGwsmsAD69KZT,La Butte Rouge,['2nuMRGzeJ5jJEKlfS7rZ0W'],0,1922
-0IA0Hju8CAgYfV1hwhidBH,La Java,['4AxgXfD7ISvJSTObqm4aIE'],0,1922
-0IgI1UCz84pYeVetnl1lGP,Old Fashioned Girl,['5nWlsH5RDgFuRAiDeOFVmf'],10,1922
+4iJyoBOLtHqaGxP12qzhQI,"Peaches (feat. Daniel Caesar & Giveon)","['1uNFoZAHBGtllmzznpCI3s', '20wkVLutqVOYrc0kxFs7rA', '4fxd5Ee7UefO4CUXgwJ7IP']",100,2021-03-19
+7lPN2DXiMsVn7XUKtOW1CS,"drivers license","['1McMsnEElThX1knmY4oliG']",99,2021-01-08
+3Ofmpyhv5UAQ70mENzB277,"Astronaut In The Ocean","['1uU7g3DNSbsu0QjSEqZtEd']",98,2021-01-06
+5QO79kh1waicV47BqGRL3g,"Save Your Tears","['1Xyo4u8uXC1ZmMpatF05PJ']",97,2020-03-20
+6tDDoYIxWvMLTdKpjFkc1B,"telepatía","['1U1el3k54VvEUzo3ybLPlM']",97,2020-12-04
+0VjIjW4GlUZAMYd2vXMi3b,"Blinding Lights","['1Xyo4u8uXC1ZmMpatF05PJ']",96,2020-03-20
+7MAibcTli4IisCtbHKrGMh,"Leave The Door Open","['0du5cEVh5yTK9QJze8zA0C', '3jK9MiCrA42lLAdMGUZpwa', '6PvvGcCY2XtUcSRld1Wilr']",96,2021-03-05
+6f3Slt0GbA2bPZlz0aIFXN,"The Business","['2o5jDhtHVPhrJdv3cEQ99Z']",95,2020-09-16
+60ynsPSSKe6O3sfwRnIBRf,"Streets","['5cj0lLjcoR7YOSnhnX0Po5']",94,2019-11-07
+3FAJ6O0NOHQV8Mc5Ri6ENp,"Heartbreak Anniversary","['4fxd5Ee7UefO4CUXgwJ7IP']",94,2020-03-27
+27OeeYzk6klgBh83TSvGMA,"WITHOUT YOU","['2tIP7SsRs7vjIcLrU85W8J']",94,2020-11-06
+1xK1Gg9SxG8fy2Ya373oqb,"Bandido","['7iK8PXO48WeuP03g8YR51W', '2LmcxBak1alK1bf7d1beTr']",94,2020-12-10
+7Bk0uXKk1uPT0XuQbpFzvs,"Fiel","['0n6sKrG0xKAf8xmdqeNGke', '3E6xrwgnVfYCrCs0ePERDz', '0EFisYRi20PTADoJrifHrz']",94,2021-02-04
+4cG7HUWYHBV6R6tHn1gxrl,"Friday (feat. Mufasa & Hypeman) - Dopamine Re-Edit","['7i9j813KFoSBMldGqlh2Z1', '1gALaWbNDnwS2ECV09sn2A', '4L2dV3zY7RmkeiNO035Fi0', '3Edve4VIATi0OZngclQlkN']",94,2021-01-15
+2XIc1pqjXV3Cr2BQUGNBck,"LA NOCHE DE ANOCHE","['4q3ewBCX7sLwd24euuV69X', '7ltDVBr6mKbRvohxheJ9h1']",93,2020-11-27
+3YJJjQPAbDT7mGpX3WtQ9A,"Good Days","['7tYKF4w9nC0nq9CsPZTHyP']",93,2020-12-25
+6UelLqGlWMcVH1E5c4H7lY,"Watermelon Sugar","['6KImCVD70vtIoJWnq6nGn3']",92,2019-12-13
+47EiUVwUp4C9fGccaPuUCS,"DÁKITI","['4q3ewBCX7sLwd24euuV69X', '0EFisYRi20PTADoJrifHrz']",92,2020-10-30
+35mvY5S1H3J2QZyna3TFe0,"positions","['66CXWjxzNUsdJxJ2JdwvnR']",92,2020-10-30
+3VvA1wSxukMLsvXoXtlwWx,"Hecha Pa' Mi","['2NfSBtmWe7oPw1EmetJVso']",92,2020-07-31
+6ft4hAq6yde8jPZY2i5zLr,"Paradise (feat. Dermot Kennedy)","['0xRXCcSX89eobfrshSVdyu', '5KNNVgR6LBIABRIomyCwKJ']",92,2020-10-30
+5YYW3yRktprLRr47WK219Y,"Ella No Es Tuya - Remix","['4riOEaOW5hCeqomFDBk0aP', '7iK8PXO48WeuP03g8YR51W', '2UZIAOlrnyZmyzt1nuXr9y']",92,2021-02-03
+1XXimziG1uhM0eDNCZCrUl,"Up","['4kYSro6naA4h99UJvo89HB']",92,2021-02-05
+5uEYRdEIh9Bo4fpjDd4Na9,"Goosebumps - Remix","['0Y5tJX1MQlPlqiwlOH1tJY', '2o08sCWF5yyo2G4DCiT7T9']",92,2021-01-15
+4u4NyuceXP7Uzh7XFJKCr1,"Hold On","['1uNFoZAHBGtllmzznpCI3s']",92,2021-03-05
+3iw6V4LH7yPj1ESORX9RIN,"Wellerman - Sea Shanty / 220 KID x Billen Ted Remix","['1PKErrAhYFdfrDymGHRQRo', '4Euia7UzdRshy1DJOSMTcs', '5PoZtBo8xZKqPWlZrIDq82']",92,2021-01-21
+4saklk6nie3yiGePpBwUoc,"Dynamite","['3Nrfpe0tUJi4K4DXYWgMUX']",91,2020-11-20
+45bE4HXI0AwGZXfZtMp8JR,"you broke me first","['45dkTj5sMRSjrmBSBeiHym']",91,2020-04-17
+7vrJn5hDSXRmdXoR30KgF1,"BICHOTA","['790FomKkXshlbRYZFtlgla']",91,2020-10-23
+6Im9k8u9iIzKMrmV7BWtlF,"34+35","['66CXWjxzNUsdJxJ2JdwvnR']",91,2020-10-30
+7ytR5pFWmSjzHJIeQkgog4,"ROCKSTAR (feat. Roddy Ricch)","['4r63FhuTkUYltbVAg5TQnk', '757aE44tKEUQEqRuT6GnEB']",91,2020-04-17
+6cx06DFPPHchuUAcTxznu9,"Head & Heart (feat. MNEK)","['6DgP9otnZw5z6daOntINxp', '7uMh23xWiuR7zsNkuNcm2G']",91,2020-07-03
+1tkg4EHVoqnhR6iFEXb60y,"What You Know Bout Love","['0eDvMgVFoNV3TpwtrVCoTj']",91,2020-07-03
+2TksvaRivgAEj780DgRB73,"911","['77ziqFxp5gaInVrF2lj4ht']",91,2021-02-05
+5YaskwnGDZFDRipaqzbwQx,"Your Love (9PM)","['7jZM5w05mGhw6wTB1okhD9', '0u6GtibW46tFX7koQ6uNJZ', '5Wg2b4Mp42gicxEeDNawf7']",91,2021-01-15
+3aQem4jVGdhtg116TmJnHz,"What’s Next","['3TVXtAsR1Inumwj472S9r4']",91,2021-03-05
+1diS6nkxMQc3wwC4G1j0bh,"We're Good","['6M2wZ9GZgrQXHCFfjv46we']",91,2021-02-11
+2QjOHCTQ1Jl3zawyYOpxh6,"Sweater Weather","['77SW9BnxLY8rJ0RciFqkHh']",90,2013-04-19
+7qEHsqek33rTcFNT9PFqLf,"Someone You Loved","['4GNC7GD6oZMSxPGyXy4MNB']",90,2019-05-17
+463CkQjx2Zk1yXoBuierM9,"Levitating (feat. DaBaby)","['6M2wZ9GZgrQXHCFfjv46we', '4r63FhuTkUYltbVAg5TQnk']",90,2020-10-01
+54bFM56PmE4YLRnqpW6Tha,"Therefore I Am","['6qqNVTkY8uBg9cP3Jd7DAH']",90,2020-11-12
+4MzXwWMhyBbmu6hOcLVD49,"DÁKITI","['4q3ewBCX7sLwd24euuV69X', '0EFisYRi20PTADoJrifHrz']",90,2020-11-27
+4Oun2ylbjFKMPTiaSbbCih,"WAP (feat. Megan Thee Stallion)","['4kYSro6naA4h99UJvo89HB', '181bsRPaVXVlUKXrxwZfHK']",90,2020-08-07
+1KixkQVDUHggZMU9dUobgm,"My Head & My Heart","['4npEfmQ6YuiwW1GpUmaq3F']",90,2020-09-18
+079Ey5uxL04AKPQgVQwx5h,"Baila Conmigo (with Rauw Alejandro)","['0C8ZW7ezQVs4URX5aX7Kqx', '1mcTU81TzQhprhouKaTkpq']",90,2021-03-12
+6fRxMU4LWwyaSSowV441IU,"Beautiful Mistakes (feat. Megan Thee Stallion)","['04gDigrS5kc9YWfZHwBETP', '181bsRPaVXVlUKXrxwZfHK']",90,2021-03-03
+61KpQadow081I2AsbeLcsb,"deja vu","['1McMsnEElThX1knmY4oliG']",90,2021-04-01
+31qCy5ZaophVA81wtlwLc4,"Anyone","['1uNFoZAHBGtllmzznpCI3s']",90,2021-01-01
+2etHQJxIbV0soyPhelVs9Y,"Best Friend (feat. Doja Cat)","['6cK3NBO6uP7hh0oyuVELFl', '5cj0lLjcoR7YOSnhnX0Po5']",90,2021-01-07
+0u2P5u6lvoDfwTYjAADbn4,"lovely (with Khalid)","['6qqNVTkY8uBg9cP3Jd7DAH', '6LuN9FCkKOj5PcnpouEgny']",89,2018-04-19
+21jGcNKet2qwijlDFuPiPb,"Circles","['246dkjvS1zLTtiykXe5h60']",89,2019-09-06
+1Xi84slp6FryDSCbzq4UCD,"Arcade","['3klZnJvYGIbWritVwQD434']",89,2019-03-07
+4xqrdfXkTW4T0RauPLv3WA,"Heather","['4Uc8Dsxct0oMqx0P6i60ea']",89,2020-03-20
+5vGLcdRuSbUhD8ScwsGSdA,"Whoopty","['7arQA31aZVS8yS6zUveWzb']",89,2020-08-20
+1zLBsSVxETQOfINOLYvT5m,"GIRL LIKE ME","['1yxSLGMDHlW21z4YXirZDS', '0EmeFodog0BfCgMzAIvKQp']",89,2020-11-02
+0PvFJmanyNQMseIFrU708S,"For The Night (feat. Lil Baby & DaBaby)","['0eDvMgVFoNV3TpwtrVCoTj', '5f7VJjfbwm532GiveGC0ZK', '4r63FhuTkUYltbVAg5TQnk']",89,2020-07-03
+6zFMeegAMYQo0mt8rXtrli,"HOLIDAY","['7jVv8c5Fj3E9VhNjxT4snq']",89,2020-11-13
+7ndTONDDRFGiPnnhOzOXxq,"La Nota","['0tmwSHipWxN12fsoLcFU3B', '1mcTU81TzQhprhouKaTkpq', '7iK8PXO48WeuP03g8YR51W']",89,2020-10-08
+249gnXrbfmV8NG6jTEMSwD,"Life Goes On","['3Nrfpe0tUJi4K4DXYWgMUX']",89,2020-11-20
+5nujrmhLynf4yMoMtj8AQF,"Levitating (feat. DaBaby)","['6M2wZ9GZgrQXHCFfjv46we', '4r63FhuTkUYltbVAg5TQnk']",89,2020-03-27
+7eJMfftS33KTjuF7lTsMCx,"death bed (coffee for your head)","['6bmlMHgSheBauioMgKv2tn', '35l9BRT7MXmM8bv2WDQiyB']",89,2020-02-08
+20McUFi8KCIVdNDLrkTDuZ,"Goosebumps","['2o08sCWF5yyo2G4DCiT7T9']",89,2020-06-12
+43PGPuHIlVOc04jrZVh9L6,"RAPSTAR","['6AgTAQt8XS6jRWi4sX7w49']",89,2021-04-09
+65OVbaJR5O1RmwOQx0875b,"Wants and Needs (feat. Lil Baby)","['3TVXtAsR1Inumwj472S9r4', '5f7VJjfbwm532GiveGC0ZK']",89,2021-03-05
+2MZQAvsA7aZDssppBLRxYp,"Batom de Cereja - Ao Vivo","['41QLxRXlc2NwfJZkHGHKid']",89,2021-01-29
+6gBFPUFcJLzWGx4lenP6h2,"goosebumps","['0Y5tJX1MQlPlqiwlOH1tJY']",88,2016-09-16
+0pqnGHJpmpxLKifKRmU6WP,"Believer","['53XhwfbYqKCa1cC15pYq2q']",88,2017-06-23
+285pBltuF7vW8TeWk8hdRR,"Lucid Dreams","['4MCBfE4596Uoi2O4DtmEMz']",88,2018-12-10
+45S5WTQEGOB1VHr1Q4FuPl,"Golden","['6KImCVD70vtIoJWnq6nGn3']",88,2019-12-13
+24Yi9hE78yPEbZ4kxyoXAI,"Roses - Imanbek Remix","['0H39MdGGX6dbnnQPt6NQkZ', '5rGrDvrLOV2VV8SCFVGWlj']",88,2019-10-09
+2b8fOow8UzyDFAE27YhOZM,"Memories","['04gDigrS5kc9YWfZHwBETP']",88,2019-09-20
+0nbXyq5TXYPCO7pr3N8S4I,"The Box","['757aE44tKEUQEqRuT6GnEB']",88,2019-12-06
+3H7ihDc1dqLriiWXwsc2po,"Breaking Me","['0u6GtibW46tFX7koQ6uNJZ', '5Wg2b4Mp42gicxEeDNawf7']",88,2019-12-19
+2Fxmhks0bxGSBdJ92vM42m,"bad guy","['6qqNVTkY8uBg9cP3Jd7DAH']",88,2019-03-29
+2XU0oxnq2qxCpomAAuJY8K,"Dance Monkey","['2NjfBq1NflQcKSeiDooVjY']",88,2019-10-17
+3jjujdWJ72nww5eGnfs2E7,"Adore You","['6KImCVD70vtIoJWnq6nGn3']",88,2019-12-13
+2mM3gZ0BbPwPPMelbA8vgt,"No Te Enamores - Remix","['7kXCcNRLEnblbTAppPraBp', '329e4yvIujISKGKz1BZZbO', '5hdhHgpxyniooUiQVaPxQ0', '2cPqdH7XMvwaBJEVjheH8g', '6kq4GHwUcUojGIu0ziSNXf']",88,2020-11-20
+5RubKOuDoPn5Kj5TLVxSxY,"TE MUDASTE","['4q3ewBCX7sLwd24euuV69X']",88,2020-11-27
+2SAqBLGA283SUiwJ3xOUVI,"Laugh Now Cry Later (feat. Lil Durk)","['3TVXtAsR1Inumwj472S9r4', '3hcs9uc56yIGFCSy9leWe7']",88,2020-08-14
+35UUpTmrcFXNIVIN26ujXl,"Relación - Remix","['77ziqFxp5gaInVrF2lj4ht', '4VMYDCV2IEDYJArk749S6m', '1vyhD5VmyZ7KMfW5gqLgo5', '7ltDVBr6mKbRvohxheJ9h1', '329e4yvIujISKGKz1BZZbO']",88,2020-09-04
+0E4Y1XIbs8GrAT1YqVy6dq,"Afterglow","['6eUKZXaKkcviH0Ku9w2n3V']",88,2020-12-21
+1VLtjHwRWOVJiE5Py7JxoQ,"Martin & Gina","['6AgTAQt8XS6jRWi4sX7w49']",88,2020-05-15
+3UHPGOkUcE4hE7sqBF4Snt,"Film out","['3Nrfpe0tUJi4K4DXYWgMUX']",88,2021-04-01
+1nahzW3kfMuwReTka28tH5,"Hold On","['1uNFoZAHBGtllmzznpCI3s']",88,2021-03-19
+2Lhdl74nwwVGOE2Gv35QuK,"Cupid's Chokehold / Breakfast in America","['4IJczjB0fJ04gs4uvP0Fli']",87,2005-02-22
+3U4isOIWM3VvDubwSI3y7a,"All of Me","['5y2Xq6xcjJb2jVM54GHK3t']",87,2013-08-30
+5FVd6KXrgO9B3JPmC8OPst,"Do I Wanna Know?","['7Ln80lUS6He07XvHI8qqHH']",87,2013-09-09
+7fBv7CLKzipRk6EC6TWHOB,"The Hills","['1Xyo4u8uXC1ZmMpatF05PJ']",87,2015-08-28
+5E30LdtzQTGqRvNd7l6kG5,"Daddy Issues","['77SW9BnxLY8rJ0RciFqkHh']",87,2015-10-30
+55Am8neGJkdj2ADaM3aw5H,"Train Wreck","['4IWBUUAFIplrNtaOHcJPRM']",87,2016-10-28
+5uCax9HTNlzGybIStD3vDh,"Say You Won't Let Go","['4IWBUUAFIplrNtaOHcJPRM']",87,2016-10-28
+7m9OqQk4RVRkw9JJdeAw96,"Jocelyn Flores","['15UsOTVnJzReFVN1VCnxy4']",87,2017-08-25
+0tgVpDi06FyKpA1z0VMD4v,"Perfect","['6eUKZXaKkcviH0Ku9w2n3V']",87,2017-03-03
+7qiZfU4dY1lWllzX7mPBI3,"Shape of You","['6eUKZXaKkcviH0Ku9w2n3V']",87,2017-03-03
+4VXIryQMWpIdGgYR4TrjT1,"All Girls Are The Same","['4MCBfE4596Uoi2O4DtmEMz']",87,2018-12-10
+3ee8Jmje8o58CHK66QrVC2,"SAD!","['15UsOTVnJzReFVN1VCnxy4']",87,2018-03-16
+2xLMifQCjDGFmkHkpNLD9h,"SICKO MODE","['0Y5tJX1MQlPlqiwlOH1tJY']",87,2018-08-03
+3eekarcy7kvN4yt5ZFzltW,"HIGHEST IN THE ROOM","['0Y5tJX1MQlPlqiwlOH1tJY']",87,2019-10-04
+1ZMiCix7XSAbfAJlEZWMCp,"Falling","['6KImCVD70vtIoJWnq6nGn3']",87,2019-12-13
+6Hj9jySrnFppAI0sEMCZpJ,"Robbery","['4MCBfE4596Uoi2O4DtmEMz']",87,2019-03-08
+2tnVG71enUj33Ic2nFN6kZ,"Ride It","['4ofCBoyEiGSePFAG500xev']",87,2019-07-26
+6ocbgoVGwYJhOv1GgI9NsF,"7 rings","['66CXWjxzNUsdJxJ2JdwvnR']",87,2019-02-08
+3ZCTVFBt2Brf31RLEnCkWJ,"everything i wanted","['6qqNVTkY8uBg9cP3Jd7DAH']",87,2019-11-13
+5u1n1kITHCxxp8twBcZxWy,"Holy (feat. Chance The Rapper)","['1uNFoZAHBGtllmzznpCI3s', '1anyVhU62p31KFi8MEzkbf']",87,2020-09-18
+0EhpEsp4L0oRGM0vmeaN5e,"UN DIA (ONE DAY) (Feat. Tainy)","['1vyhD5VmyZ7KMfW5gqLgo5', '0GM7qgcRCORpGnfcN2tCiB', '6M2wZ9GZgrQXHCFfjv46we', '4q3ewBCX7sLwd24euuV69X']",87,2020-07-24
+21N4Buj4xsyLb218lYle61,"Chica Ideal","['07YUOmWljBTXwIseAUd9TW', '0BqURncJM5B1BBu7UM51eq']",87,2020-10-16
+2ePtv8MlBO9nuuXABqAfEX,"SugarCrash!","['4b19vuzlDcNdU4quI7L6sW']",87,2020-08-25
+02kDW379Yfd5PzW5A6vuGt,"Lemonade","['6MPCFvOQv5cIGfw3jODMF0', '2hlmm7s2ICUX0LVIhVFlZQ', '4Gso3d4CscCijv0lmajZWs', '7rkW85dBwwrJtlHRDkJDAC']",87,2020-08-14
+2U5WueTLIK5WJLD7mvDODv,"Wishing Well","['4MCBfE4596Uoi2O4DtmEMz']",87,2020-07-10
+2bgcUk2A3jjKbCJ7KPquTi,"Mi Niña","['3E6xrwgnVfYCrCs0ePERDz', '7iK8PXO48WeuP03g8YR51W', '0n6sKrG0xKAf8xmdqeNGke']",87,2020-09-23
+4y4spB9m0Q6026KfkAvy9Q,"Lonely (with benny blanco)","['1uNFoZAHBGtllmzznpCI3s', '5CiGnKThu5ctn9pBxv7DGa']",87,2020-10-16
+1xQ6trAsedVPCdbtDAmk0c,"Savage Love (Laxed - Siren Beat)","['56mfhUDKa1vec6rSLZV5Eg', '07YZf4WDAMNwqr4jfgOZ8y']",87,2020-06-11
+7r9ZhitdQBONTFOiJW5mr8,"Reloj","['1mcTU81TzQhprhouKaTkpq', '2R21vXR83lH98kGeO99Y66']",87,2020-10-22
+2r6OAV3WsYtXuXjvJ1lIDi,"Hello (feat. A Boogie Wit da Hoodie)","['0eDvMgVFoNV3TpwtrVCoTj', '31W5EY0aAly4Qieq6OFu6I']",87,2020-07-20
+1ere9b9vDw2N3m9d4uiXxa,"Facas - Ao Vivo","['3k68C6mNMJL6OaAdWeW2ZF', '5JXhkyafynxCvxtov7C1PV']",87,2020-10-15
+6AGOKlMZWLCaEJGnaROtF9,"Put Your Records On","['7MPGCB854Qo4alYMOPkBka']",87,2020-04-24
+59qrUpoplZxbIZxk6X0Bm3,"Take You Dancing","['07YZf4WDAMNwqr4jfgOZ8y']",87,2020-07-22
+5JqZ3oqF00jkT81foAFvqg,"Prisoner (feat. Dua Lipa)","['5YGY8feqx7naU7z4HrwZM6', '6M2wZ9GZgrQXHCFfjv46we']",87,2020-11-20
+5y7DaS3jAc9eZzcSOoUIwU,"Una Locura","['1i8SpTcr7yvPOmcqrbnVXY', '1vyhD5VmyZ7KMfW5gqLgo5', '37230BxxYs9ksS7OkZw3IU']",87,2020-09-04
+0siYMEsGrzzzlWLXK5zJfS,"BED","['6DgP9otnZw5z6daOntINxp', '5KKpBU5eC2tJDzf0wmlRp2', '1Cs0zKBU1kc0i8ypK3B9ai']",87,2021-02-26
+58pgi1RpcU2fVJsxhm7BIr,"Tapão Na Raba","['0NiaKn55OzJswiYevvlKfz']",87,2021-01-22
+7FdUvDkaE24o3FPIWTvzv2,"Follow You","['53XhwfbYqKCa1cC15pYq2q']",87,2021-03-12
+0ofHAoxe9vBkTCp2UQIavz,"Dreams - 2004 Remaster","['08GQAI4eElDnROBrJRGE0X']",86,1977-02-04
+2WfaOiMkCvy7F5fcp2zZ8L,"Take on Me","['2jzc5TC5TVFLXQlBNiIUzE']",86,1985-06-01
+3AJwUDP919kvQ9QcozQPxg,"Yellow","['4gzpq5DPGxSnKTe4SA8HAU']",86,2000-07-10
+2kS6td1yvmpNgZTt1q5pQq,"Hayloft","['0e86yPdC41PGRkLp2Q1Bph']",86,2008-09-23
+086myS9r57YsLbJpU0TgK9,"Why'd You Only Call Me When You're High?","['7Ln80lUS6He07XvHI8qqHH']",86,2013-09-09
+0ct6r3EGTcMLPtrXHDvVjc,"The Nights","['1vCWHaC5f2uS3yhpwWbIA6']",86,2014-01-01
+6K4t31amVTZDgR3sKmwUJJ,"The Less I Know The Better","['5INjqkS1o8h1imAzPqGZBb']",86,2015-07-17
+3CRDbSIZ4r5MsZ0YwxuEkn,"Stressed Out","['3YQKmKGau1PzlVlkL1iodx']",86,2015-05-15
+2GiJYvgVaD2HtM8GqD9EgQ,"Electric Love","['1KP6TWI40m7p3QBTU6u2xo']",86,2015-10-16
+7BKLCZ1jbUBVqRi2FVlTVw,"Closer","['69GGBxA162lTqCwzJG5jLp', '26VFTg2z8YR0cCuwLzESi2']",86,2016-07-29
+7MXVkk9YMctZqd1Srtv4MB,"Starboy","['1Xyo4u8uXC1ZmMpatF05PJ', '4tZwfgrHOc3mvqYlEYSvVi']",86,2016-11-25
+7MiZjKawmXTsTNePyTfPyL,"Devil Eyes","['4dM6NDYSfLcspt8GLoT5aE']",86,2016-02-05
+2bRKxuH1o7pTmb1y4GfdEc,"Clean White Noise - Loopable with no fade","['2c5WYCqQGs0UttiLCzVfOe', '4W12lEvVl5wectUtRNrvDh', '4ZfEELHfyKd4odAb6YfDFw']",86,2017-01-08
+2ZRo7axmMPeSVUvDbGkJah,"Hope","['15UsOTVnJzReFVN1VCnxy4']",86,2018-03-16
+7uoFMmxln0GPXQ0AcCBXRq,"Snowman","['5WUlDfRSoLAfcVSX1WnrxN']",86,2018-11-01
+2VxeLyX666F8uXCJ0dZF8B,"Shallow","['1HY2Jd0NmPuamShAr6KMms', '4VIvfOurcf0vuLRxLkGnIG']",86,2018-10-05
+0e7ipj03S05BNilyu5bRzt,"rockstar (feat. 21 Savage)","['246dkjvS1zLTtiykXe5h60', '1URnnhqYAYcrqrcwql10ft']",86,2018-04-27
+2kJwzbxV2ppxnQoYw4GLBZ,"If the World Was Ending - feat. Julia Michaels","['66W9LaWS0DPdL7Sz8iYGYe', '0ZED1XzwlLHW4ZaG4lOT6m']",86,2019-10-17
+43zdsphuZLzwA9k4DJhU0I,"when the party's over","['6qqNVTkY8uBg9cP3Jd7DAH']",86,2019-03-29
+79s5XnCN4TJKTVMSmOx8Ep,"Dior","['0eDvMgVFoNV3TpwtrVCoTj']",86,2019-07-26
+30bqVoKjX479ab90a8Pafp,"Star Shopping","['2kCcBybjl3SAtIcwdWpUe3']",86,2019-04-19
+6WrI0LAC5M1Rw2MnX2ZvEg,"Don't Start Now","['6M2wZ9GZgrQXHCFfjv46we']",86,2019-10-31
+696DnlkuDOXcMAnKlTgXXK,"ROXANNE","['0vRvGUQVUjytro0xpb26bs']",86,2019-10-10
+2gMXnyrvIjhVBUZwvLZDMP,"Before You Go","['4GNC7GD6oZMSxPGyXy4MNB']",86,2019-11-22
+4HBZA5flZLE435QTztThqH,"Stuck with U (with Justin Bieber)","['66CXWjxzNUsdJxJ2JdwvnR', '1uNFoZAHBGtllmzznpCI3s']",86,2020-05-08
+6EDO9iiTtwNv6waLwa1UUq,"POPSTAR (feat. Drake)","['0QHgL1lAIqAw0HtD7YldmP', '3TVXtAsR1Inumwj472S9r4']",86,2020-07-17
+7kDUspsoYfLkWnZR7qwHZl,"my ex's best friend (with blackbear)","['6TIYQ3jFPwQSRmorSezPxX', '2cFrymmkijnjDg9SS92EPM']",86,2020-09-25
+15OjBeqNX3bShsGYQbteRv,"La Tóxica","['329e4yvIujISKGKz1BZZbO']",86,2020-07-24
+0ri0Han4IRJhzvERHOZTMr,"At My Worst","['1W7FNibLa0O0b572tB2w7t']",86,2020-07-17
+7szuecWAPwGoV1e5vGu8tl,"In Your Eyes","['1Xyo4u8uXC1ZmMpatF05PJ']",86,2020-03-20
+27X3qzgB0Show6qfw5wNOK,"Esquema Preferido","['0RPzmE1iY76tx1eBBXFyYn', '48HORs6F9P7IgdyKrk4MZC']",86,2020-11-26
+7FIWs0pqAYbP91WWM0vlTQ,"Godzilla (feat. Juice WRLD)","['7dGJo4pcD2V6oG8kP0tJRR', '4MCBfE4596Uoi2O4DtmEMz']",86,2020-01-17
+4Lt6GXGzYsa1tgkv3nGSTm,"Love Not War (The Tampa Beat)","['07YZf4WDAMNwqr4jfgOZ8y', '1XynjLPAyPi8SZAx8LHN0Z']",86,2020-11-20
+68mrW6gXHgupgSiDHgaDi5,"Polvo","['1SupJlEpv7RS2tPNRaHViT', '7iK8PXO48WeuP03g8YR51W']",86,2020-11-20
+2mt1IqcFyY1zmYZT8Q3xw9,"hot girl bummer","['2cFrymmkijnjDg9SS92EPM']",86,2020-08-21
+2nZj5YymF54qhAu7RneVP6,"Coração Na Cama","['1LIuN7ov1IBQDdLsU83ojl']",86,2020-11-13
+4HYDUMY0xSpeBr0AMY9cUz,"La Curiosidad","['2cPqdH7XMvwaBJEVjheH8g', '2ydZrTy8U3kOMOzx20s3dg', '7iK8PXO48WeuP03g8YR51W']",86,2020-06-12
+2Y0wPrPQBrGhoLn14xRYCG,"Come & Go (with Marshmello)","['4MCBfE4596Uoi2O4DtmEMz', '64KEffDW9EtZ1y2vBYgq8T']",86,2020-07-10
+7hxHWCCAIIxFLCzvDgnQHX,"Lemonade (feat. Gunna, Don Toliver & NAV)","['6MPCFvOQv5cIGfw3jODMF0', '2hlmm7s2ICUX0LVIhVFlZQ', '4Gso3d4CscCijv0lmajZWs', '7rkW85dBwwrJtlHRDkJDAC']",86,2020-08-28
+4RJz8NfIe09gpKMiRUWKhJ,"Parce (feat. Justin Quiles)","['1r4hJ1h58CWwUQe3MxPuau', '1pQWsZQehhS4wavwh7Fnxd', '14zUHaJZo1mnYtn6IBRaRP']",86,2020-08-21
+4C6BlqqMwjFzOXzqpTeoWR,"Ponte Pa' Mi","['14zUHaJZo1mnYtn6IBRaRP']",86,2020-11-20
+6KfoDhO4XUWSbnyKjNp9c4,"Maniac","['4Uc8Dsxct0oMqx0P6i60ea']",86,2020-03-20
+5rZlwNFl01HqLWBQGryKSm,"Mood Swings (feat. Lil Tjay)","['0eDvMgVFoNV3TpwtrVCoTj', '6jGMq4yGs7aQzuGsMgVgZR']",86,2020-07-03
+5Km4r87BoX2qqtoprYS1gh,"LOCATION","['790FomKkXshlbRYZFtlgla', '2R21vXR83lH98kGeO99Y66', '1vyhD5VmyZ7KMfW5gqLgo5']",86,2021-02-12
+0VWLId2RwPCno9s1cJm2Vy,"Travesuras - Remix","['5hdhHgpxyniooUiQVaPxQ0', '1fux65HMCBvfJHqlBc4Nno', '1i8SpTcr7yvPOmcqrbnVXY', '1wZtkThiXbVNtj6hee6dz9', '7iK8PXO48WeuP03g8YR51W', '2oT7xd9iTO2ejLsNGIMa5f']",86,2021-03-11
+6Tio0ZoDeSQnI7EBAqWer2,"Cover Me In Sunshine","['1KCSPY1glIKqW2TotWuXOR', '0gAILSEru1PKMwP0tAqNLS']",86,2021-02-12
+2pPO9YecZimmuVQfIzfV6U,"Wasted Love (feat. Lagique)","['4AKwRarlmsUlLjIwt38NLw', '1PbtWtrN7jZpd4toqxrjm2']",86,2021-01-08
+4FRW5Nza1Ym91BGV4nFWXI,"Lemon Pepper Freestyle (feat. Rick Ross)","['3TVXtAsR1Inumwj472S9r4', '1sBkRIssrMs1AbVkOJbc7a']",86,2021-03-05
+1mauYRwbpoGQX6itP2FAJC,"Fan de Tus Fotos","['1SupJlEpv7RS2tPNRaHViT', '5lwmRuXgjX8xIwlnauTZIP']",86,2021-02-08
+7I8L3vYCLThw2FDrE6LuzE,"Además de Mí - Remix","['3Apb2lGmGJaBmr0TTBJvIZ', '4m6ubhNsdwF4psNf3R8kwR', '1bAftSH8umNcGZ0uyV7LMg', '1DxLCyH42yaHKGK3cl5bvG', '1vqR17Iv8VFdzure1TAXEq', '5Y3MV9DZ0d87NnVm56qSY1']",86,2021-03-04
+2dl5K2ScW7jYhAhuem06cm,"PROBLEMA","['4VMYDCV2IEDYJArk749S6m']",86,2021-02-26
+5SFXOMJJ334Wn2PwBHeRZN,"Girls Like Us","['03d2mJXSMtuPI0nIvLnhoS']",86,2021-01-12
+2xgACMNtJ5YktyvOC83SPO,"On The Ground","['3eVa5w3URK5duf6eyVDbu9']",86,2021-03-12
+08mG3Y1vljYA6bvDt4Wqkj,"Back In Black","['711MCceyCBcFnzjGY4Q7Un']",85,1980-07-25
+5ChkMS8OtdzJeqyybCc9R5,"Billie Jean","['3fMbdgg4jU18AjLCKBhRSm']",85,1982-11-30
+1JSTJqkT5qHq8MDJnJbRE1,"Every Breath You Take","['5NGO30tJxFlKixkPSgXcFE']",85,1983-06-17
+4xkOaSrkexMciUUogZKVTS,"'Till I Collapse","['7dGJo4pcD2V6oG8kP0tJRR', '1Oa0bMld0A3u5OTYfMzp5h']",85,2002-05-26
+7lQ8MOhq6IN2w8EYcFNSUk,"Without Me","['7dGJo4pcD2V6oG8kP0tJRR']",85,2002-05-26
+7w87IxuO7BDcJ3YUqCyMTT,"Pumped Up Kicks","['7gP3bB2nilZXLfPHJhMdvc']",85,2011-05-23
+0nJW01T7XtvILxQgC5J7Wh,"When I Was Your Man","['0du5cEVh5yTK9QJze8zA0C']",85,2012-12-07
+3bidbhpOYeV4knp8AIu8Xn,"Can't Hold Us - feat. Ray Dalton","['5BcAKTbp20cv7tC5VqPFoC']",85,2012-10-09
+3w3y8KPTfNeOKPiqUTakBh,"Locked out of Heaven","['0du5cEVh5yTK9QJze8zA0C']",85,2012-12-07
+0nrRP2bk19rLc0orkWPQk2,"Wake Me Up","['1vCWHaC5f2uS3yhpwWbIA6']",85,2013-01-01
+62vpWI1CHwFy7tMIcSStl8,"No Role Modelz","['6l3HvQ5sa6mXTsMTB19rO5']",85,2014-12-09
+1HNkqx9Ahdgi1Ixy2xkKkL,"Photograph","['6eUKZXaKkcviH0Ku9w2n3V']",85,2014-06-21
+3GVkPk8mqxz0itaAriG1L7,"Everybody Dies In Their Nightmares","['15UsOTVnJzReFVN1VCnxy4']",85,2017-08-25
+1zB4vmk8tFRmM9UULNzbLB,"Thunder","['53XhwfbYqKCa1cC15pYq2q']",85,2017-06-23
+0JP9xo3adEtGSdUEISiszL,"Moonlight","['15UsOTVnJzReFVN1VCnxy4']",85,2018-03-16
+2dpaYNEQHiRxtZbfNsse99,"Happier","['64KEffDW9EtZ1y2vBYgq8T', '7EQ0qTo7fWT7DPxmxtSYEc']",85,2018-08-17
+3KkXRkHbMCARz0aVfEt68P,"Sunflower - Spider-Man: Into the Spider-Verse","['246dkjvS1zLTtiykXe5h60', '1zNqQNIdeOUZHb8zbZRFMX']",85,2018-12-14
+0rKtyWc8bvkriBthvHKY8d,"SLOW DANCING IN THE DARK","['3MZsBdqDrRTJihTHQrO6Dq']",85,2018-10-26
+2qxmye6gAegTMjLKEBoR3d,"Let Me Down Slowly","['5IH6FPUwQTxPSXurCrcIov']",85,2018-11-16
+4ZLzoOkj0MPWrTLvooIuaa,"Get You The Moon (feat. Snøw)","['4qIVPF0s71ZYW3qzhu5GkF', '5fSVkkuijRIpxuvSqysYiP']",85,2018-10-08
+4TnjEaWOeW0eKTKIEvJyCa,"Falling","['7uaIm6Pw7xplS8Dy06V6pT']",85,2018-10-05
+3Dv1eDb0MEgF93GpLXlucZ,"Say So","['5cj0lLjcoR7YOSnhnX0Po5']",85,2019-11-07
+4PEfJZpVjdclfzZ9XO8uDw,"Hasta Abajo","['1RBzGO6Nm3uyhUSxP7EDWO', '6w9ToX5slZ4uIdmD17hJ3c', '1Ts9of7VPZElwPQnqnDSfW']",85,2019-10-04
+2wrJq5XKLnmhRXHIAf9xBa,"10,000 Hours (with Justin Bieber)","['7z5WFjZAIYejWy0NI5lv4T', '1uNFoZAHBGtllmzznpCI3s']",85,2019-10-04
+7k4t7uLgtOxPwTpFmtJNTY,"Tusa","['790FomKkXshlbRYZFtlgla', '0hCNtLu0JehylgoiP8L4Gh']",85,2019-11-07
+7B3z0ySL9Rr0XvZEAjWZzM,"Sofia","['3l0CmX0FuQjFxr8SK7Vqag']",85,2019-08-02
+62aP9fBQKYKxi7PDXwcUAS,"ily (i love you baby) (feat. Emilee)","['1lmU3giNF3CSbkVSQmLpHQ', '4ArPQ1Opcksbbf3CPwEjWE']",85,2019-11-26
+7CHi4DtfK4heMlQaudCuHK,"Lose Control","['0xRXCcSX89eobfrshSVdyu', '4EPJlUEBy49EX1wuFOvtjK', '2nm38smINjms1LtczR0Cei']",85,2019-10-11
+57RA3JGafJm5zRtKJiKPIm,"Are You Bored Yet? (feat. Clairo)","['0NIPkIjTV8mB795yEIiPYL', '3l0CmX0FuQjFxr8SK7Vqag']",85,2019-03-22
+6vFsBXYczYsP0H3lgunZOm,"Cloud 9","['2vnB6tuQMaQpORiRdvXF9H']",85,2020-02-14
+7a53HqqArd4b9NF4XAmlbI,"Kings & Queens","['4npEfmQ6YuiwW1GpUmaq3F']",85,2020-09-18
+2Z8yfpFX0ZMavHkcIeHiO1,"Monster (Shawn Mendes & Justin Bieber)","['7n2wHs1TKAczGzO7Dd2rGr', '1uNFoZAHBGtllmzznpCI3s']",85,2020-11-20
+3PfIrDoz19wz7qK7tYeu62,"Don't Start Now","['6M2wZ9GZgrQXHCFfjv46we']",85,2020-03-27
+6qraVL4IJaIj0IuEexYJNa,"Explícito","['7iK8PXO48WeuP03g8YR51W']",85,2020-12-15
+4uoR6qeWeuL4Qeu2qJzkuG,"Hawái","['1r4hJ1h58CWwUQe3MxPuau']",85,2020-07-29
+02MWAaffLxlfxAUY7c5dvx,"Heat Waves","['4yvcSjfu4PC0CYQyLy4wSq']",85,2020-08-06
+7D7EH7MGyNHWSkqrszerI1,"BEBÉ","['28gNT5KBp7IjEOQoevXf9N', '2oQX8QiMXOyuqbcZEFsZfm']",85,2020-11-25
+4Iedi94TIaB2GGb1nMB68v,"On Me","['5f7VJjfbwm532GiveGC0ZK']",85,2020-12-04
+11EnQRgRMJwMAesfkB5pnu,"Se Te Nota (with Guaynaa)","['6i3DxIlAqnDkwELLw4aVrx', '0BqURncJM5B1BBu7UM51eq']",85,2020-09-02
+0A1hoCfMLkiAgvhWkkucJa,"Body","['181bsRPaVXVlUKXrxwZfHK']",85,2020-11-20
+5yY9lUy8nbvjM1Uyo1Uqoc,"Life Is Good (feat. Drake)","['1RyvyyTE3xzB2ZywiAwp0i', '3TVXtAsR1Inumwj472S9r4']",85,2020-01-10
+7JuHVG3qQKQKxC4doneXVW,"Back In Blood (feat. Lil Durk)","['5F1aAS1duwlzExnPs3l2Xe', '3hcs9uc56yIGFCSy9leWe7']",85,2020-11-06
+73nAK3HgQK8dak83Y2WQ8F,"Vida de Rico","['28gNT5KBp7IjEOQoevXf9N']",85,2020-09-21
+3USxtqRwSYz57Ewm6wWRMp,"Heat Waves","['4yvcSjfu4PC0CYQyLy4wSq']",85,2020-08-07
+6Pgmqg15yVexuOgtzuxwoX,"Dancing in My Room","['0bBz5bRBkExaej2HxtVfCw']",85,2020-10-26
+0lx2cLdOt3piJbcaXIV74f,"willow","['06HL4z0CvFAxyc27GXpf02']",85,2020-12-11
+1IIKrJVP1C9N7iPtG6eOsK,"Go Crazy","['7bXgB6jMjp9ATFy66eO08Z', '50co4Is1HCEo8bhOyUWKpn']",85,2020-05-08
+748mdHapucXQri7IAO8yFK,"Kiss Me More (feat. SZA)","['5cj0lLjcoR7YOSnhnX0Po5', '7tYKF4w9nC0nq9CsPZTHyP']",85,2021-04-09
+3J8EOeKLTLXORtWPpOU5bE,"Calling My Phone","['6jGMq4yGs7aQzuGsMgVgZR', '4IVAbR2w4JJNJDDRFP3E83']",85,2021-04-02
+2pn8dNVSpYnAtlKFC8Q0DJ,"On The Ground","['3eVa5w3URK5duf6eyVDbu9']",85,2021-03-12
+1Crj1zkRMpsEjb9NOR6Zof,"L-Gante: Bzrp Music Sessions, Vol.38","['716NhGYqD1jl2wI1Qkgq36', '4YYxffPVDFe9XoqqbRW6Bq']",85,2021-03-10
+3CeCwYWvdfXbZLXFhBrbnf,"Love Story (Taylor’s Version)","['06HL4z0CvFAxyc27GXpf02']",85,2021-02-12
+6F2r4HgpJnvKDmkN6JEN6J,"As I Am (feat. Khalid)","['1uNFoZAHBGtllmzznpCI3s', '6LuN9FCkKOj5PcnpouEgny']",85,2021-03-19
+4jPy3l0RUwlUI9T5XHBW2m,"Mood (feat. iann dior)","['6fWVd57NKTalqvmjRd2t8Z', '6ASri4ePR7RlsvIQgWPJpS']",85,2021-03-26
+11ZulcYY4lowvcQm4oe3VJ,"Slumber Party (feat. Princess Nokia)","['3PyJHH2wyfQK3WZrk9rpmP', '6lay1nwbE6hTx1jivysUAL']",85,2021-01-15
+2Gjt4rUHBUH0rMKpBg0hF4,"Disco Arranhado - Funk Remix","['3fll16LLw6kdDxWzSpJPEQ', '2zWqENF4cnsd1nLmraG9IE']",85,2021-01-22
+73O30uMI7n6DuzBmbtO7kC,"Antes","['2R21vXR83lH98kGeO99Y66', '1i8SpTcr7yvPOmcqrbnVXY']",85,2021-01-22
+1LXb70u8SLsvBAPWHMCTMe,"Machu Picchu","['28gNT5KBp7IjEOQoevXf9N', '52qzWdNUp6ebjcNsvgZSiC']",85,2021-03-01
+2h9TDNEXRhcDIV3fsoEVq9,"What Other People Say","['6L1XC7NrmgWRlwAeLJvVtA', '6S2OmqARrzebs0tKUEyXyp']",85,2021-02-04
+2WnAKZefdRHxtBEkRjFOHC,"Anyone","['1uNFoZAHBGtllmzznpCI3s']",85,2021-03-19
+40riOy7x9W7GXjyGp4pjAv,"Hotel California - 2013 Remaster","['0ECwFtbIWEVNwjlrfc6xoL']",84,1976-12-08
+2zYzyRzz6pRmhPzyfMEC8s,"Highway to Hell","['711MCceyCBcFnzjGY4Q7Un']",84,1979-07-27
+2374M0fQpWi3dLnB54qaLX,"Africa","['0PFtn5NtBbbUNbU9EAmIWF']",84,1982-04-08
+4RvWPyQ5RL0ao9LPZeSouE,"Everybody Wants To Rule The World","['4bthk9UfsYUYdcFyqxmSUU']",84,1985-02-25
+37ZJ0p5Jm13JPevGcx4SkF,"Livin' On A Prayer","['58lV9VcRSjABbAbfWS6skp']",84,1986-08-16
+60a0Rd6pjrkxjPbaKzXjfq,"In the End","['6XyY86QOPPrYVGvF9ch6wz']",84,2000-10-24
+3yfqSUWxFvZELEM4PmlwIR,"The Real Slim Shady","['7dGJo4pcD2V6oG8kP0tJRR']",84,2000-05-23
+75JFxkI2RXiU7L9VXzMkle,"The Scientist","['4gzpq5DPGxSnKTe4SA8HAU']",84,2002-08-08
+3dPQuX8Gs42Y7b454ybpMR,"Seven Nation Army","['4F84IBURUo98rz4r61KF70']",84,2003-04-01
+3ZFTkvIE7kyPt6Nu3PEa7V,"Hips Don't Lie (feat. Wyclef Jean)","['0EmeFodog0BfCgMzAIvKQp', '7aBzpmFXB4WWpPl2F7RjBe']",84,2005-11-28
+0zMAvsQmaQ4DGsmXtKixpn,"Burning Pile","['0e86yPdC41PGRkLp2Q1Bph']",84,2008-09-23
+4HlFJV71xXKIGcU3kRyttv,"Hey, Soul Sister","['3FUY2gzHeIiaesXtOAdB7A']",84,2010-12-01
+4cluDES4hQEUhmXj6TXkSo,"What Makes You Beautiful","['4AK6F7OLvEQ5QYCBNiQWHq']",84,2012-05-25
+4nVBt6MZDDP6tRVdQTgxJg,"Story of My Life","['4AK6F7OLvEQ5QYCBNiQWHq']",84,2013-11-25
+0NlGoUyOJSuSHmngoibVAs,"All I Want","['4BxCuXFJrSWGi1KHcVqaU4']",84,2013-06-17
+2tpWsVSb9UEmDRxAl1zhX1,"Counting Stars","['5Pwc4xIPtQLFEnJriah9YJ']",84,2013-01-01
+3dYD57lRAUcMHufyqn9GcI,"Take Me To Church","['2FXC3k01G6Gw61bmprjgqS']",84,2014-07-20
+34gCuhDGsG4bRPIf9bb02f,"Thinking out Loud","['6eUKZXaKkcviH0Ku9w2n3V']",84,2014-06-21
+4DpNNXFMMxQEKl7r0ykkWA,"Play Date","['63yrD80RY3RNEM2YDpUpO8']",84,2015-08-14
+50kpGaPAhYJ3sGmk6vplg0,"Love Yourself","['1uNFoZAHBGtllmzznpCI3s']",84,2015-11-13
+0KKkJNfGyhkQ5aFogxQAPU,"That's What I Like","['0du5cEVh5yTK9QJze8zA0C']",84,2016-11-17
+1v1oIWf2Xgh54kIWuKsDf6,"Runaway","['1WgXqy2Dd70QQOU7Ay074N']",84,2016-03-11
+5NvOZCjZaGGGL597exlQWv,"Line Without a Hook","['0ZUvK7zGdXLd78mQr3t1Tw']",84,2016-04-08
+0wXuerDYiBnERgIpbb3JBR,"Redbone","['73sIBHcqh3Z3NyqHKZ7FOL']",84,2016-12-02
+3dhjNA0jGA8vHBQ1VdD6vV,"I Feel It Coming","['1Xyo4u8uXC1ZmMpatF05PJ', '4tZwfgrHOc3mvqYlEYSvVi']",84,2016-11-25
+7GX5flRQZVHRAGd6B4TmDO,"XO Tour Llif3","['4O15NlyKLIASxsJ0PrXPfz']",84,2017-08-25
+6RUKPb4LETWmmr3iAEQktW,"Something Just Like This","['69GGBxA162lTqCwzJG5jLp', '4gzpq5DPGxSnKTe4SA8HAU']",84,2017-04-07
+7AQim7LbvFVZJE3O8TYgf2,"Fuck Love (feat. Trippie Redd)","['15UsOTVnJzReFVN1VCnxy4', '6Xgp2XMz1fhVYe7i6yNAax']",84,2017-08-25
+5Ohxk2dO5COHF1krpoPigN,"Sign of the Times","['6KImCVD70vtIoJWnq6nGn3']",84,2017-05-12
+2P91MQbaiQOfbiz9VqhqKQ,"I Like Me Better","['5JZ7CnR6gTvEMKX4g70Amv']",84,2018-05-31
+7AFASza1mXqntmGtbxXprO,"changes","['15UsOTVnJzReFVN1VCnxy4']",84,2018-03-16
+6DCZcSspjsKoFjzjrWoCdn,"God's Plan","['3TVXtAsR1Inumwj472S9r4']",84,2018-06-29
+7dt6x5M1jzdTEt8oCbisTK,"Better Now","['246dkjvS1zLTtiykXe5h60']",84,2018-04-27
+2BgEsaKNfHUdlh97KmvFyo,"2002","['1zNqDE7qDGCsyzJwohVaoX']",84,2018-04-27
+1rqqCSm0Qe4I9rUvWncaom,"High Hopes","['20JZFwl6HVl6yg8a4H3ZqK']",84,2018-06-22
+3e9HZxeyfWwjeyPAMmWSSQ,"thank u, next","['66CXWjxzNUsdJxJ2JdwvnR']",84,2019-02-08
+0RLLvYBopDwooCyvnTwgYu,"F.N","['6jGMq4yGs7aQzuGsMgVgZR']",84,2019-10-11
+5DqdesEfbRyOlSS3Tf6c29,"It's You","['4rTv3Ejc7hKMtmoBOK1B4T']",84,2019-11-08
+3H3r2nKWa3Yk5gt8xgmsEt,"This City","['6L1XC7NrmgWRlwAeLJvVtA']",84,2019-12-11
+0fea68AdmYNygeTGI4RC18,"LA CANCIÓN","['1vyhD5VmyZ7KMfW5gqLgo5', '4q3ewBCX7sLwd24euuV69X']",84,2019-06-28
+0TK2YIli7K1leLovkQiNik,"Señorita","['7n2wHs1TKAczGzO7Dd2rGr', '4nDoRrQiYLoBzwC5BhVJzF']",84,2019-06-21
+22vgEDb5hykfaTwLuskFGD,"Sucker","['7gOdHgIoIKoe4i9Tta6qdD']",84,2019-06-07
+6gi6y1xwmVszDWkUqab1qw,"OUT WEST (feat. Young Thug)","['7A8S43ryYdbWpJKeHRZRcq', '0Y5tJX1MQlPlqiwlOH1tJY', '50co4Is1HCEo8bhOyUWKpn']",84,2019-12-27
+5KawlOMHjWeUjQtnuRs22c,"Boy With Luv (feat. Halsey)","['3Nrfpe0tUJi4K4DXYWgMUX', '26VFTg2z8YR0cCuwLzESi2']",84,2019-04-12
+7F1CiKqrY44kh5cDqwHOnx,"Love Is Gone - Acoustic","['20DZAfCuP1TKZl5KcY7z3Q', '6d0ZjIp5L7Ygy2l02HskRX']",84,2019-11-13
+1Cv1YLb4q0RzL6pybtaMLo,"Sunday Best","['4ETSs924pXMzjIeD6E9b4u']",84,2019-01-06
+5IUtvfNvOyVYZUa6AJFrnP,"Spicy (feat. Post Malone)","['7c0XG5cIJTrrAgEC3ULPiq', '246dkjvS1zLTtiykXe5h60']",84,2020-10-23
+2MbdDtCv5LUVjYy9RuGTgC,"WHATS POPPIN (feat. DaBaby, Tory Lanez & Lil Wayne) - Remix","['2LIk90788K0zvyj2JJVwkJ', '2jku7tDXc6XoB6MO2hFuqg', '4r63FhuTkUYltbVAg5TQnk', '55Aa2cqylxrFIXC767Z865']",84,2020-06-24
+5m5aY6S9ttfIG157xli2Rs,"Alô Ambev (Segue Sua Vida) - Ao Vivo","['487N2T9nIPEHrlTZLL3SQs']",84,2020-03-26
+3Z8FwOEN59mRMxDCtb8N0A,"Be Kind (with Halsey)","['64KEffDW9EtZ1y2vBYgq8T', '26VFTg2z8YR0cCuwLzESi2']",84,2020-05-01
+1yoMvmasuxZfqHEipJhRbp,"Hawái","['1r4hJ1h58CWwUQe3MxPuau']",84,2020-08-21
+3GtnId3Cm1Xa6joCj08nzW,"Jeans","['14zUHaJZo1mnYtn6IBRaRP']",84,2020-08-14
+6J2LdBN97cDWn0MLxYh9HB,"July","['55fhWPvDiMpLnE4ZzNXZyW']",84,2020-05-15
+7GLWWrk1YlkPYqJK3ynIA0,"Lance Individual","['1elUiq4X7pxej6FRlrEzjM']",84,2020-11-13
+78qd8dvwea0Gosb6Fe6j3k,"Boss Bitch","['5cj0lLjcoR7YOSnhnX0Po5']",84,2020-01-23
+1nYzjrdVQ8RpF93M0jPFW7,"Remember That Night?","['7Lk9V7E1u5gqSHmtcKlOqH']",84,2020-11-06
+69Y5IZuBvGyzySFt5x7kCq,"Más De La Una","['4bw2Am3p9ji3mYsXNXtQcd', '1r4hJ1h58CWwUQe3MxPuau']",84,2020-12-03
+26w9NTiE9NGjW1ZvIOd1So,"BOOKER T","['4q3ewBCX7sLwd24euuV69X']",84,2020-11-27
+39Yp9wwQiSRIDOvrVg7mbk,"THE SCOTTS","['2PaZWGu5T5nHjY2xxAkFsT', '0Y5tJX1MQlPlqiwlOH1tJY', '0fA0VVWsXO9YnASrzqfmYu']",84,2020-04-24
+4l0Mvzj72xxOpRrp6h8nHi,"Lose You To Love Me","['0C8ZW7ezQVs4URX5aX7Kqx']",84,2020-01-10
+5cpJFiNwYyWwFLH0V6B3N8,"Del Mar","['1i8SpTcr7yvPOmcqrbnVXY', '5cj0lLjcoR7YOSnhnX0Po5', '5WUlDfRSoLAfcVSX1WnrxN']",84,2020-09-04
+527k23H0A4Q0UJN3vGs0Da,"After Party","['4Gso3d4CscCijv0lmajZWs']",84,2020-03-13
+6fmQjRuo7XvRFCK2qex5hQ,"Mi Cuarto","['7f02bxFbZIOVdSbYRNYvLT']",84,2020-04-03
+017PF4Q3l4DBUiWoXk4OWT,"Break My Heart","['6M2wZ9GZgrQXHCFfjv46we']",84,2020-03-27
+7DnAm9FOTWE3cUvso43HhI,"Sweet but Psycho","['4npEfmQ6YuiwW1GpUmaq3F']",84,2020-09-18
+3JKgcAa7r07ocVWcV8bS0H,"21","['6AgTAQt8XS6jRWi4sX7w49']",84,2020-05-15
+5ri4zqtWhG07hIuNNDWP76,"Fly Away","['2NjfBq1NflQcKSeiDooVjY']",84,2020-11-13
+35RJhm1pEovTBwnNR0zWad,"GREECE (feat. Drake)","['0QHgL1lAIqAw0HtD7YldmP', '3TVXtAsR1Inumwj472S9r4']",84,2020-07-16
+70uX4beGHc1nQikXveOknp,"Mala Costumbre","['0tmwSHipWxN12fsoLcFU3B', '1wZtkThiXbVNtj6hee6dz9']",84,2021-01-07
+1M4OcYkxAtu3ErzSgDEfoi,"Up","['4kYSro6naA4h99UJvo89HB']",84,2021-02-04
+5pcjystBtalYeqaiXCcgEY,"You All Over Me (feat. Maren Morris) (Taylor’s Version) (From The Vault)","['06HL4z0CvFAxyc27GXpf02', '6WY7D3jk8zTrHtmkqqo5GI']",84,2021-03-26
+137mSruegm1u6x9NvwiagR,"Unstable (feat. The Kid LAROI)","['1uNFoZAHBGtllmzznpCI3s', '2tIP7SsRs7vjIcLrU85W8J']",84,2021-03-19
+4MmMxyew8yq1OEyJOMaX6M,"As I Am (feat. Khalid)","['1uNFoZAHBGtllmzznpCI3s', '6LuN9FCkKOj5PcnpouEgny']",84,2021-03-19
+7BIy3EGQhg98CsRdKYHnJC,"Ropa Cara","['28gNT5KBp7IjEOQoevXf9N']",84,2021-01-18
+54OBgO0Xwu20Jak9TMXbR7,"Wellerman - Sea Shanty","['1PKErrAhYFdfrDymGHRQRo']",84,2021-01-21
+2FSGUA0gFgGeQdprjtGM2M,"EL MAKINON","['790FomKkXshlbRYZFtlgla', '0KKUc4amZyvswV2YL6WTar']",84,2021-03-26
+07AQkmp456NpEnT8HR7WLy,"M4","['68YeXpLt3jB7JHQS5ZjMGo', '5nP8x4uEFjAAmDzwOEc9b8']",84,2021-01-20
+158ukl5rih76dOEsp0I91H,"Paradigmas","['1elUiq4X7pxej6FRlrEzjM']",84,2021-01-22
+41BzKiCrKpUQHS3TP0jmdr,"Agua de Jamaica","['1r4hJ1h58CWwUQe3MxPuau']",84,2021-01-28
+3T03rPwlL8NVk1yIaxeD8U,"Off My Face","['1uNFoZAHBGtllmzznpCI3s']",84,2021-03-19
+5KFHrrBMyGj5MhVbZMM3ts,"Tu Veneno","['1vyhD5VmyZ7KMfW5gqLgo5']",84,2021-03-19
+7pnQ23WgZca9jEfMts9qsR,"Latest Trends","['1WO1hFAkFbeo9tV3uVX7Dy']",84,2021-02-04
+2SUPbyD77tJuOUbqbxct6l,"Quero Ver é Me Esquecer (feat. Jorge) - Ao Vivo","['5Lv2GUVwqmQBPwrTrxucE5', '6gLW5LlLEXdtWaS0EWfzaJ']",84,2021-02-19
+43CIWpJaJHRcI4mUSjqgc2,"Bad Boy (with Young Thug)","['4MCBfE4596Uoi2O4DtmEMz', '50co4Is1HCEo8bhOyUWKpn']",84,2021-01-15
+1t9WgS8FN0534tLBRwbaxO,"Whoopty","['7arQA31aZVS8yS6zUveWzb']",84,2021-02-19
+6toQdWWc4noiOk3Eo5mVDS,"Beat Box 3 (feat. DaBaby)","['3Y2MLcrD3ZQXRXmtn4fZQx', '4r63FhuTkUYltbVAg5TQnk']",84,2021-02-26
+4AAIAVjSyiq1N7SXKkwXZe,"Troca de Calçada","['1yR65psqiazQpeM79CcGh8']",84,2021-01-29
+0qOnSQQF0yzuPWsXrQ9paz,"Stereo Hearts (feat. Adam Levine)","['4IJczjB0fJ04gs4uvP0Fli', '4bYPcJP5jwMhSivRcqie2n']",84,2011-11-11
+6Ozh9Ok6h4Oi1wUSLtBseN,"BOP","['4r63FhuTkUYltbVAg5TQnk']",84,2019-09-27
+6i7zAdNhzUN2k1HcrBxPHG,"Head Shoulders Knees & Toes (feat. Norma Jean Martine)","['4AKwRarlmsUlLjIwt38NLw', '2h6hAChW74hB9HvrNoK1RY', '2fsk4VlJdNF6G8cCMDrrzB']",84,2020-05-08
+0BI0hfbmqybnd3TezrDME3,"Met Him Last Night (feat. Ariana Grande)","['6S2OmqARrzebs0tKUEyXyp', '66CXWjxzNUsdJxJ2JdwvnR']",84,2021-04-02
+6dGnYIeXmHdcikdzNNDMm2,"Here Comes The Sun - Remastered 2009","['3WrFJ7ztbogyGnTHbHJFl2']",83,1969-09-26
+4BP3uh0hFLFRb5cjsgLqDh,"Fortunate Son","['3IYUhFvPQItj6xySrBmZkd']",83,1969-11-02
+7e89621JPkKaeDSTQ3avtg,"Sweet Home Alabama","['4MVyzYMgTwdP7Z49wAZHx0']",83,1974-04-15
+4u7EnebtmKWzUH433cf5Qv,"Bohemian Rhapsody - Remastered 2011","['1dfeR4HaWDbWqFHLkxsg1d']",83,1975-11-21
+5vdp5UmvTsnMEMESIF2Ym7,"Another One Bites The Dust - Remastered 2011","['1dfeR4HaWDbWqFHLkxsg1d']",83,1980-06-27
+1jDJFeK9x3OZboIAHsY9k2,"I'm Still Standing","['3PhoLpVuITZKcymswpck5b']",83,1983-05-30
+1TfqLAPs4K3s2rJMoCokcS,"Sweet Dreams (Are Made of This) - Remastered","['0NKDgy9j66h3DLnN8qu1bB', '5MspMQqdVbdwP6ax3GXqum', '7gcCQIlkkfbul5Mt0jBQkg']",83,1983-01-04
+0GONea6G2XdnHWjNZd6zt3,"Summer Of '69","['3Z02hBLubJxuFJfhacLSDc']",83,1984-11-05
+2tUBqZG2AbRi7Q0BIrVrEj,"I Wanna Dance with Somebody (Who Loves Me)","['6XpaIBNiVzIetEPCWDvAFP']",83,1987-06-02
+57bgtoPSgt236HzfBOd8kj,"Thunderstruck","['711MCceyCBcFnzjGY4Q7Un']",83,1990-09-24
+1f3yAtsJtY87CTmM8RLnxf,"Smells Like Teen Spirit","['6olE6TJLqED3rqDCT0FyPh']",83,1991-09-26
+31AOj9sFz2gM0O3hMARRBx,"Losing My Religion","['4KWTAlx2RvbpseOGMEmROg']",83,1991-03-12
+70LcF31zb1H0PyJoS1Sx1r,"Creep","['4Z8W4fKeB5YxbusRsdQVPb']",83,1993-02-22
+7lQWRAjyhTpCWFC0jmclT4,"Gangsta's Paradise","['3y24n3XhZ96wgwRXjvS17T', '2LhsePRtgCo4THVKULQBL7']",83,1995-11-07
+6I9VzXrHxO9rA9A5euc8Ak,"Toxic","['26dSoYclwsYLMAKD3tpOr4']",83,2003-11-13
+2nLtzopw4rPReszdYBJU6h,"Numb","['6XyY86QOPPrYVGvF9ch6wz']",83,2003-03-24
+5rb9QrpfcKFHM1EUbSIurX,"Yeah! (feat. Lil Jon & Ludacris)","['23zg3TcAtWQy7J6upgbUnj', '7sfl4Xt5KmfyDs2T3SVSMK', '3ipn9JLAPI5GUEo4y4jcoi']",83,2004-03-23
+0d28khcov6AiegSCpG5TuT,"Feel Good Inc.","['3AA28KZvwAUcZuOKwyblJQ']",83,2005-05-23
+7LVHVU3tWfcxj5aiPFEW4Q,"Fix You","['4gzpq5DPGxSnKTe4SA8HAU']",83,2005-06-07
+5fVZC9GiM4e8vu99W0Xf6J,"How to Save a Life","['0zOcE3mg9nS6l3yxt1Y0bK']",83,2005-09-13
+1zzxoZVylsna2BQB65Ppcb,"X Gon' Give It To Ya","['1HwM5zlC5qNWhJtM00yXzG']",83,2007-06-12
+1EzrEOXmMH3G43AXT1y7pA,"I'm Yours","['4phGZZrJZRo4ElhRtViYdl']",83,2008-05-12
+49FYlytm3dAAraYgpoJZux,"Umbrella","['5pKCCKE2ajJHZ9KAiaK11H', '3nFkdlSjzX9mRTtwJOzDYB']",83,2008-06-02
+0SiywuOBRcynK0uKGWdCnn,"Bad Romance","['1HY2Jd0NmPuamShAr6KMms']",83,2009-11-05
+15JINEqzVMv3SvJTAXAKED,"Love The Way You Lie","['7dGJo4pcD2V6oG8kP0tJRR', '5pKCCKE2ajJHZ9KAiaK11H']",83,2010-06-18
+0HPD5WQqrq7wPWR7P7Dw1i,"TiK ToK","['6LqNN22kT3074XbTVUrhzX']",83,2010-01-01
+0GO8y8jQk1PkHzS31d699N,"Tongue Tied","['3kVUvbeRdcrqQ3oHk5hPdx']",83,2011-09-02
+1XGmzt0PVuFgQYYnV2It7A,"Payphone","['04gDigrS5kc9YWfZHwBETP', '137W8MRPWKqSmrBGDBFSop']",83,2012-01-01
+1mKXFLRA179hdOWQBwUk9e,"Just Give Me a Reason (feat. Nate Ruess)","['1KCSPY1glIKqW2TotWuXOR', '1qUjOF5fzrpoNycD36b2jZ']",83,2012-09-18
+3JvKfv6T31zO0ini8iNItO,"Another Love","['2txHhyCwHjUEpJjWrEyqyX']",83,2013-06-24
+5O2P9iiztwhomNh8xkR9lJ,"Night Changes","['4AK6F7OLvEQ5QYCBNiQWHq']",83,2014-11-17
+6YUTL4dYpB9xZO5qExPf05,"Summer","['7CajNmpbOovFoOoasH2HaY']",83,2014-10-31
+5Nm9ERjJZ5oyfXZTECKmRt,"Stay With Me","['2wY79sveU1sp5g7SokKOiI']",83,2014-05-26
+32OlwWuMpZ6b0aN2RZOeMS,"Uptown Funk (feat. Bruno Mars)","['3hv9jJF3adDNsBSIQDqcjp', '0du5cEVh5yTK9QJze8zA0C']",83,2015-01-12
+2JzZzZUQj3Qff7wapcbKjc,"See You Again (feat. Charlie Puth)","['137W8MRPWKqSmrBGDBFSop', '6VuMaDnrHyPL1p4EHjYLi7']",83,2015
+75ZvA4QfFiZvzhj2xkaWAh,"I Fall Apart","['246dkjvS1zLTtiykXe5h60']",83,2016-12-09
+1zi7xx7UVEFkmKfv06H8x0,"One Dance","['3TVXtAsR1Inumwj472S9r4', '3tVQdUvClmAT7URs9V3rsp', '77DAFfvm3O9zT5dIoG0eIO']",83,2016-05-06
+3a1lNhkSLSkpJE4MSHpDu9,"Congratulations","['246dkjvS1zLTtiykXe5h60', '0VRj0yCOv2FXJNP47XQnx5']",83,2016-12-09
+2IVsRhKrx8hlQBOWy4qebo,"Mr Loverman","['0ZUvK7zGdXLd78mQr3t1Tw']",83,2016-04-08
+6i0V12jOa3mr6uu4WYhUBr,"Heathens","['3YQKmKGau1PzlVlkL1iodx']",83,2016-06-16
+0uxSUdBrJy9Un0EYoBowng,"20 Min","['4O15NlyKLIASxsJ0PrXPfz']",83,2017-11-17
+5vjLSffimiIP26QG5WcN2K,"Hold On","['5D3muNJhYYunbRkh3FKgX0']",83,2017-02-03
+52okn5MNA47tk87PeZJLEL,"Let You Down","['6fOMl44jA4Sp5b9PpYCkzz']",83,2017-10-06
+7floNISpH8VF4z4459Qo18,"Look At Me!","['15UsOTVnJzReFVN1VCnxy4']",83,2017-02-20
+7KXjTSCq5nL1LoYtL7XAwS,"HUMBLE.","['2YZyLoL8N0Wb9xBt1NhZWg']",83,2017-04-14
+3QGsuHI8jO1Rx4JWLUh9jd,"Treat You Better","['7n2wHs1TKAczGzO7Dd2rGr']",83,2017-04-20
+7JJmb5XwzOO8jgpou264Ml,"There's Nothing Holdin' Me Back","['7n2wHs1TKAczGzO7Dd2rGr']",83,2017-04-20
+2RttW7RAu5nOAfq6YFvApB,"Happier","['6eUKZXaKkcviH0Ku9w2n3V']",83,2017-03-03
+7sO5G9EABYOXQKNPNiE9NR,"Ric Flair Drip (& Metro Boomin)","['4DdkRBBYG6Yk9Ka8tdJ9BW', '0iEtIxbK0KxaSlF7G42ZOp']",83,2017-10-30
+4UKCKdYiLN6IMA5ZESUTL7,"the remedy for a broken heart (why am I so in love)","['15UsOTVnJzReFVN1VCnxy4']",83,2018-03-16
+69vToJ9BMbbLlFZo7k7A7B,"You Are The Reason","['6ydoSd3N2mwgwBHtF6K7eX']",83,2018-03-09
+09mEdoA6zrmBPgTEN5qXmN,"Call Out My Name","['1Xyo4u8uXC1ZmMpatF05PJ']",83,2018-03-30
+4jvjzW7Hm0yK4LvvE0Paz9,"Falling Down - Bonus Track","['2kCcBybjl3SAtIcwdWpUe3', '15UsOTVnJzReFVN1VCnxy4']",83,2018-11-09
+7eBqSVxrzQZtK2mmgRG6lC,"Murder On My Mind","['1cNDP5yjU5vjeR8qMf4grg']",83,2018-08-03
+7ef4DlsgrMEH11cDZd32M6,"One Kiss (with Dua Lipa)","['7CajNmpbOovFoOoasH2HaY', '6M2wZ9GZgrQXHCFfjv46we']",83,2018-04-06
+1Bhm5HNO1cq8olDbBmokyL,"Copines","['7IlRNXHjoOCgEAWN5qYksg']",83,2018-11-02
+09IStsImFySgyp0pIQdqAc,"The Middle","['2qxJFvFYMEDqd7ui6kSAcq', '6WY7D3jk8zTrHtmkqqo5GI', '4lDBihdpMlOalxy1jkUbPl']",83,2018-01-23
+58q2HKrzhC3ozto2nDdN4z,"I Like It","['4kYSro6naA4h99UJvo89HB', '4q3ewBCX7sLwd24euuV69X', '1vyhD5VmyZ7KMfW5gqLgo5']",83,2018-04-06
+2BOqDYLOJBiMOXShCV1neZ,"Dancing On My Own","['6ydoSd3N2mwgwBHtF6K7eX']",83,2018-03-09
+5p7ujcrUXASCNwRaWNHR1C,"Without Me","['26VFTg2z8YR0cCuwLzESi2']",83,2018-10-04
+1lOe9qE0vR9zwWQAOk6CoO,"Ransom","['4Ga1P7PMIsmqEZqhYZQgDo']",83,2019-08-30
+7xQAfvXzm3AkraOtGPWIZg,"Wow.","['246dkjvS1zLTtiykXe5h60']",83,2019-09-06
+2YpeDb67231RjR0MgVLzsG,"Old Town Road - Remix","['7jVv8c5Fj3E9VhNjxT4snq', '60rpJ9SgigSd16DOAG7GSa']",83,2019-06-21
+3pCt2wRdBDa2kCisIdHWgF,"To the Bone","['7d86ERlvO5UG44j7Va0Y0C']",83,2019-06-14
+4Of7rzpRpV1mWRbhp5rAqG,"Bruises","['4GNC7GD6oZMSxPGyXy4MNB']",83,2019-05-17
+6N22FZs2ZhPBYi3b9XPajV,"Still Don't Know My Name","['2feDdbD5araYcm6JhFHHw7']",83,2019-10-04
+6XHVuErjQ4XNm6nDPVCxVX,"No Guidance (feat. Drake)","['7bXgB6jMjp9ATFy66eO08Z', '3TVXtAsR1Inumwj472S9r4']",83,2019-06-28
+3QzAOrNlsabgbMwlZt7TAY,"Ballin' (with Roddy Ricch)","['0YinUQ50QDB7ZxSCLyQ40k', '757aE44tKEUQEqRuT6GnEB']",83,2019-06-28
+7ce20yLkzuXXLUhzIDoZih,"Before You Go","['4GNC7GD6oZMSxPGyXy4MNB']",83,2019-11-19
+6Gg1gjgKi2AK4e0qzsR7sd,"Bandit (with YoungBoy Never Broke Again)","['4MCBfE4596Uoi2O4DtmEMz', '7wlFDEWiM5OoIAt8RSli8b']",83,2019-10-04
+6uFn47ACjqYkc0jADwEdj1,"Pop Out (feat. Lil Tjay)","['6AgTAQt8XS6jRWi4sX7w49', '6jGMq4yGs7aQzuGsMgVgZR']",83,2019-06-07
+3HVWdVOQ0ZA45FuZGSfvns,"I Don't Care (with Justin Bieber)","['6eUKZXaKkcviH0Ku9w2n3V', '1uNFoZAHBGtllmzznpCI3s']",83,2019-05-10
+2HYvkdq6lpFXkVz9Tfqi8r,"Big Gangsta","['1gPhS1zisyXr5dHTYZyiMe']",83,2019-05-31
+6CcJMwBtXByIz4zQLzFkKc,"i love you","['6qqNVTkY8uBg9cP3Jd7DAH']",83,2019-03-29
+0DmAvNCAK08oCi7miSZUIY,"Lasting Lover","['1IueXOQyABrMOprrzwQJWN', '4IWBUUAFIplrNtaOHcJPRM']",83,2020-09-04
+7LE1K0lZyRFZjSlrnm7lfD,"La Curiosidad (feat. Dj Nelson, Jhay Cortez, Lunay & Kendo Kaponi) - Blue Grand Prix Remix","['2cPqdH7XMvwaBJEVjheH8g', '7iK8PXO48WeuP03g8YR51W', '1mcTU81TzQhprhouKaTkpq', '2ydZrTy8U3kOMOzx20s3dg', '0EFisYRi20PTADoJrifHrz', '47MpMsUfWtgyIIBEFOr4FE', '1WMwuNKzEFtU6pPkdtryYS']",83,2020-12-17
+1xqRKo0SDFDO5Jy8yEVD0X,"ROLLIN N CONTROLLIN FREESTYLE","['22hWz22JAmIhIEp0u1X01L']",83,2020-08-07
+7x4ASXYEKfQBCewcZhK776,"Ay, DiOs Mío!","['790FomKkXshlbRYZFtlgla']",83,2020-07-10
+4wVOKKEHUJxHCFFNUWDn0B,"Chicago Freestyle (feat. Giveon)","['3TVXtAsR1Inumwj472S9r4', '4fxd5Ee7UefO4CUXgwJ7IP']",83,2020-05-01
+1H7KnK26kc1YyellpbINEn,"The Woo (feat. 50 Cent & Roddy Ricch)","['0eDvMgVFoNV3TpwtrVCoTj', '3q7HBObVc0L8jNeTe5Gofh', '757aE44tKEUQEqRuT6GnEB']",83,2020-07-03
+0GzuHFG4Ql6DoyxFRnIk3F,"Hawái - Remix","['1r4hJ1h58CWwUQe3MxPuau', '1Xyo4u8uXC1ZmMpatF05PJ']",83,2020-11-05
+4aarlAfLKVCTxUDNgbwhjH,"Cry Baby (feat. DaBaby)","['181bsRPaVXVlUKXrxwZfHK', '4r63FhuTkUYltbVAg5TQnk']",83,2020-11-20
+6dyUkkcyYuDiHOwIRXYOJm,"3G (feat. Jon Z, Don Chezina, Chencho Corleone & Myke Towers) - Remix","['3E6xrwgnVfYCrCs0ePERDz', '0eHQ9o50hj6ZDNBt6Ys1sD', '329e4yvIujISKGKz1BZZbO', '5bWUlnPx9OYKsLiUJrhCA1', '1ljNTY4uIBecRJmy69UNWt', '37230BxxYs9ksS7OkZw3IU', '7iK8PXO48WeuP03g8YR51W']",83,2020-01-24
+2tFwfmceQa1Y6nRPhYbEtC,"CÓMO SE SIENTE - Remix","['0EFisYRi20PTADoJrifHrz', '4q3ewBCX7sLwd24euuV69X']",83,2020-05-09
+6wJYhPfqk3KGhHRG76WzOh,"Blueberry Faygo","['5zctI4wO9XSKS8XwcnqEHk']",83,2020-02-07
+4R2kfaDFhslZEMJqAFNpdd,"cardigan","['06HL4z0CvFAxyc27GXpf02']",83,2020-07-24
+24ySl2hOPGCDcxBxFIqWBu,"Rain On Me (with Ariana Grande)","['1HY2Jd0NmPuamShAr6KMms', '66CXWjxzNUsdJxJ2JdwvnR']",83,2020-05-22
+5VlTQnZO89Ioku8ssdbqJk,"Dead Man Walking","['3tlXnStJ1fFhdScmQeLpuG']",83,2020-09-18
+0QglpM23kl9ldvVdoYNZwF,"Mds","['1TYJOhNSxMOODWiDVhuyZb', '1mV9h1AwhRXSjBFcYpajgY']",83,2020-05-19
+7bCfHiRcfUjG0YVVNUL7Ve,"E-GIRLS ARE RUINING MY LIFE!","['7yntSJ6uojO3z6GFUVwhAW', '0x7qiZJaal6j8qS7yCydFk']",83,2020-09-25
+1FP9s72rDYty6mfoOEYKnE,"All We Got (feat. KIDDO)","['3t5xRXzsuZmMDkQzgOX35S', '5pXe6yFchq1oyYK3rq2A8i']",83,2020-10-16
+6CDzDgIUqeDY5g8ujExx2f,"Heat Waves","['4yvcSjfu4PC0CYQyLy4wSq']",83,2020-06-29
+1jaTQ3nqY3oAAYyCTbIvnM,"WHATS POPPIN","['2LIk90788K0zvyj2JJVwkJ']",83,2020-03-13
+5SWnsxjhdcEDc7LJjq9UHk,"Runnin","['1URnnhqYAYcrqrcwql10ft', '0iEtIxbK0KxaSlF7G42ZOp']",83,2020-10-02
+78SeXVRJ7KCqVmOwTiFjnI,"Nathy Peluso: Bzrp Music Sessions, Vol. 36","['716NhGYqD1jl2wI1Qkgq36', '3VHAySZQPlfGlNLslzXYpN']",83,2020-11-27
+27u7t9d7ZQoyjsCROHuZJ3,"Tick Tock (feat. 24kGoldn)","['6MDME20pz9RveH9rEXvrOM', '1MIVXf74SZHmTIp4V4paH4', '6fWVd57NKTalqvmjRd2t8Z']",83,2020-08-21
+7AzlLxHn24DxjgQX73F9fU,"No Idea","['4Gso3d4CscCijv0lmajZWs']",83,2020-03-13
+0WlmiIK5qFQ4dAB4mCA4sI,"Amor da Despedida","['5Lv2GUVwqmQBPwrTrxucE5', '1oSgjdbgLYULVmEBojPRw8']",83,2020-11-06
+2DEZmgHKAvm41k4J3R2E9Y,"Safaera","['4q3ewBCX7sLwd24euuV69X', '4IMAo2UQchVFyPH24PAjUs', '12vb80Km0Ew53ABfJOepVz']",83,2020-02-28
+51Of5p3lKZeOg6itfs4og4,"Lovefool","['7ACEUD7UsmmXrnj4OLt8f9']",83,2020-05-08
+2pBEAodCImE4LgbKAG4bfz,"Último Beijo","['5JXhkyafynxCvxtov7C1PV', '1AL2GKpmRrKXkYIcASuRFa']",83,2020-11-27
+4ZRrLHqzhGRXYj2qcB4s5S,"Tattoo - Remix with Camilo","['1mcTU81TzQhprhouKaTkpq', '28gNT5KBp7IjEOQoevXf9N']",83,2020-07-09
+4Ls13Ag4SWnniiX4QLRltL,"Acaso","['3TJGVUkSJzk5ZPixMFczZX']",83,2020-07-28
+0t1kP63rueHleOhQkYSXFY,"Dynamite","['3Nrfpe0tUJi4K4DXYWgMUX']",83,2020-08-28
+1J14CdDAvBTE1AJYUOwl6C,"Arcade","['3klZnJvYGIbWritVwQD434']",83,2020-11-12
+17vGPZ5EsdvtgAOCD4FLWI,"AP - Music from the film Boogie","['0eDvMgVFoNV3TpwtrVCoTj']",83,2021-02-26
+0osvOdeD3YXZiWkT8MKolJ,"Lifestyle (feat. Adam Levine)","['07YZf4WDAMNwqr4jfgOZ8y', '4bYPcJP5jwMhSivRcqie2n', '04gDigrS5kc9YWfZHwBETP']",83,2021-01-21
+6Xgq7MvZiet0hVi3KaDSgJ,"Holy (feat. Chance The Rapper)","['1uNFoZAHBGtllmzznpCI3s', '1anyVhU62p31KFi8MEzkbf']",83,2021-03-19
+6I3mqTwhRpn34SLVafSH7G,"Ghost","['1uNFoZAHBGtllmzznpCI3s']",83,2021-03-19
+59fFsGRwFiuhxKDPc1k6xW,"Opp Stoppa (feat. 21 Savage)","['3gGUMEwIX6XodWsYEvKSal', '1URnnhqYAYcrqrcwql10ft']",83,2021-01-22
+5glMxRMRHGBRj6bydBjoPM,"FALA MAL DE MIM","['5wbf52LA6kcaboHSN6NEF1', '1NNT7LXreEsY7C0bHlCWDp', '1AL2GKpmRrKXkYIcASuRFa']",83,2021-01-28
+0DlHQxrVijRqVUfuS6PKaY,"Deixa de Onda (Porra Nenhuma)","['6xlRSRMLgZbsSNd0BMobwy', '5YwzDz4RJfTiMHS4tdR5Lf', '3CDoRporvSjdzTrm99a3gi']",83,2021-01-21
+2MlOUXmcofMackX3bxfSwi,"Jerusalema (feat. Nomcebo Zikode)","['523y9KSneKh6APd1hKxLuF', '4cfKtwkefMW3aiXtxfw8w6']",83,2020-01-24
+2ayIgfvWo3SfYP2pVOr4pC,"Gone","['3eVa5w3URK5duf6eyVDbu9']",83,2021-03-12
+161DnLWsx1i3u1JT05lzqU,"Talking to the Moon","['0du5cEVh5yTK9QJze8zA0C']",83,2010-10-05
+7BqBn9nzAq8spo5e7cZ0dJ,"Just the Way You Are","['0du5cEVh5yTK9QJze8zA0C']",83,2010-10-05
+7tqhbajSfrz2F7E1Z75ASX,"Ain't No Mountain High Enough","['3koiLjNrgRTNbOwViDipeA', '75jNCko3SnEMI5gwGqrbb8']",82,1967-08-29
+3gdewACMIVMEWVbyb8O9sY,"Rocket Man (I Think It's Going To Be A Long, Long Time)","['3PhoLpVuITZKcymswpck5b']",82,1972-05-19
+2RlgNHKcydI9sayD2Df2xp,"Mr. Blue Sky","['7jefIIksOi1EazgRTfW2Pk']",82,1977
+5e9TFTbltYBg2xThimr0rU,"The Chain - 2004 Remaster","['08GQAI4eElDnROBrJRGE0X']",82,1977-02-04
+5T8EDUDqKcs6OSOwEsfqG7,"Don't Stop Me Now - Remastered 2011","['1dfeR4HaWDbWqFHLkxsg1d']",82,1978-11-10
+4bHsxqR3GMrXTxEPLuK5ue,"Don't Stop Believin'","['0rvjqX7ttXeg3mTy8Xscbt']",82,1981
+1ko2lVN0vKGUl9zrU0qSlT,"Just the Two of Us (feat. Bill Withers)","['05YVYeV4HxYp5rrWalvuE1', '1ThoqLcyIYvZn7iWbj8fsj']",82,1985
+7o2CTH4ctstm8TNelqjb51,"Sweet Child O' Mine","['3qm84nBOXUEQ2vnTfUTTFC']",82,1987-07-21
+48UPSzbZjgc449aqz8bxox,"Californication","['0L8ExT028jH3ddEcZwqJJ5']",82,1999-06-08
+0I3q5fE6wg7LIfHGngUTnV,"Ms. Jackson","['1G9G7WwrXka3Z1r7aIDjI7']",82,2000-10-31
+5W8YXBz9MTIDyrpYaCg2Ky,"Last Resort","['4RddZ3iHvSpGV4dvATac9X']",82,2001-04-25
+003vvx7Niy0yvhvHt4a68B,"Mr. Brightside","['0C0XlULifJtAgn6ZNCW2eu']",82,2004
+4RCWB3V8V0dignt99LZ8vH,"Hey There Delilah","['1g1yxsNVPhMUl9GrMjEb2o']",82,2005-01-01
+2gam98EZKrF9XuOkU13ApN,"Promiscuous","['2jw70GZXlAI8QzWeY2bgRc', '5Y5TRrQiqgUO4S36tzjIRZ']",82,2006-01-01
+4fzsfWzRhPawzqhX8Qt9F3,"Stronger","['5K4W6rqBFWDnAN6FQUkS6x']",82,2007-09-11
+0ntQJM78wzOLVeCUAW7Y45,"Sex on Fire","['2qk9voo8llSGYcZ6xrBzKx']",82,2008-09-23
+4kLLWz7srcuLKA7Et40PQR,"I Gotta Feeling","['1yxSLGMDHlW21z4YXirZDS']",82,2009-01-01
+0I1eFRytp4XRhLCjT6tZm7,"I Can't Handle Change","['7dIpKWlEeAljA20vFJ82RD']",82,2010-03-14
+6jg5SRvdGxvJ0DzNV0UqEK,"Please Don't Go","['2KsP6tYLJlTBvSUxnwlVWa']",82,2010-08-09
+4QNpBfC0zvjKqPJcyqBy9W,"Give Me Everything (feat. Ne-Yo, Afrojack & Nayer)","['0TnOYISbd1XYRBk9myaseg', '21E3waRsmPlU7jZsS13rcj', '4D75GcNG95ebPtNvoNVXhz', '1ruutHJcECI7cos2n5TqpO']",82,2011-06-17
+4Li2WHPkuyCdtmokzW2007,"Ni**as In Paris","['3nFkdlSjzX9mRTtwJOzDYB', '5K4W6rqBFWDnAN6FQUkS6x']",82,2011-08-08
+2iUmqdfGZcHIhS3b9E9EWq,"Everybody Talks","['0RpddSzUHfncUWNJXKOsjy']",82,2012-01-01
+6IbnUaczZBT34DhaD6S18F,"Bubblegum Bitch","['6CwfuxIqcltXDGjfZsMd9A']",82,2012-04-30
+1gihuPhrLraKYrJMAEONyc,"Feel So Close - Radio Edit","['7CajNmpbOovFoOoasH2HaY']",82,2012-10-29
+5qaEfEh1AtSdrdrByCP7qR,"Demons","['53XhwfbYqKCa1cC15pYq2q']",82,2012-09-04
+5XeFesFbtLpXzIVDNQP22n,"I Wanna Be Yours","['7Ln80lUS6He07XvHI8qqHH']",82,2013-09-09
+4rHZZAmHpZrA3iH5zx8frV,"Mirrors","['31TPClRtHm23RisEBtV3X7']",82,2013-03-15
+6Z8R6UsFuGXGtiIxiD8ISb,"Safe And Sound","['4gwpcMTbLWtBUlOijbVpuu']",82,2013
+4kbj5MwxO1bq9wjT5g9HaA,"Shut Up and Dance","['6DIS6PRrLS3wbnZsf7vYic']",82,2014-12-02
+2bJvI42r8EF3wxjOuDav4r,"Time of Our Lives","['0TnOYISbd1XYRBk9myaseg', '21E3waRsmPlU7jZsS13rcj']",82,2014-11-21
+7795WJLVKJoAyVoOtCWqXN,"I'm Not The Only One","['2wY79sveU1sp5g7SokKOiI']",82,2014-05-26
+3DmW6y7wTEYHJZlLo1r6XJ,"Shower","['4obzFoKoKRHIphyHzJ35G3']",82,2014-04-23
+2iuZJX9X9P0GKaE93xcPjk,"Sugar","['04gDigrS5kc9YWfZHwBETP']",82,2014-09-02
+2Z8WuEywRWYTKe1NybPQEW,"Ride","['3YQKmKGau1PzlVlkL1iodx']",82,2015-05-15
+0y60itmpH0aPKsFiGxmtnh,"Wait a Minute!","['3rWZHrfrsPBxVy692yAIxF']",82,2015-01-11
+22VdIZQfgXJea34mQxlt81,"Can't Feel My Face","['1Xyo4u8uXC1ZmMpatF05PJ']",82,2015-08-28
+2K87XMYnUMqLcX3zvtAF4G,"Drag Me Down","['4AK6F7OLvEQ5QYCBNiQWHq']",82,2015-11-13
+04aAxqtGp5pv12UXAg4pkq,"Centuries","['4UXqAaa6dQYAk18Lv7PEgX']",82,2015-01-20
+0lYBSQXN6rCTvUZvg9S0lU,"Let Me Love You","['540vIaP2JwjQb9dm3aArA4', '1uNFoZAHBGtllmzznpCI3s']",82,2016-08-05
+7vGuf3Y35N4wmASOKLUVVU,"Silence","['64KEffDW9EtZ1y2vBYgq8T', '6LuN9FCkKOj5PcnpouEgny']",82,2017-08-11
+1j4kHkkpqZRBwE0A4CN4Yv,"Dusk Till Dawn - Radio Edit","['5ZsFI1h6hIdQRw2ti0hz81', '5WUlDfRSoLAfcVSX1WnrxN']",82,2017-09-07
+7hDVYcQq6MxkdJGweuCtl9,"ocean eyes","['6qqNVTkY8uBg9cP3Jd7DAH']",82,2017-12-22
+0VgkVdmE4gld66l8iyGjgx,"Mask Off","['1RyvyyTE3xzB2ZywiAwp0i']",82,2017-06-30
+7KA4W4McWYRpgf0fWsJZWB,"See You Again (feat. Kali Uchis)","['4V8LLVI7PbaPR0K2TGSxFF', '1U1el3k54VvEUzo3ybLPlM']",82,2017-07-21
+5Z3GHaZ6ec9bsiI5BenrbY,"Young Dumb & Broke","['6LuN9FCkKOj5PcnpouEgny']",82,2017-04-27
+3B54sVLJ402zGa6Xm4YGNe,"Unforgettable","['6vXTefBL93Dj5IqAWq6OTv', '1zNqQNIdeOUZHb8zbZRFMX']",82,2017-07-14
+1mXVgsBdtIVeCLJnSnmtdV,"Too Good At Goodbyes","['2wY79sveU1sp5g7SokKOiI']",82,2017-11-03
+2ekn2ttSfGqwhhate0LSR0,"New Rules","['6M2wZ9GZgrQXHCFfjv46we']",82,2017-06-02
+2iUXsYOEPhVqEBwsqP70rE,"Youngblood","['5Rl15oVamLq7FbSb0NNBNy']",82,2018-06-15
+3EPXxR3ImUwfayaurPi3cm,"Be Alright","['3QSQFmccmX81fWCUSPTS7y']",82,2018-06-29
+78QR3Wp35dqAhFEc2qAGjE,"Drip Too Hard (Lil Baby & Gunna)","['5f7VJjfbwm532GiveGC0ZK', '2hlmm7s2ICUX0LVIhVFlZQ']",82,2018-10-05
+1rfofaqEpACxVEHIZBJe6W,"Havana (feat. Young Thug)","['4nDoRrQiYLoBzwC5BhVJzF', '50co4Is1HCEo8bhOyUWKpn']",82,2018-01-12
+58wyJLv6yH1La9NIZPl3ne,"Can We Kiss Forever?","['4qIVPF0s71ZYW3qzhu5GkF', '7KHA7OOevgTDFhlym0oEyP']",82,2018-08-31
+2RSHsoi04658QL5xgQVov3,"Bad Liar","['53XhwfbYqKCa1cC15pYq2q']",82,2018-11-09
+1BYZxKSf0aTxp8ZFoeyM3d,"we fell in love in october","['3uwAm6vQy7kWPS2bciKWx9']",82,2018-11-21
+5cF0dROlMOK5uNZtivgu50,"Attention","['6VuMaDnrHyPL1p4EHjYLi7']",82,2018-05-11
+2IRZnDFmlqMuOrYOLnZZyc,"Going Bad (feat. Drake)","['20sxb77xiYeusSH8cVdatc', '3TVXtAsR1Inumwj472S9r4']",82,2018-11-30
+0E9ZjEAyAwOXZ7wJC0PD33,"In My Mind","['3v6Ji4uoWtKRkhuDUaxi9n', '1OAjDaKgg00KCUYqDe68un']",82,2018-06-08
+08bNPGLD8AhKpnnERrAc6G,"FRIENDS","['64KEffDW9EtZ1y2vBYgq8T', '1zNqDE7qDGCsyzJwohVaoX']",82,2018-02-09
+2FY7b99s15jUprqC0M5NCT,"Natural","['53XhwfbYqKCa1cC15pYq2q']",82,2018-11-09
+0AUyNF6iFxMNQsNx2nhtrw,"Blood // Water","['4ZgQDCtRqZlhLswVS6MHN4']",82,2018-05-04
+18uwL0vNUanqZH0ro2QcOP,"comethru","['3gIRvgZssIb9aiirIg0nI3']",82,2018-09-28
+2TH65lNHgvLxCKXM3apjxI,"Callaita","['4q3ewBCX7sLwd24euuV69X', '0GM7qgcRCORpGnfcN2tCiB']",82,2019-05-31
+0RiRZpuVRbi7oqRdSMwhQY,"Sunflower - Spider-Man: Into the Spider-Verse","['246dkjvS1zLTtiykXe5h60', '1zNqQNIdeOUZHb8zbZRFMX']",82,2019-09-06
+2JvzF1RMd7lE3KmFlsyZD8,"MIDDLE CHILD","['6l3HvQ5sa6mXTsMTB19rO5']",82,2019-01-23
+4CxFN5zON70B3VOPBYbd6P,"you were good to me","['3gIRvgZssIb9aiirIg0nI3', '5JMLG56F1X5mFmWNmS0iAp']",82,2019-05-03
+5kcvBnt6DPX3AMEsCx1qDh,"Happiest Year","['6QrQ7OrISRYIfS5mtacaw2']",82,2019-07-12
+6v3KW9xbzN5yKLt9YKDYA2,"Señorita","['7n2wHs1TKAczGzO7Dd2rGr', '4nDoRrQiYLoBzwC5BhVJzF']",82,2019-06-19
+1DFD5Fotzgn6yYXkYsKiGs,"Piece Of Your Heart","['0xRXCcSX89eobfrshSVdyu', '2nm38smINjms1LtczR0Cei']",82,2019-02-01
+5WHTFyqSii0lmT9R21abT8,"Don't Call Me Up","['1MIVXf74SZHmTIp4V4paH4']",82,2019-01-18
+64lsIF5pw0sJY0gV5kz0RN,"Can I Call You Tonight?","['6eJa3zG1QZLRB3xgRuyxbm']",82,2019-11-14
+6oJ6le65B3SEqPwMRNXWjY,"Higher Love","['23fqKkggKUBHNkbKtXEls4', '6XpaIBNiVzIetEPCWDvAFP']",82,2019-06-28
+5ry2OE6R2zPQFDO85XkgRb,"Money In The Grave (Drake ft. Rick Ross)","['3TVXtAsR1Inumwj472S9r4', '1sBkRIssrMs1AbVkOJbc7a']",82,2019-06-15
+3lCbsHaN1wCxyDzcNN2x4N,"Si Me Tomo Una Cerveza","['48R2gYdPKtfnfKAzhSVPUx', '7n3wAgh1j3RRbxYzfZTQDF']",82,2020-11-07
+33gwZOGJWEZ7dRWPqPxBEZ,"Wolves (feat. Post Malone)","['0c173mlxpT3dSFRgMO8XPh', '246dkjvS1zLTtiykXe5h60']",82,2020-09-04
+22Sh5dlwbERqJAq1fZk5b2,"De Cora <3","['1mcTU81TzQhprhouKaTkpq', '1vyhD5VmyZ7KMfW5gqLgo5']",82,2020-11-13
+26QApq0cuO9brJigr0C0W4,"HACIENDO QUE ME AMAS","['4q3ewBCX7sLwd24euuV69X']",82,2020-11-27
+5dOxHHMOFAbG3VH23t0xNm,"Righteous","['4MCBfE4596Uoi2O4DtmEMz']",82,2020-07-10
+5f1joOtoMeyppIcJGZQvqJ,"Be Like That - feat. Swae Lee & Khalid","['3oSJ7TBVCWMDMiYjXNiCKE', '1zNqQNIdeOUZHb8zbZRFMX', '6LuN9FCkKOj5PcnpouEgny']",82,2020-07-10
+3UoULw70kMsiVXxW0L3A33,"pov","['66CXWjxzNUsdJxJ2JdwvnR']",82,2020-10-30
+7CFfqRW50ffULvBv7lfIIg,"Violent","['2hiq2iBnUik3mrOfEgRSpB']",82,2020-11-23
+5KCbr5ndeby4y4ggthdiAb,"Wonder","['7n2wHs1TKAczGzO7Dd2rGr']",82,2020-10-02
+792HwhrdO3ErRKL5yRe4Ge,"Invincible","['0eDvMgVFoNV3TpwtrVCoTj']",82,2020-02-07
+6FuGJB290AQMAHTfjOYVaK,"Mood (Remix) feat. Justin Bieber, J Balvin & iann dior","['6fWVd57NKTalqvmjRd2t8Z', '1uNFoZAHBGtllmzznpCI3s', '1vyhD5VmyZ7KMfW5gqLgo5', '6ASri4ePR7RlsvIQgWPJpS']",82,2020-11-06
+0ada5XsQGLPUVbmTCkAP49,"Hate The Other Side (with Marshmello & The Kid Laroi)","['4MCBfE4596Uoi2O4DtmEMz', '64KEffDW9EtZ1y2vBYgq8T', '2tIP7SsRs7vjIcLrU85W8J', '6AgTAQt8XS6jRWi4sX7w49']",82,2020-07-10
+22LAwLoDA5b4AaGSkg6bKW,"Blueberry Faygo","['5zctI4wO9XSKS8XwcnqEHk']",82,2020-02-06
+4loQgPwJHocL3dFwLfjb1J,"Reloj","['1mcTU81TzQhprhouKaTkpq', '2R21vXR83lH98kGeO99Y66']",82,2020-11-13
+3LlT8mKSlzJTxkCkfNxMFr,"Ele É Ele, Eu Sou Eu","['1AL2GKpmRrKXkYIcASuRFa', '5Lv2GUVwqmQBPwrTrxucE5']",82,2020-11-11
+4vLBnQtece15fFhqWxZvJP,"Your New Boyfriend","['2XzXLjXRSeFtsic4ieyLJy']",82,2020-12-11
+127QTOFJsJQp5LbJbu3A1y,"Toosie Slide","['3TVXtAsR1Inumwj472S9r4']",82,2020-04-03
+2Oycxb8QbPkpHTo8ZrmG0B,"Prisoner (feat. Dua Lipa)","['5YGY8feqx7naU7z4HrwZM6', '6M2wZ9GZgrQXHCFfjv46we']",82,2020-11-27
+4SFknyjLcyTLJFPKD2m96o,"How You Like That","['41MozSoPIsD1dJM0CLPjZF']",82,2020-10-02
+41wtwzCZkXwpnakmwJ239F,"Si Veo a Tu Mamá","['4q3ewBCX7sLwd24euuV69X']",82,2020-02-28
+0AUvWawuP0ibk4SQ3sIZjk,"Daisy","['3PyJHH2wyfQK3WZrk9rpmP']",82,2020-07-09
+39LLxExYz6ewLAcYrzQQyP,"Levitating","['6M2wZ9GZgrQXHCFfjv46we']",82,2020-03-27
+6IBcOGPsniK3Pso1wHIhew,"Forever After All","['718COspgdWOnwOFpJHRZHS']",82,2020-10-23
+1uA7fD01YlQr1Rm0oyNB4H,"Pulei na Piscina - Ao Vivo","['6m6e7D2TnV0aYMllFFwMxu']",82,2020-08-21
+0JAZWvvqttGFm4UMDsPQXC,"Despeinada","['1i8SpTcr7yvPOmcqrbnVXY', '28gNT5KBp7IjEOQoevXf9N']",82,2020-09-04
+7EWXP47VlXKO3r7mNxuWHw,"Ele É Ele, Eu Sou Eu","['1AL2GKpmRrKXkYIcASuRFa', '5Lv2GUVwqmQBPwrTrxucE5']",82,2020-11-12
+4lsHZ92XCFOQfzJFBTluk8,"You Got It","['3wVXTWabe3viT0jF7DfjOL']",82,2020-03-27
+69vlMrzHwATKzupwNcUPyK,"La Santa","['4q3ewBCX7sLwd24euuV69X', '4VMYDCV2IEDYJArk749S6m']",82,2020-02-28
+0j1Ia2lQWrcXrQZI4AdJlk,"IDK You Yet","['6sFHvCyqklnJpXC9Nh1aag']",82,2020-06-23
+6HlE9t71z9DjGi7KqSyEpA,"Deep End","['6trIghKwHRUyxwvm66HLHH']",82,2020-07-31
+4wNIkl5XGiAACjFBlDWuSd,"What A Man Gotta Do","['7gOdHgIoIKoe4i9Tta6qdD']",82,2020-01-17
+5YSHygGN9D0mID1NsVd5my,"Reminds Me Of You","['4MCBfE4596Uoi2O4DtmEMz', '2tIP7SsRs7vjIcLrU85W8J']",82,2020-12-08
+4DuUwzP4ALMqpquHU0ltAB,"Tyler Herro","['2LIk90788K0zvyj2JJVwkJ']",82,2020-10-22
+0SqqAgdovOE24BzxIClpjw,"Yo Perreo Sola","['4q3ewBCX7sLwd24euuV69X']",82,2020-02-28
+7E2C5rBLpCKwQlhJPVFBRS,"You’re Mines Still (feat. Drake)","['3KNIG74xSTc3dj0TRy7pGX', '3TVXtAsR1Inumwj472S9r4']",82,2020-10-15
+3dEtfTtCXWW7N8WQ9FD29z,"En Tu Cuerpo - Remix","['1Ts9of7VPZElwPQnqnDSfW', '1mcTU81TzQhprhouKaTkpq', '1pQWsZQehhS4wavwh7Fnxd', '1DxLCyH42yaHKGK3cl5bvG']",82,2020-09-04
+57BGVV6wcyhbn3hsjlqEZB,"Element","['0eDvMgVFoNV3TpwtrVCoTj']",82,2020-02-07
+5GkQIP5mWPi4KZLLXeuFTT,"motive (with Doja Cat)","['66CXWjxzNUsdJxJ2JdwvnR', '5cj0lLjcoR7YOSnhnX0Po5']",82,2020-10-30
+1daDRI9ahBonbWD8YcxOIB,"Angels Like You","['5YGY8feqx7naU7z4HrwZM6']",82,2020-11-27
+46lyJh9GYmWsHez3EsvmAx,"Rise Up (feat. Vamero)","['4mrBetqy378Jf1y6NLszlx', '74GrV01oFcjJdLHCF9MWhr']",82,2020-05-01
+7l2tmgUhV7Y2aJHjiszifg,"Mr. Perfectly Fine (Taylor’s Version) (From The Vault)","['06HL4z0CvFAxyc27GXpf02']",82,2021-04-07
+2z0IupRlVRlDN5r2IVqHyN,"Shy Away","['3YQKmKGau1PzlVlkL1iodx']",82,2021-04-07
+0oaY19dUwZimIgzn3ZZLZO,"2 Much","['1uNFoZAHBGtllmzznpCI3s']",82,2021-03-19
+2NnJpRXIlx35Vij3bPZO0h,"DAYWALKER! (feat. CORPSE)","['6TIYQ3jFPwQSRmorSezPxX', '7yntSJ6uojO3z6GFUVwhAW']",82,2021-03-12
+5NU40QTlXrDUJzDBdv79bg,"Deserve You","['1uNFoZAHBGtllmzznpCI3s']",82,2021-03-19
+5RAIMjdrCEjpjaR5tBATXU,"Aloha","['1r4hJ1h58CWwUQe3MxPuau', '7a0XAaPaK2aDSqa8p3QnC7', '1mcTU81TzQhprhouKaTkpq', '2T1aUibqR2QC2sINIDQOAK', '64aJYyrXljOodnUG6jvhRD', '1TtXnWcUs0FCkaZDPGYHdf']",82,2021-03-05
+4jOBQxq4Ffd8DDrsN4wPOR,"Christian Dior","['0EFisYRi20PTADoJrifHrz']",82,2021-03-12
+2AceGjiX9isUbXmMZa0Dl1,"Floating Through Space","['5WUlDfRSoLAfcVSX1WnrxN', '1Cs0zKBU1kc0i8ypK3B9ai']",82,2021-02-04
+2dNhNlpZAtV4lwAFW45LIv,"Am","['5hdhHgpxyniooUiQVaPxQ0', '2oT7xd9iTO2ejLsNGIMa5f']",82,2021-01-28
+472vIK1ldetTxRxG3ovaiY,"Glad You Exist","['7z5WFjZAIYejWy0NI5lv4T']",82,2021-02-05
+0awuNCj9gwJEM0seER22DW,"CHICKEN TENDIES","['7okSU80WTrn4LXlyXYbX3P']",82,2021-02-19
+03B2SfXuvDh1m9F4tqrX07,"Skin","['74KM79TiuVKeVCqs8QtB0B']",82,2021-01-22
+5J5CpT6bgE6KYKk23jgp9W,"Patience (feat. YUNGBLUD & Polo G)","['1nzgtKYFckznkcVMR3Gg4z', '6Ad91Jof8Niiw0lGLLi3NW', '6AgTAQt8XS6jRWi4sX7w49']",82,2021-03-12
+3jjBPF4NDMCU51psU8JPpR,"34+35 Remix (feat. Doja Cat, Megan Thee Stallion) - Remix","['66CXWjxzNUsdJxJ2JdwvnR', '5cj0lLjcoR7YOSnhnX0Po5', '181bsRPaVXVlUKXrxwZfHK']",82,2021-01-15
+7eX3um6NpOQKWJMGCi97XD,"Real As It Gets (feat. EST Gee)","['5f7VJjfbwm532GiveGC0ZK', '4FlG0V0jhLO4qGpayFOphj']",82,2021-03-04
+3XoflnowYPFRPOh3uFvHcm,"Selfish Love (with Selena Gomez)","['540vIaP2JwjQb9dm3aArA4', '0C8ZW7ezQVs4URX5aX7Kqx']",82,2021-03-04
+4ga4WvRNhMsIL38pkBbnIN,"Pressure (feat. Tove Lo)","['60d24wfXkVzDSfLS6hyCjZ', '4NHQUGzhtTLFvgF5SZesLK']",82,2021-02-05
+2bo0HCDcZj8BYjoht9zYgk,"Time Today","['3tJoFztHeIJkJWMrx0td2f']",82,2021-02-03
+5hChuUMe5iHfjkXgzj1D4b,"Track Star","['4NqH3V7GS0Igs1VyGMXEi8']",82,2021-02-09
+2tB9OFgAHjAds3cqquLlvp,"Loved By You (feat. Burna Boy)","['1uNFoZAHBGtllmzznpCI3s', '3wcj11K77LjEY1PkEazffa']",82,2021-03-19
+06XQvnJb53SUYmlWIhUXUi,"怪物","['64tJ2EAv1R6UaZqc4iOCyj']",82,2021-01-06
+4NOZ35Dhucr6UlVyLOtktd,"Dangerous","['5P2rwRBgIN450RaJxdjYdA', '0z4gvV4rjIZ9wHck67ucSV']",82,2008-01-01
+6FE2iI43OZnszFLuLtvvmg,"Classic","['2l35CQqtYRh3d8ZIiBep4v']",82,2012
+0GjEhVFGZW8afUYGChu3Rr,"Dancing Queen","['0LcJLqbBmaGUft1e9Mm8HV']",81,1976
+2grjqo0Frpf2okIBiifQKs,"September","['4QQgXkCYTt3BlENzhyNETg']",81,1978-11-23
+37Tmv4NnfQeb0ZgUC4fOJj,"Sultans Of Swing","['0WwSkZ7LtFUFjGjMZBMt6T']",81,1978-10-07
+2SiXAy7TuUkycRVbbWDEpo,"You Shook Me All Night Long","['711MCceyCBcFnzjGY4Q7Un']",81,1980-07-25
+2fuCquhmrzHpu5xcA1ci9x,"Under Pressure - Remastered 2011","['1dfeR4HaWDbWqFHLkxsg1d', '0oSGxfWSnnOXhD2fKuz2Gy']",81,1982-05-03
+0rmGAIH9LNJewFw7nKzZnc,"You Give Love A Bad Name","['58lV9VcRSjABbAbfWS6skp']",81,1986-08-16
+3d9DChrdc6BOeFsbrZ3Is0,"Under the Bridge","['0L8ExT028jH3ddEcZwqJJ5']",81,1991-09-24
+3YRCqOhFifThpSRFJ1VWFM,"November Rain","['3qm84nBOXUEQ2vnTfUTTFC']",81,1991-09-17
+0jWgAnTrNZmOGmqgvHhZEm,"What's Up?","['0Je74SitssvJg1w4Ra2EK7']",81,1992-01-01
+2IZZqH4K02UIYg5EohpNHF,"Zombie","['7t0rwkOPGlDPEhaOcVtOt9']",81,1994-10-03
+1Je1IMUlBXcx1Fz0WE7oPT,"Wannabe","['0uq5PttqEjj3IH1bzwcrXF']",81,1996-01-01
+503OTo2dSqe7qk76rgsbep,"Still D.R.E.","['6DPYiyq5kWVQS4RGwxzPC7', '7hJcb9fa4alzcOq3EaNPoG']",81,1999-11-16
+2m1hi0nfMR9vdGC8UcrnwU,"All The Small Things","['6FBDaR13swtiWwGhX1WQsP']",81,1999-06-01
+6naxalmIoLFWR0siv8dnQQ,"Oops!...I Did It Again","['26dSoYclwsYLMAKD3tpOr4']",81,2000-05-16
+0DiWol3AO6WpXZgp0goxAV,"One More Time","['4tZwfgrHOc3mvqYlEYSvVi']",81,2001-03-12
+2DlHlPMa4M17kufBvI2lEN,"Chop Suey!","['5eAWCfyUhZtHHtBdNk56l1']",81,2001-09-04
+3ZOEytgrvLwQaqXreDs2Jx,"Can't Stop","['0L8ExT028jH3ddEcZwqJJ5']",81,2002-07-09
+0COqiPhxzoWICwFCS4eZcp,"Bring Me To Life","['5nGIFgo0shDenQYSE0Sn7c']",81,2003-03-04
+77loZpT5Y5PRP1S451P9Yz,"The Reason","['2MqhkhX4npxDZ62ObR5ELO']",81,2003-12-09
+0O45fw2L5vsWpdsOdXwNAR,"SexyBack (feat. Timbaland)","['31TPClRtHm23RisEBtV3X7', '5Y5TRrQiqgUO4S36tzjIRZ']",81,2006-09-12
+0BxE4FqsDD1Ot4YuBXwAPp,"505","['7Ln80lUS6He07XvHI8qqHH']",81,2007-04-22
+0JJP0IS4w0fJx01EcrfkDe,"Dear Maria, Count Me In","['46gyXjRIvN1NL1eCB8GBxo']",81,2007-09-25
+0CAfXk7DXMnon4gLudAp7J,"Low (feat. T-Pain)","['0jnsk9HBra6NMjO2oANoPY', '3aQeKQSyrW4qWr35idm0cy']",81,2008-03-17
+1mea3bSkSGXuIRvnydlB5b,"Viva La Vida","['4gzpq5DPGxSnKTe4SA8HAU']",81,2008-05-26
+2igwFfvr1OAGX9SKDCPBwO,"Empire State Of Mind","['3nFkdlSjzX9mRTtwJOzDYB', '3DiDSECUqqY1AuBP8qtaIa']",81,2009-09-08
+1qDrWA6lyx8cLECdZE7TV7,"Somebody That I Used To Know","['2AsusXITU8P25dlRNhcAbG', '6hk7Yq1DU9QcCCrz9uc0Ti']",81,2011-01-01
+6nek1Nin9q48AVZcWs9e9D,"Paradise","['4gzpq5DPGxSnKTe4SA8HAU']",81,2011-10-24
+2wAJTrFhCnQyNSD3oUgTZO,"Work Out","['6l3HvQ5sa6mXTsMTB19rO5']",81,2011-09-27
+3cHyrEgdyYRjgJKSOiOtcS,"Timber (feat. Ke$ha)","['0TnOYISbd1XYRBk9myaseg', '6LqNN22kT3074XbTVUrhzX']",81,2012
+7wMq5n8mYSKlQIGECKUgTX,"Hall of Fame (feat. will.i.am)","['3AQRLZ9PuTAozP28Skbq8V', '085pc2PYOi8bGKj0PNjekA']",81,2012-09-10
+2Foc5Q5nqNiosCNqttzHof,"Get Lucky (feat. Pharrell Williams & Nile Rodgers) - Radio Edit","['4tZwfgrHOc3mvqYlEYSvVi', '2RdwBSPQiwcmiDo9kixcl8', '3yDIp0kaq9EFKe07X1X2rz']",81,2013-04-19
+2AT8iROs4FQueDv2c8q2KE,"R U Mine?","['7Ln80lUS6He07XvHI8qqHH']",81,2013-09-09
+6RtPijgfPKROxEzTHNRiDp,"Rude","['0DxeaLnv6SyYk2DOqkLO8c']",81,2014-06-25
+7yq4Qj7cqayVTp3FF9CWbm,"Riptide","['10exVja0key0uqUkk6LJRT']",81,2014-09-08
+2bL2gyO6kBdLkNSkxXNh6x,"Animals","['04gDigrS5kc9YWfZHwBETP']",81,2014-09-02
+60nZcImufyMA1MKQY3dcCH,"Happy - From ""Despicable Me 2""","['2RdwBSPQiwcmiDo9kixcl8']",81,2014-03-03
+6WkJ2OK163XXS2oARUC9JM,"Dancin (feat. Luvli) - Krono Remix","['77qukKzmdI5BeMBR7WGUrN', '17TFSnqADESRM8BPSaM5aB', '6dqohi36avY0M9urnyhITr']",81,2014-11-07
+6Ius4TC0L3cN74HT7ENE6e,"Wet Dreamz","['6l3HvQ5sa6mXTsMTB19rO5']",81,2014-12-09
+1u8c2t2Cy7UBoG4ArRcF5g,"Blank Space","['06HL4z0CvFAxyc27GXpf02']",81,2014-01-01
+3JjnGLK8IxkNLvo8Lb3KOM,"18","['4AK6F7OLvEQ5QYCBNiQWHq']",81,2014-11-17
+4gbVRS8gloEluzf0GzDOFc,"Maps","['04gDigrS5kc9YWfZHwBETP']",81,2014-09-02
+09CtPGIpYB4BrO8qb1RGsF,"Sorry","['1uNFoZAHBGtllmzznpCI3s']",81,2015-11-13
+3RiPr603aXAoi4GHyXx0uy,"Hymn for the Weekend","['4gzpq5DPGxSnKTe4SA8HAU']",81,2015-12-04
+3hRV0jL3vUpRrcy398teAU,"The Night We Met","['6ltzsmQQbmdoHHbLZ4ZN25']",81,2015-04-06
+2P4OICZRVAQcYAV2JReRfj,"Waiting For Love","['1vCWHaC5f2uS3yhpwWbIA6']",81,2015-10-02
+0y1QJc3SJVPKJ1OvFmFqe6,"Way down We Go","['7jdFEYD2LTYjfwxOdlVjmc']",81,2016-06-10
+42ydLwx4i5V49RXHOozJZq,"Scars To Your Beautiful","['2wUjUUtkb5lvLKcGKsKqsR']",81,2016-03-11
+5oO3drDxtziYU2H1X23ZIp,"Love On The Brain","['5pKCCKE2ajJHZ9KAiaK11H']",81,2016-01-28
+7vRriwrloYVaoAe3a9wJHe,"i hate u, i love u (feat. olivia o'brien)","['3iri9nBFs9e4wN7PLIetAw', '1QRj3hoop9Mv5VvHQkwPEp']",81,2016-03-25
+76hfruVvmfQbw0eYn1nmeC,"Cake By The Ocean","['6T5tfhQCknKG4UnH90qGnz']",81,2016-11-18
+5kqIPrATaCc2LqxVWzQGbk,"7 Years","['25u4wHJWxCA9vO0CzxAbK7']",81,2016-04-01
+4pAl7FkDMNBsjykPXo91B3,"Needed Me","['5pKCCKE2ajJHZ9KAiaK11H']",81,2016-01-28
+1i1fxkWeaMmKEB4T7zqbzK,"Don't Let Me Down","['69GGBxA162lTqCwzJG5jLp', '6Dd3NScHWwnW6obMFbl1BH']",81,2016-02-05
+6Qn5zhYkTa37e91HC1D7lb,"Whatever It Takes","['53XhwfbYqKCa1cC15pYq2q']",81,2017-06-23
+1FpVJ7HpZInE2GvhVE2TwT,"Legends Never Die","['47mIJdHORyRerp4os813jD', '6yhD1KjhLxIETFF7vIRf8B']",81,2017-09-15
+6Nle9hKrkL1wQpwNfEkxjh,"Chanel","['2h93pZq0e7k5yf4dywlkpM']",81,2017-03-10
+6h5PAsRni4IRlxWr6uDPTP,"More Than You Know","['2XnBwblw31dfGnspMIwgWz']",81,2017-07-28
+7zFXmv6vqI4qOt4yGf3jYZ,"Get You (feat. Kali Uchis)","['20wkVLutqVOYrc0kxFs7rA', '1U1el3k54VvEUzo3ybLPlM']",81,2017-08-25
+47Bg6IrMed1GPbxRgwH2aC,"Best Friend","['7pbDxGE6nQSZVfiFdq9lOL']",81,2017-01-25
+0tBbt8CrmxbjRP0pueQkyU,"Wolves","['0C8ZW7ezQVs4URX5aX7Kqx', '64KEffDW9EtZ1y2vBYgq8T']",81,2017-10-25
+5mCPDVBb16L4XQwDdbRUpz,"Passionfruit","['3TVXtAsR1Inumwj472S9r4']",81,2017-03-18
+0S0vWvyZ6Rc79TXkWxT9QA,"Save That Shit","['2kCcBybjl3SAtIcwdWpUe3']",81,2017-08-15
+41zXlQxzTi6cGAjpOXyLYH,"idontwannabeyouanymore","['6qqNVTkY8uBg9cP3Jd7DAH']",81,2017-12-22
+152lZdxL1OR0ZMW6KquMif,"Location","['6LuN9FCkKOj5PcnpouEgny']",81,2017-04-27
+33SNO8AaciGbNaQFkxvPrW,"Kiwi","['6KImCVD70vtIoJWnq6nGn3']",81,2017-05-12
+76cy1WJvNGJTj78UqeA5zr,"IDGAF","['6M2wZ9GZgrQXHCFfjv46we']",81,2017-06-02
+35wvL50xvKpCHEJPxLOLPI,"Si Estuviésemos Juntos","['4q3ewBCX7sLwd24euuV69X']",81,2018-12-23
+3GCdLUSnKSMJhs4Tj6CV3s,"All The Stars (with SZA)","['2YZyLoL8N0Wb9xBt1NhZWg', '7tYKF4w9nC0nq9CsPZTHyP']",81,2018-02-09
+7ycWLEP1GsNjVvcjawXz3z,"Praise The Lord (Da Shine) (feat. Skepta)","['13ubrt8QOOCPljQ2FL1Kca', '2p1fiYHYiXz9qi0JJyxBzN']",81,2018-05-25
+1fewSx2d5KIZ04wsooEBOz,"Space Cadet (feat. Gunna)","['0iEtIxbK0KxaSlF7G42ZOp', '2hlmm7s2ICUX0LVIhVFlZQ']",81,2018-11-06
+3swc6WTsr7rl9DqQKQA55C,"Psycho (feat. Ty Dolla $ign)","['246dkjvS1zLTtiykXe5h60', '7c0XG5cIJTrrAgEC3ULPiq']",81,2018-04-27
+5OCJzvD7sykQEKHH7qAC3C,"God is a woman","['66CXWjxzNUsdJxJ2JdwvnR']",81,2018-08-17
+1VGzxJnVQND7Cg5H5wGj14,"YEAH RIGHT","['3MZsBdqDrRTJihTHQrO6Dq']",81,2018-10-26
+2cYqizR4lgvp4Qu6IQ3qGN,"BUTTERFLY EFFECT","['0Y5tJX1MQlPlqiwlOH1tJY']",81,2018-08-03
+2Y0iGXY6m6immVb2ktbseM,"Little Dark Age","['0SwO7SWeDHJijQ3XNS7xEE']",81,2018-02-09
+5wujBwqG7INdStqGd4tRMX,"Armed And Dangerous","['4MCBfE4596Uoi2O4DtmEMz']",81,2018-12-10
+6LOZws7T3jqZz78unPgFF9,"Dead To Me","['1U1el3k54VvEUzo3ybLPlM']",81,2018-04-06
+3oDkdAySo1VQQG0ptV7uwa,"Lean Wit Me","['4MCBfE4596Uoi2O4DtmEMz']",81,2018-12-10
+6foY66mWZN0pSRjZ408c00,"Whiskey Glasses","['4oUHIQIBe0LHzYfvXNW4QM']",81,2018-04-27
+2qT1uLXPVPzGgFOx4jtEuo,"no tears left to cry","['66CXWjxzNUsdJxJ2JdwvnR']",81,2018-08-17
+1Knctxx9vGZxpZfF66BIEa,"Legends","['4MCBfE4596Uoi2O4DtmEMz']",81,2018-06-22
+4evmHXcjt3bTUHD1cvny97,"Beautiful People (feat. Khalid)","['6eUKZXaKkcviH0Ku9w2n3V', '6LuN9FCkKOj5PcnpouEgny']",81,2019-06-28
+2nC3QhMI9reBIOWutbU3Tj,"Moral of the Story","['6P5NO5hzJbuOqSdyPB7SJM']",81,2019-02-14
+6Qs4SXO9dwPj5GKvVOv8Ki,"Dancing With A Stranger (with Normani)","['2wY79sveU1sp5g7SokKOiI', '2cWZOOzeOm4WmBJRnD5R7I']",81,2019-01-11
+60iSKGrGazRzICtMjADNSM,"Hold Me While You Wait","['4GNC7GD6oZMSxPGyXy4MNB']",81,2019-05-17
+5hVghJ4KaYES3BFUATCYn0,"EARFQUAKE","['4V8LLVI7PbaPR0K2TGSxFF']",81,2019-05-17
+0t3ZvGKlmYmVsDzBJAXK8C,"Goodbyes (feat. Young Thug)","['246dkjvS1zLTtiykXe5h60', '50co4Is1HCEo8bhOyUWKpn']",81,2019-09-06
+3yOlyBJuViE2YSGn3nVE1K,"My Oh My (feat. DaBaby)","['4nDoRrQiYLoBzwC5BhVJzF', '4r63FhuTkUYltbVAg5TQnk']",81,2019-12-06
+5JtvedSVWW9McnoEAPJwQm,"Sex Sounds","['6jGMq4yGs7aQzuGsMgVgZR']",81,2019-10-11
+2gTdDMpNxIRFSiu7HutMCg,"I Think I'm OKAY (with YUNGBLUD & Travis Barker)","['6TIYQ3jFPwQSRmorSezPxX', '6Ad91Jof8Niiw0lGLLi3NW', '4exLIFE8sISLr28sqG1qNX']",81,2019-07-05
+4nK5YrxbMGZstTLbvj6Gxw,"Supalonely","['0Cp8WN4V8Tu4QJQwCN5Md4', '6sHCvZe1PHrOAuYlwTLNH4']",81,2019-11-15
+1TQXIltqoZ5XXyfCbAeSQQ,"Dancing With Your Ghost","['4xnihxcoXWK3UqryOSnbw5']",81,2019-06-28
+5w9c2J52mkdntKOmRLeM2m,"Con Calma","['4VMYDCV2IEDYJArk749S6m', '3uZFBSsMiooimnprFL9jD1']",81,2019-01-24
+6cy3ki60hLwimwIje7tALf,"RITMO (Bad Boys For Life)","['1yxSLGMDHlW21z4YXirZDS', '1vyhD5VmyZ7KMfW5gqLgo5']",81,2019-10-12
+6RRNNciQGZEXnqk8SQ9yv5,"You Need To Calm Down","['06HL4z0CvFAxyc27GXpf02']",81,2019-08-23
+2f0pn9DkEJwAzXApnFh5cr,"Someone To You","['4qWnlmXWuGv2TtuxtIWlJX']",81,2019-10-04
+68rVGSTnCiFOET9k5Vd8Se,"parents","['6Ad91Jof8Niiw0lGLLi3NW']",81,2019-10-18
+4EivmOT13NMpNSfTKn9p4s,"Like That (feat. Gucci Mane)","['5cj0lLjcoR7YOSnhnX0Po5', '13y7CgLHjMVRMDqxdx0Xdo']",81,2019-11-07
+27ycaQnQAxaPiyeg3nr2aB,"Midnight Sky","['5YGY8feqx7naU7z4HrwZM6']",81,2020-08-14
+2rPHUAeUPbNgTmK18FPTiZ,"GO (feat. Juice WRLD)","['2tIP7SsRs7vjIcLrU85W8J', '4MCBfE4596Uoi2O4DtmEMz']",81,2020-07-24
+1JHvLQWHUoYuapwQikeDuD,"Ele Não Tem","['22jNvLBrXGKr4CcV2tw8Ag', '7MiDcPa6UiV3In7lIM71IN']",81,2020-10-16
+0XinBYhf1X3kdvKQHOX971,"Tú Me Dejaste De Querer","['5TYxZTjIPqKM8K8NuP9woO', '5IbUz6BcOu6IVY512oxavP', '7xtnpHS34mLlxGZDVUBHSU']",81,2020-11-05
+5hvwx5i67IwnCkjl9VHkNv,"Diamonds","['2wY79sveU1sp5g7SokKOiI']",81,2020-09-17
+2lCkncy6bIB0LTMT7kvrD1,"Azul","['1vyhD5VmyZ7KMfW5gqLgo5']",81,2020-03-19
+34LI7rwi9H8w2S5KTHnv1M,"Quiéreme Mientras Se Pueda","['0tmwSHipWxN12fsoLcFU3B']",81,2020-05-01
+6qBFSepqLCuh5tehehc1bd,"Like I Want You","['4fxd5Ee7UefO4CUXgwJ7IP']",81,2020-03-27
+7o4gBbTM6UBLkOYPw9xMCz,"Moonwalking in Calabasas (feat. Blueface) - Remix","['0WK3H9OErSn5zKOkOV5egm', '3Fl1V19tmjt57oBdxXKAjJ']",81,2020-12-02
+0sY6ZUTh4yoctD8VIXz339,"champagne problems","['06HL4z0CvFAxyc27GXpf02']",81,2020-12-11
+0n2moJpAEWHwaPYYjkzMDl,"Blue & Grey","['3Nrfpe0tUJi4K4DXYWgMUX']",81,2020-11-20
+25zlnOAzbVoOzIeXSvQFf1,"Got It On Me","['0eDvMgVFoNV3TpwtrVCoTj']",81,2020-07-03
+66W1rVTnEv86dIkFhoiElg,"Secrets","['4ofCBoyEiGSePFAG500xev', '5KKpBU5eC2tJDzf0wmlRp2']",81,2020-04-24
+4nbWX2HzrOEnX4xxvYRCyU,"Cabrón y Vago - En Vivo","['0my6Pg4I28dVcZLSpAkqhv', '25UNJbwGZSQKvz5cPLWlv3']",81,2020-07-31
+0YqTL3nSL36OFdHwHoqCag,"MODO TURBO","['4PzYKhC14sTJNEr0dzoo0d', '6tzRZ39aZlNqlUzQlkuhDV', '7FNnA9vBm6EKceENgCGRMb']",81,2020-12-21
+4pvb0WLRcMtbPGmtejJJ6y,"exile (feat. Bon Iver)","['06HL4z0CvFAxyc27GXpf02', '4LEiUm1SRbFMgfqnQTwUbQ']",81,2020-07-24
+0zlnHTHiBQ68ZCAmTw5ozm,"Algo Mágico","['1mcTU81TzQhprhouKaTkpq']",81,2020-06-25
+1mQOFRDoqI34LdN79PE0vH,"Ô Moça","['1OwYxVDNKP9JtSpp5E0uA4']",81,2020-12-21
+7C1trmcQQ5n5RNy4l6ziCv,"Some Say - Felix Jaehn Remix","['7nqlScm2smydSRl13eaP8E', '4bL2B6hmLlMWnUEZnorEtG']",81,2020-01-10
+6F7tttrdq7aUdxXVeo0nKp,"Foi Pá Pum","['0MInKJqZscEeNc5K3K0mkE']",81,2020-11-27
+0vWUhCPxpJOJR5urYbZypB,"Hypnotized","['2WBJQGf1bT1kxuoqziH5g4', '4FrXHrpbDLNyO3pbVv8RmF']",81,2020-04-08
+7dH0dpi751EoguDDg3xx6J,"ドライフラワー","['0ixzjrK1wkN2zWBXt3VW3W']",81,2020-10-25
+6bnF93Rx87YqUBLSgjiMU8,"Heartless","['1Xyo4u8uXC1ZmMpatF05PJ']",81,2020-03-20
+5CFJRZRq6sdKKtRwNPWbYv,"Show Out (with Skepta & Pop Smoke)","['0fA0VVWsXO9YnASrzqfmYu', '2p1fiYHYiXz9qi0JJyxBzN', '0eDvMgVFoNV3TpwtrVCoTj']",81,2020-12-11
+3rchFjeKZ0bJxO7EEdM3S5,"Paparazzi","['526TMJFuJibm9j2p9td9Yp']",81,2020-12-11
+37ZtpRBkHcaq6hHy0X98zn,"I CAN'T STOP ME","['7n2Ycct7Beij7Dj7meI4X0']",81,2020-10-26
+5RqR4ZCCKJDcBLIn4sih9l,"Party Girl","['1XLWox9w1Yvbodui0SRhUQ']",81,2020-04-21
+5gTgQBtNP08fUijxpEgmzF,"É Problema","['2Z0lRIqr997lIUiPtrpKCr']",81,2020-11-12
+0DYNL4xbYWgNzppUamtyR4,"F*CK YOU, GOODBYE (feat. Machine Gun Kelly)","['2tIP7SsRs7vjIcLrU85W8J', '6TIYQ3jFPwQSRmorSezPxX']",81,2020-11-06
+6NfrH0ANGmgBXyxgV2PeXt,"La Difícil","['4q3ewBCX7sLwd24euuV69X']",81,2020-02-28
+0GTPmh5G40joBg93vcSQNq,"Don't Say Goodbye (feat. Tove Lo)","['0NGAZxHanS9e0iNHpR8f2W', '5deLgmgAEgy8UHOfJ9Dj8w', '4NHQUGzhtTLFvgF5SZesLK']",81,2020-09-25
+6rLi6PyWXu1rPlShuIZpj6,"Way Out (feat. Big Sean)","['2LIk90788K0zvyj2JJVwkJ', '0c173mlxpT3dSFRgMO8XPh']",81,2020-12-09
+1mohfLaTJtB2RplHLQVM70,"La Jeepeta - Remix","['5hdhHgpxyniooUiQVaPxQ0', '2R21vXR83lH98kGeO99Y66', '7iK8PXO48WeuP03g8YR51W', '1GKIlPFdcewHtpDVCQ8zmJ', '3Wb38LDP3N4tkobValgE9D']",81,2020-04-24
+0TrPqhAMoaKUFLR7iYDokf,"Know Your Worth","['6LuN9FCkKOj5PcnpouEgny', '6nS5roXSAGhTGr34W6n7Et']",81,2020-02-04
+4r9jkMEnArtWGH2rL2FZl0,"A Tu Merced","['4q3ewBCX7sLwd24euuV69X']",81,2020-02-28
+6lhZLbb0czULpjb2kFryPS,"Let's Love","['1Cs0zKBU1kc0i8ypK3B9ai', '5WUlDfRSoLAfcVSX1WnrxN']",81,2020-09-11
+4eNOLmx8r2IJAVKvBBL1jv,"Headshot (feat. Polo G & Fivio Foreign)","['6jGMq4yGs7aQzuGsMgVgZR', '6AgTAQt8XS6jRWi4sX7w49', '14CHVeJGrR5xgUGQFV5BVM']",81,2021-04-02
+1dg3qy5DjoJodawfOCgrTP,"Run It Up (feat. Offset & Moneybagg Yo)","['6jGMq4yGs7aQzuGsMgVgZR', '4DdkRBBYG6Yk9Ka8tdJ9BW', '3tJoFztHeIJkJWMrx0td2f']",81,2021-04-02
+4I5bvu2KDsrCg0EWHIcvul,"Don't Play","['1zNqDE7qDGCsyzJwohVaoX', '1nzgtKYFckznkcVMR3Gg4z', '5fyDppLDl1juIu1BcUT5zh']",81,2021-01-15
+56F3ngwk3a42aLY0o5QgBF,"Fala Comigo - Ao Vivo","['7MiDcPa6UiV3In7lIM71IN']",81,2021-02-04
+2769RhOZs0ezRncRW1vryp,"Till Forever Falls Apart","['6P5NO5hzJbuOqSdyPB7SJM', '37M5pPGs6V1fchFJSgCguX']",81,2021-03-02
+7HsjuVBM93Z2RoxjpWLgTT,"Richer (feat. Polo G)","['45TgXXqMDdF8BkjA83OM7z', '6AgTAQt8XS6jRWi4sX7w49']",81,2021-03-26
+26UxwWl9xCb83OynXELJcL,"Masterpiece","['4r63FhuTkUYltbVAg5TQnk']",81,2021-01-15
+3S8jK1mGzQi24ilFb45DAZ,"Lonely (with benny blanco)","['1uNFoZAHBGtllmzznpCI3s', '5CiGnKThu5ctn9pBxv7DGa']",81,2021-03-19
+3cBsEDNhFI9E82vPj3kvi3,"Wasted On You","['4oUHIQIBe0LHzYfvXNW4QM']",81,2021-01-08
+4hSJUp6k7QeHLxU32MrLIU,"Ohne Dich","['7ADRm1oT7VmhRRZrZqycV6', '7oWrEQO1d3klp0Qrfh7a5h', '44yXVrsMTsKGUBHZsYFZNq']",81,2021-01-14
+6Et5KimMg3IXwD6lJPGmQw,"Me Fije","['2DspEsT7UXGKd2VaaedgG4', '1mcTU81TzQhprhouKaTkpq']",81,2021-03-18
+27tDoZsybt3KvJWTDoW9id,"Heartbreak Anniversary","['4fxd5Ee7UefO4CUXgwJ7IP']",81,2021-03-12
+1RSBK5VWdjPjHEmRhAkS4Q,"Sacrifice","['64M6ah0SkkRsnPGtGiRAbb']",81,2021-03-05
+6u3CPnFMKANYgfdiifFOiJ,"Gravity (feat. Tyler, The Creator)","['3tlXnStJ1fFhdScmQeLpuG', '5BozIJTTNCufaZpjhy2der', '4V8LLVI7PbaPR0K2TGSxFF']",81,2021-01-29
+0Cnb8XdGDMHAmIRBUJMkIS,"Where The Lights Are Low","['2XnY6NZ6rENbLMYabjkRey', '4bL2B6hmLlMWnUEZnorEtG', '49T8i1paijMAK9rYtjO4lu']",81,2021-01-22
+46zfTi4Wg6mmkOBPimtg6X,"Frag mich nicht","['76dRoxKtDwYkgCQePok9cU', '3ZuBEj9ppJe8GSdKaMTfMN', '4sVieJlKgpZ2k9ESNS5IdN']",81,2021-03-26
+15OCqNPYoLziEAsbVnqRj5,"Good Without","['3GxKJzJK4LpsYGXQrw77wz']",81,2021-03-26
+1HoapWs5KcMzs8QYdgg9Kt,"Não Pode Se Apaixonar","['43DRDu6nLSeIedZ7T1A616', '0RPzmE1iY76tx1eBBXFyYn', '3PZTvUS5fUUhV3EKAjqdZk']",81,2021-02-12
+2vl0D1b0M6UHlD1Fjh5j1m,"JETSKI (feat. Lil Mosey & Lil Tecca)","['6MPCFvOQv5cIGfw3jODMF0', '4Ga1P7PMIsmqEZqhYZQgDo', '5zctI4wO9XSKS8XwcnqEHk']",81,2021-03-26
+7aely3H8kMj9o0gt6vXHE1,"Die For You (feat. Dominic Fike)","['1uNFoZAHBGtllmzznpCI3s', '6USv9qhCn6zfxlBQIYJ9qs']",81,2021-03-19
+0DAQryfUiFZdWFo76RYBc8,"Madonna","['13bDjug9N0pyv3ZUINjkDV', '1qQLhymHXFPtP5U8KNKsm6']",81,2021-02-19
+3HquWF2pZmWYu3WAEP9Heb,"Só Não Divulga","['1oSgjdbgLYULVmEBojPRw8', '48HORs6F9P7IgdyKrk4MZC']",81,2021-02-25
+6lanRgr6wXibZr8KgzXxBl,"A Thousand Years","['7H55rcKCfwqkyDFH9wpKM6']",81,2011-10-18
+4umIPjkehX1r7uhmGvXiSV,"Intentions (feat. Quavo)","['1uNFoZAHBGtllmzznpCI3s', '0VRj0yCOv2FXJNP47XQnx5']",81,2020-02-14
+745H5CctFr12Mo7cqa1BMH,"My Girl","['3RwQ26hR2tJtA8F9p2n7jG']",80,1965-03-22
+3yrSvpt2l1xhsV9Em88Pul,"Brown Eyed Girl","['44NX2ffIYHr6D4n7RaZF7A']",80,1967-09
+38zsOOcu31XbbYj9BIPUF1,"Your Song","['3PhoLpVuITZKcymswpck5b']",80,1970-04-10
+2TVxnKdb3tqe1nhQWwwZCO,"Tiny Dancer","['3PhoLpVuITZKcymswpck5b']",80,1971-11-05
+1QEEqeFIZktqIpPI4jSVSF,"More Than a Feeling","['29kkCKKGXheHuoO829FxWK']",80,1976
+6A9mKXlFRPMPem6ygQSt7z,"Three Little Birds","['2QsynagSdAqZj3U9HgDzjD']",80,1977-01-03
+4pbJqGIASGPr0ZpGpnWkDn,"We Will Rock You - Remastered","['1dfeR4HaWDbWqFHLkxsg1d']",80,1977-10-28
+07q0QVgO56EorrSGHC48y3,"I Was Made For Lovin' You","['07XSN3sPlIlB2L2XNcTwJw']",80,1979-03-23
+1OOtq8tRnDM8kG2gqUPjAj,"Beat It","['3fMbdgg4jU18AjLCKBhRSm']",80,1982-11-30
+39shmbIHICJ2Wxnk1fPSdz,"Should I Stay or Should I Go - Remastered","['3RGLhK1IP9jnYFH4BRFJBS']",80,1982
+0ikz6tENMONtK6qGkOrU3c,"Wake Me Up Before You Go-Go","['5lpH0xAS4fVfLkACg9DAuM']",80,1984-10-23
+7N3PAbqfTjSEU1edb2tY8j,"Jump - 2015 Remaster","['2cnMpRsOVqtPMfq7YiFE6K']",80,1984-01-04
+6ADSaE87h8Y3lccZlBJdXH,"With Or Without You - Remastered","['51Blml2LZPmy7TTiAg47vQ']",80,1987-03-03
+6wpGqhRvJGNNXwWlPmkMyO,"I Still Haven't Found What I'm Looking For","['51Blml2LZPmy7TTiAg47vQ']",80,1987-03-03
+5sICkBXVmaCQk5aISGR3x1,"Enter Sandman","['2ye2Wgw4gimLv2eAKyk1NB']",80,1991-08-12
+0nLiqZ6A27jJri2VCalIUs,"Nothing Else Matters","['2ye2Wgw4gimLv2eAKyk1NB']",80,1991-08-12
+20fBuVybkHgjF6vNhSMROD,"Ambitionz Az A Ridah","['1ZwdS5xdxEREPySFridCfh']",80,1996
+57iDDD9N9tTWe75x6qhStw,"Bitter Sweet Symphony","['2cGwlqi3k18jFpUyTrsR84']",80,1997-09-29
+47BBI51FKFwOMlIiX6m8ya,"I Want It That Way","['5rSXSAkZ67PYJSvpUpkOr7']",80,1999-05-18
+3MjUtNVVq3C8Fn0MP3zhXa,"...Baby One More Time","['26dSoYclwsYLMAKD3tpOr4']",80,1999-01-12
+1KGi9sZVMeszgZOWivFpxs,"No Scrubs","['0TImkz4nPqjegtVSMZnMRq']",80,1999-02-23
+3UmaczJpikHgJFyBTAJVoz,"Stan","['7dGJo4pcD2V6oG8kP0tJRR', '2mpeljBig2IXLXRAFO9AAs']",80,2000-05-23
+6ZOBP3NvffbU4SZcrnt1k6,"Kryptonite","['2RTUTCvo6onsAnheUk3aL9']",80,2000
+0v1XpBHnsbkCn7iJ9Ucr1l,"It's My Life","['58lV9VcRSjABbAbfWS6skp']",80,2000-01-01
+6GG73Jik4jUlQCkKg9JuGO,"The Middle","['3Ayl7mCk0nScecqOzvNp6s']",80,2001-07-17
+0gmbgwZ8iqyMPmXefof8Yf,"How You Remind Me","['6deZN1bslXzeGvOLaLMOIF']",80,2001-09-11
+4llK75pXNWZz6KAho2Gp16,"She Will Be Loved - Radio Mix","['04gDigrS5kc9YWfZHwBETP']",80,2002
+6ECp64rv50XVz93WvxXMGF,"This Love","['04gDigrS5kc9YWfZHwBETP']",80,2002
+2PpruBYCo4H7WOBJ7Q2EwM,"Hey Ya!","['1G9G7WwrXka3Z1r7aIDjI7']",80,2003
+3XVBdLihbNbxUwZosxcGuJ,"If I Ain't Got You","['3DiDSECUqqY1AuBP8qtaIa']",80,2003-12-02
+6nTiIhLmQ3FWhvrGafw2zj,"American Idiot","['7oPftvlwr6VrsViSDV7fJY']",80,2004-09-21
+68vgtRHr7iZHpzGpon6Jlo,"My Boo","['23zg3TcAtWQy7J6upgbUnj', '3DiDSECUqqY1AuBP8qtaIa']",80,2004-03-23
+5D2mYZuzcgjpchVY1pmTPh,"Candy Shop","['3q7HBObVc0L8jNeTe5Gofh', '5YBSzuCs7WaFKNr7Bky0Uf']",80,2005-03-03
+4TsmezEQVSZNNPv5RJ65Ov,"Pon de Replay","['5pKCCKE2ajJHZ9KAiaK11H']",80,2005-08-29
+2TfSHkHiFO4gRztVIkggkE,"Sugar, We're Goin Down","['4UXqAaa6dQYAk18Lv7PEgX']",80,2005-05-03
+2aibwv5hGXSgw7Yru8IYTO,"Snow (Hey Oh)","['0L8ExT028jH3ddEcZwqJJ5']",80,2006-05-09
+7j31rVgGX9Q2blT92VBEA0,"Teenagers","['7FBcuc1gsnv6Y1nwFtNRCb']",80,2006-10-23
+6IwKcFdiRQZOWeYNhUiWIv,"No One","['3DiDSECUqqY1AuBP8qtaIa']",80,2007-11-09
+266Vb7ItE3o1q8HdJ9QOvn,"Verbatim","['0e86yPdC41PGRkLp2Q1Bph']",80,2007-05-08
+6ic8OlLUNEATToEFU3xmaH,"Gimme More","['26dSoYclwsYLMAKD3tpOr4']",80,2007-10-25
+1hGy2eLcmC8eKx7qr1tOqx,"Beautiful Girls","['6S0dmVVn4udvppDhZIWxCr']",80,2007-07-23
+6TfBA04WJ3X1d1wXhaCFVT,"You're Gonna Go Far, Kid","['5LfGQac0EIXyAN8aUwmNAQ']",80,2008-06-17
+22UDw8rSfLbUsaAGTXQ4Z8,"American Boy","['5T0MSzX9RC5NA6gAI6irSn', '5K4W6rqBFWDnAN6FQUkS6x']",80,2008-03-28
+4EWCNWgDS8707fNSZ1oaA5,"Heartless","['5K4W6rqBFWDnAN6FQUkS6x']",80,2008-11-24
+3DamFFqW32WihKkTVlwTYQ,"Fireflies","['07QEuhtrNmmZ0zEcqE9SF6']",80,2009-01-01
+3E7dfMvvCLUddWissuqMwr,"Party In The U.S.A.","['5YGY8feqx7naU7z4HrwZM6']",80,2009-01-01
+4356Typ82hUiFAynbLYbPn,"DJ Got Us Fallin' In Love (feat. Pitbull)","['23zg3TcAtWQy7J6upgbUnj', '0TnOYISbd1XYRBk9myaseg']",80,2010-03-30
+51pshtuYkgUQnt5huMPbKL,"The Spins","['4LLpKhyESsyAXpc4laK94U']",80,2010-08-13
+2CEgGE6aESpnmtfiZwYlbV,"Dynamite","['6MF9fzBmfXghAz953czmBC']",80,2010-01-01
+3hlksXnvbKogFdPbpO9vel,"Super Bass","['0hCNtLu0JehylgoiP8L4Gh']",80,2010-11-22
+0JXXNGljqupsJaZsgSbMZV,"Sure Thing","['360IAlyVv4PCEVjgyMZrxK']",80,2010-11-26
+7Ie9W94M7OjPoZVV216Xus,"Not Afraid","['7dGJo4pcD2V6oG8kP0tJRR']",80,2010-06-18
+3bNv3VuUOKgrf5hu3YcuRo,"Someone Like You","['4dpARuHxo51G3z768sgnrY']",80,2011-01-24
+2ihCaVdNZmnHZWt0fvAM7B,"Little Talks","['4dwdTW1Lfiq0cM8nBAqIIz']",80,2012-01-01
+20I6sIOMTCkB6w7ryavxtO,"Call Me Maybe","['6sFIWsNpZYqfjUpaCgueju']",80,2012-01-01
+3bC1ahPIYt1btJzSSEyyrF,"Whistle","['0jnsk9HBra6NMjO2oANoPY']",80,2012-06-22
+3sNVsP50132BTNlImLx70i,"Bound 2","['5K4W6rqBFWDnAN6FQUkS6x']",80,2013-06-18
+2nMeu6UenVvwUktBCpLMK9,"Young And Beautiful","['00FQb4jTyendYWaN8pK0wa']",80,2013-01-01
+2iJuuzV8P9Yz0VSurttIV5,"Scream & Shout","['085pc2PYOi8bGKj0PNjekA', '26dSoYclwsYLMAKD3tpOr4']",80,2013-01-01
+5Hroj5K7vLpIG4FNCRIjbP,"Best Day Of My Life","['0MlOPi3zIDMVrfA9R04Fe3']",80,2014-01-01
+2Bs4jQEGMycglOfWPBqrVG,"Steal My Girl","['4AK6F7OLvEQ5QYCBNiQWHq']",80,2014-11-17
+3JvrhDOgAt6p7K8mDyZwRd,"Riptide","['10exVja0key0uqUkk6LJRT']",80,2014-09-09
+0puf9yIluy9W0vpMEUoAnN,"Bang Bang","['2gsggkzM5R49q6jpPvazou', '66CXWjxzNUsdJxJ2JdwvnR', '0hCNtLu0JehylgoiP8L4Gh']",80,2014-10-14
+7MmG8p0F9N3C4AXdK6o6Eb,"Outside (feat. Ellie Goulding)","['7CajNmpbOovFoOoasH2HaY', '0X2BH1fck6amBIoJhDVmmJ']",80,2014-10-31
+2YlZnw2ikdb837oKMKjBkW,"Like I'm Gonna Lose You (feat. John Legend)","['6JL8zeS1NmiOftqZTRgdTz', '5y2Xq6xcjJb2jVM54GHK3t']",80,2015-01-09
+3fqwjXwUGN6vbzIwvyFMhx,"Tennessee Whiskey","['4YLtscXsxbVgi031ovDDdh']",80,2015-05-04
+78TTtXnFQPzwqlbtbwqN0y,"FourFiveSeconds","['5pKCCKE2ajJHZ9KAiaK11H', '5K4W6rqBFWDnAN6FQUkS6x', '4STHEaNw4mPZ2tzheohgXB']",80,2015-01-24
+4PhsKqMdgMEUSstTDAmMpg,"Often","['1Xyo4u8uXC1ZmMpatF05PJ']",80,2015-08-28
+3zHq9ouUJQFQRf3cm1rRLu,"Love Me Like You Do - From ""Fifty Shades Of Grey""","['0X2BH1fck6amBIoJhDVmmJ']",80,2015-11-06
+6y6jbcPG4Yn3Du4moXaenr,"idfc","['2cFrymmkijnjDg9SS92EPM']",80,2015-02-14
+5NORWMFC27ywGSZxi8uquP,"Ophelia","['16oZKvXb6WkQlVAjwo2Wbg']",80,2016-04-08
+4NZrZgrRoR4GwR7flWOXRI,"Go Fuck Yourself","['5sWHDYs0csV6RS48xBl0tH']",80,2016-07-29
+0azC730Exh71aQlOt9Zj3y,"This Is What You Came For (feat. Rihanna)","['7CajNmpbOovFoOoasH2HaY', '5pKCCKE2ajJHZ9KAiaK11H']",80,2016-04-29
+37f4ITSlgPX81ad2EvmVQr,"Fight Song","['3QLIkT4rD2FMusaqmkepbq']",80,2016-01-01
+0PDUDa38GO8lMxLCRc4lL1,"PILLOWTALK","['5ZsFI1h6hIdQRw2ti0hz81']",80,2016-03-25
+6b8Be6ljOzmkOmFslEb23P,"24K Magic","['0du5cEVh5yTK9QJze8zA0C']",80,2016-11-17
+34xTFwjPQ1dC6uJmleno7x,"Godspeed","['2h93pZq0e7k5yf4dywlkpM']",80,2016-08-20
+0ErK6K0kYr0Ow2RkPMhmMs,"Shout Out to My Ex","['3e7awlrlDSwF3iM0WBjGMp']",80,2016-11-18
+3xKsf9qdS1CyvXSMEid6g8,"Pink + White","['2h93pZq0e7k5yf4dywlkpM']",80,2016-08-20
+0AS63m1wHv9n4VVRizK6Hc,"Mercy","['7n2wHs1TKAczGzO7Dd2rGr']",80,2017-04-20
+4JE6agBLHGA5TaF6FlqfBD,"As the World Caves In","['12j6dJrPXanCBwY599pZxf']",80,2017-03-06
+7gvd8xj4QgPqbQSsn5pV7d,"Sorry Not Sorry","['6S2OmqARrzebs0tKUEyXyp']",80,2017-09-29
+3ebXMykcMXOcLeJ9xZ17XH,"Scared to Be Lonely","['60d24wfXkVzDSfLS6hyCjZ', '6M2wZ9GZgrQXHCFfjv46we']",80,2017-01-27
+0q75NwOoFiARAVp4EXU4Bs,"Love Galore (feat. Travis Scott)","['7tYKF4w9nC0nq9CsPZTHyP', '0Y5tJX1MQlPlqiwlOH1tJY']",80,2017-06-09
+6PGoSes0D9eUDeeAafB2As,"LOVE. FEAT. ZACARI.","['2YZyLoL8N0Wb9xBt1NhZWg', '3qBKjEOanahMxlRojwCzhI']",80,2017-04-14
+1SOClUWhOi8vHZYMz3GluK,"Infinity","['6QrQ7OrISRYIfS5mtacaw2']",80,2017-06-23
+5bgwqaRSS3M8WHWruHgSL5,"8TEEN","['6LuN9FCkKOj5PcnpouEgny']",80,2017-04-27
+0afhq8XCExXpqazXczTSve,"Galway Girl","['6eUKZXaKkcviH0Ku9w2n3V']",80,2017-03-03
+4EpZ4eYuZOwPSSwyqpdHnJ,"Sunflower","['7pbDxGE6nQSZVfiFdq9lOL']",80,2017-03-22
+2fQrGHiQOvpL9UgPvtYy6G,"Bank Account","['1URnnhqYAYcrqrcwql10ft']",80,2017-09-23
+55n9yjI6qqXh5F2mYvUc2y,"I Don’t Wanna Live Forever (Fifty Shades Darker)","['5ZsFI1h6hIdQRw2ti0hz81', '06HL4z0CvFAxyc27GXpf02']",80,2017-11-09
+1wJRveJZLSb1rjhnUHQiv6,"Swervin (feat. 6ix9ine)","['31W5EY0aAly4Qieq6OFu6I', '7gZfnEnfiaHzxARJ2LeXrf']",80,2018-12-21
+2rxQMGVafnNaRaXlRMWPde,"Beautiful Crazy","['718COspgdWOnwOFpJHRZHS']",80,2018-06-01
+2TIlqbIneP0ZY1O0EzYLlc,"Someone You Loved","['4GNC7GD6oZMSxPGyXy4MNB']",80,2018-11-08
+698ItKASDavgwZ3WjaWjtz,"Faded","['7vk5e3vY1uw9plTHJAMwjN']",80,2018-12-14
+0FZ4Dmg8jJJAPJnvBIzD9z,"ZEZE (feat. Travis Scott & Offset)","['46SHBwWsqBkxI7EeeBEQG7', '4DdkRBBYG6Yk9Ka8tdJ9BW', '0Y5tJX1MQlPlqiwlOH1tJY']",80,2018-12-14
+0oufSLnKQDoBFX5mgkDCgR,"Trust","['3tlXnStJ1fFhdScmQeLpuG']",80,2018-10-19
+2rbDhOo9Fh61Bbu23T2qCk,"Always Remember Us This Way","['1HY2Jd0NmPuamShAr6KMms']",80,2018-10-05
+2Yer0p7uB2lVBUAtANuuQp,"Magic In The Hamptons (feat. Lil Yachty)","['5UjifI1TYefXWn9GdqDOHl', '6icQOAFXDZKsumw3YXyusw']",80,2018-06-08
+4ofwffwvvnbSkrMSCKQDaC,"Shotgun","['2ysnwxxNtSgbb9t1m2Ur4j']",80,2018-03-23
+0TlLq3lA83rQOYtrqBqSct,"Nonstop","['3TVXtAsR1Inumwj472S9r4']",80,2018-06-29
+5bJ1DrEM4hNCafcDd1oxHx,"Self Care","['4LLpKhyESsyAXpc4laK94U']",80,2018-08-03
+3h3pOvw6hjOvZxRUseB7h9,"i wanna be your girlfriend","['3uwAm6vQy7kWPS2bciKWx9']",80,2018-03-02
+1tNJrcVe6gwLEiZCtprs1u,"3 Nights","['6USv9qhCn6zfxlBQIYJ9qs']",80,2018-10-16
+6vN77lE9LK6HP2DewaN6HZ,"Yes Indeed","['5f7VJjfbwm532GiveGC0ZK', '3TVXtAsR1Inumwj472S9r4']",80,2018-05-18
+07KXEDMj78x68D884wgVEm,"High Fashion (feat. Mustard)","['757aE44tKEUQEqRuT6GnEB', '0YinUQ50QDB7ZxSCLyQ40k']",80,2019-12-06
+41MCdlvXOl62B7Kv86Bb1v,"Empty","['4MCBfE4596Uoi2O4DtmEMz']",80,2019-03-08
+5stPVcRqb4qixbafP9e8lt,"Hola - Remix","['0KPX4Ucy9dk82uj4GpKesn', '1pQWsZQehhS4wavwh7Fnxd', '37230BxxYs9ksS7OkZw3IU', '2LmcxBak1alK1bf7d1beTr', '3fZk3Gm5dN5v5yfYMQ04Bx']",80,2019-11-01
+3XF5xLJHOQQRbWya6hBp7d,"you should see me in a crown","['6qqNVTkY8uBg9cP3Jd7DAH']",80,2019-03-29
+51Fjme0JiitpyXKuyQiCDo,"Lalala","['6USMTwO0MNDnKte5a5h0xx', '41X1TR6hrK8Q2ZCpp2EqCz']",80,2019-06-28
+3NqCEpT8xsHdzpiRlM1kpS,"Through Da Storm","['6AgTAQt8XS6jRWi4sX7w49']",80,2019-06-07
+15k1TDabqSEmyXOwMq9RM7,"Investe Em Mim","['22jNvLBrXGKr4CcV2tw8Ag']",80,2019-12-13
+6b2RcmUt1g9N9mQ3CbjX2Y,"How Do You Sleep?","['2wY79sveU1sp5g7SokKOiI']",80,2019-07-19
+5iFwAOB2TFkPJk8sMlxP8g,"Make You Mine","['4vxaQs6vK54nK89J1VtLex']",80,2019-08-09
+4jAIqgrPjKLTY9Gbez25Qb,"Lights Up","['6KImCVD70vtIoJWnq6nGn3']",80,2019-12-13
+4Yxc55NX3tAXC2mHRAhtcW,"All I Want - From ""High School Musical: The Musical: The Series""","['1McMsnEElThX1knmY4oliG']",80,2019-11-27
+4SSnFejRGlZikf02HLewEF,"bury a friend","['6qqNVTkY8uBg9cP3Jd7DAH']",80,2019-03-29
+6U0FIYXCQ3TGrk4tFpLrEA,"SUGAR","['1Bl6wpkWCQ4KVgnASpvzzA']",80,2019-08-23
+5A3fPy30SN2wuzrahpcxvV,"Don't Give Up On Me - (From ""Five Feet Apart"")","['2oX42qP5ineK3hrhBECLmj']",80,2019-07-26
+0ecC8p17cDNlxHXkuYqeR6,"Surrender","['2WxjxdeF7GGdcCK276qViY']",80,2019-10-29
+4a6q8CR2hzLk2plDkSxkfD,"I.F.L.Y.","['4GvEc3ANtPPjt1ZJllr5Zl']",80,2019-08-09
+2gwkD6igEhQbDQegRCcdoB,"Suge","['4r63FhuTkUYltbVAg5TQnk']",80,2019-03-01
+40mjsnRjCpycdUw3xhS20g,"GATTI","['7A8S43ryYdbWpJKeHRZRcq', '0eDvMgVFoNV3TpwtrVCoTj', '0Y5tJX1MQlPlqiwlOH1tJY']",80,2019-12-27
+6habFhsOp2NvshLv26DqMb,"Despacito","['4V8Sr092TqfHkfAA5fXXqG', '4VMYDCV2IEDYJArk749S6m']",80,2019-02-01
+1cVlW9WQiGlFdWUXFdFZGh,"Pa' Olvidarme De Ella","['4bw2Am3p9ji3mYsXNXtQcd', '0XwVARXT135rw8lyw1EeWP']",80,2019-09-06
+4vUmTMuQqjdnvlZmAH61Qk,"South of the Border (feat. Camila Cabello & Cardi B)","['6eUKZXaKkcviH0Ku9w2n3V', '4nDoRrQiYLoBzwC5BhVJzF', '4kYSro6naA4h99UJvo89HB']",80,2019-07-12
+4ja2gzrNh9VNigzoXfmbwD,"Mariposa","['0imE3buPhAowREqCrr4CYe']",80,2019-08-28
+2Rk4JlNc2TPmZe2af99d45,"ME! (feat. Brendon Urie of Panic! At The Disco)","['06HL4z0CvFAxyc27GXpf02', '6eYFryfcEu3QSq59D62wZQ', '20JZFwl6HVl6yg8a4H3ZqK']",80,2019-08-23
+3Fj47GNK2kUF0uaEDgXLaD,"wish you were gay","['6qqNVTkY8uBg9cP3Jd7DAH']",80,2019-03-29
+4kV4N9D1iKVxx1KLvtTpjS,"break up with your girlfriend, i'm bored","['66CXWjxzNUsdJxJ2JdwvnR']",80,2019-02-08
+0bMbDctzMmTyK2j74j3nF3,"Alone, Pt. II","['7vk5e3vY1uw9plTHJAMwjN', '4npEfmQ6YuiwW1GpUmaq3F']",80,2019-12-27
+6kls8cSlUyHW2BUOkDJIZE,"Hate Me (with Juice WRLD)","['0X2BH1fck6amBIoJhDVmmJ', '4MCBfE4596Uoi2O4DtmEMz']",80,2019-06-26
+4EWBhKf1fOFnyMtUzACXEc,"Pluto Projector","['7pbDxGE6nQSZVfiFdq9lOL']",80,2019-10-25
+18A7ha5BitZjmdHTCwXFbU,"Cradles","['7gXb99Sf9nNmpNYeAgIQFG']",80,2019-01-04
+0F7FA14euOIX8KcbEturGH,"Old Town Road","['7jVv8c5Fj3E9VhNjxT4snq']",80,2019-06-21
+2ksOAxtIxY8yElEWw8RhgK,"China","['2R21vXR83lH98kGeO99Y66', '4VMYDCV2IEDYJArk749S6m', '790FomKkXshlbRYZFtlgla', '1vyhD5VmyZ7KMfW5gqLgo5', '1i8SpTcr7yvPOmcqrbnVXY']",80,2019-07-19
+1iSqfoUFnQwV0QW1EfUit8,"Suicidal","['1cNDP5yjU5vjeR8qMf4grg']",80,2019-11-22
+1VSuFS7PahCN3SWbOcQ98m,"forget me too (feat. Halsey)","['6TIYQ3jFPwQSRmorSezPxX', '26VFTg2z8YR0cCuwLzESi2']",80,2020-09-25
+6y4GYuZszeXNOXuBFsJlos,"Kaikai Kitan","['58oPVy7oihAEXE0Ott6JOf']",80,2020-12-23
+4S2uhQE8L9V6p7rj7SiauJ,"Suicidal (Remix) [feat. Juice WRLD]","['1cNDP5yjU5vjeR8qMf4grg', '4MCBfE4596Uoi2O4DtmEMz']",80,2020-03-13
+7MoZgM6AsQaZw14WnKopuy,"Miedito o Qué? (feat. KAROL G)","['3m5qlPf2OkihLz3dRYnkPA', '5H1nN1SzW0qNeUEZvuXjAj', '790FomKkXshlbRYZFtlgla']",80,2020-11-25
+5psEZhQu6lukjhavJo4AbC,"SO DONE","['2tIP7SsRs7vjIcLrU85W8J']",80,2020-10-23
+7aGyRfJWtLqgJaZoG9lJhE,"Mad at Disney","['3QJUFtGBGL05vo0kCJZsmT']",80,2020-07-24
+3jT2LKH0RSbQ8jIUNFzXm5,"PTSD","['5QdEbQJ3ylBnc3gsIASAT5', '4MCBfE4596Uoi2O4DtmEMz', '4O15NlyKLIASxsJ0PrXPfz', '1anyVhU62p31KFi8MEzkbf']",80,2020-02-28
+4TgxFMOn5yoESW6zCidCXL,"Savage Love (Laxed – Siren Beat) [BTS Remix]","['56mfhUDKa1vec6rSLZV5Eg', '07YZf4WDAMNwqr4jfgOZ8y', '3Nrfpe0tUJi4K4DXYWgMUX']",80,2020-10-02
+2QqJTIlGKRLJC3onkavYEz,"Flex (feat. Juice WRLD)","['6AgTAQt8XS6jRWi4sX7w49', '4MCBfE4596Uoi2O4DtmEMz']",80,2020-05-15
+7ju97lgwC2rKQ6wwsf9no9,"Rain On Me (with Ariana Grande)","['1HY2Jd0NmPuamShAr6KMms', '66CXWjxzNUsdJxJ2JdwvnR']",80,2020-05-29
+7EUvcSFkyVB73zrblhQmEL,"Bonita","['6ZtLRqHEkAXPWVw0eRbDac']",80,2020-06-18
+0zzVTGyRrWpQu8Fr28NRAv,"OK Not To Be OK","['64KEffDW9EtZ1y2vBYgq8T', '6S2OmqARrzebs0tKUEyXyp']",80,2020-09-10
+055Mme9ReKK99jRFA5UJ55,"Get Out My Head","['2s7Oijd4mFGgEkhYJtf3sJ']",80,2020-05-25
+4K8cyoCDovlc4FvtUr2Hfx,"Nada","['5DUlefCLzVRzNWaNURTFpK', '5xSx2FM8mQnrfgM1QsHniB']",80,2020-08-14
+7Bar1kLTmsRmH6FCKKMEyU,"Hit Different","['7tYKF4w9nC0nq9CsPZTHyP', '0KuF7reCTOZwV7YJnHQqgr', '2RdwBSPQiwcmiDo9kixcl8', '7c0XG5cIJTrrAgEC3ULPiq']",80,2020-09-04
+4vjpLMyL3ZO6aphdYr8XYw,"i'm so tired...","['5JZ7CnR6gTvEMKX4g70Amv', '3WGpXCj9YhhfX11TToZcXP']",80,2020-03-06
+2FVpOsjT1iquZ3SpCjZ9Ne,"Telepathy","['3Nrfpe0tUJi4K4DXYWgMUX']",80,2020-11-20
+3nS9a01VvXHQriLqJYwRqG,"DOLLAZ ON MY HEAD (feat. Young Thug)","['2hlmm7s2ICUX0LVIhVFlZQ', '50co4Is1HCEo8bhOyUWKpn']",80,2020-05-22
+43BlKpJcSrC9AsJ3F1DKg9,"Still Trappin' (with King Von)","['3hcs9uc56yIGFCSy9leWe7', '6QtgPSJPSzcnn7dPZ4VINp']",80,2020-12-24
+2ygvZOXrIeVL4xZmAWJT2C,"my future","['6qqNVTkY8uBg9cP3Jd7DAH']",80,2020-07-30
+7lJoRyuNJtuiqTcKtuMuIR,"Maçã Verde","['0pcoadNMmvrUyab1RxWBoV']",80,2020-10-09
+3wJVBz7gvGTwTWVAxFa6ny,"Fever","['6M2wZ9GZgrQXHCFfjv46we', '3QVolfxko2UyCOtexhVTli']",80,2020-10-29
+6gxKUmycQX7uyMwJcweFjp,"We Paid (feat. 42 Dugg)","['5f7VJjfbwm532GiveGC0ZK', '45gHcnDnMC15sgx3VL7ROG']",80,2020-05-01
+0k7wmahjkn389wAZdz19Cv,"Drankin N Smokin","['1RyvyyTE3xzB2ZywiAwp0i', '4O15NlyKLIASxsJ0PrXPfz']",80,2020-11-13
+68cPbG7hJnwDW9nPX1uQcX,"Saturno","['1WXbiUMl1AT9Inb619xPUg', '25XJqeReVV38w0tR04GGBd', '0y7B2G0jNMGWyQJsOoRMUt']",80,2020-12-10
+7E9GeFGfjXw9LAI4ay6rsw,"El Tóxico","['1dKdetem2xEmjgvyymzytS', '66ihevNkSYNzRAl44dx6jJ']",80,2020-10-27
+6mADjHs6FXdroPzEGW6KVJ,"bloody valentine","['6TIYQ3jFPwQSRmorSezPxX']",80,2020-09-25
+4w47S36wQGBhGg073q3nt7,"TKN (feat. Travis Scott)","['7ltDVBr6mKbRvohxheJ9h1', '0Y5tJX1MQlPlqiwlOH1tJY']",80,2020-05-28
+5ruzrDWcT0vuJIOMW7gMnW,"The Adults Are Talking","['0epOFNiUfyON9EYx7Tpr6V']",80,2020-04-10
+25z6kpmIwkCUqk2IORrJ5v,"Rät","['3u6lPufHw4Oww6D88rv6sB']",80,2020-09-25
+06s3QtMJVXw1AJX3UfvZG1,"Hasta Que Dios Diga","['2R21vXR83lH98kGeO99Y66', '4q3ewBCX7sLwd24euuV69X']",80,2020-05-29
+13EW51DKru044OJDJ9Bm8o,"TRAGIC (feat. Youngboy Never Broke Again & Internet Money)","['2tIP7SsRs7vjIcLrU85W8J', '7wlFDEWiM5OoIAt8RSli8b', '6MPCFvOQv5cIGfw3jODMF0']",80,2020-11-06
+5zj8WNkBrEzlI5FKeYV4ol,"La Luz","['77ziqFxp5gaInVrF2lj4ht', '1vyhD5VmyZ7KMfW5gqLgo5']",80,2020-10-31
+30QR0ndUdiiMQMA9g1PGCm,"...And to Those I Love, Thanks for Sticking Around","['1VPmR4DJC1PlOtd0IADAO0']",80,2020-02-14
+50Td3qilgs8BLtv8mHyT1t,"Control","['03d2mJXSMtuPI0nIvLnhoS']",80,2020-03-13
+6wQlQrTY5mVS8EGaFZVwVF,"Smile (with The Weeknd)","['4MCBfE4596Uoi2O4DtmEMz', '1Xyo4u8uXC1ZmMpatF05PJ']",80,2020-07-10
+4crczEC1PpoD8TsDsmoWNI,"Goodbye","['5rGrDvrLOV2VV8SCFVGWlj', '2nm38smINjms1LtczR0Cei']",80,2020-12-18
+5hM5arv9KDbCHS0k9uqwjr,"Borderline","['5INjqkS1o8h1imAzPqGZBb']",80,2020-02-14
+58f4twRnbZOOVUhMUpplJ4,"Brown Munde","['6LEG9Ld1aLImEFEVHdWNSB', '4vvW590Gq8dNWsP5BM9FkS', '5DHi2MeoRgAwPE0A0qwRMl', '6aQfrWHwAcuY8IYItbChZh']",80,2020-09-18
+1O74aTse7W5hd2rAvnEVaW,"Xerecard","['7FMscVRC6dsjpDpgt1r4Hn', '3PZTvUS5fUUhV3EKAjqdZk']",80,2020-10-18
+56Ta1O7Jxxpjnc6cWdDKUo,"Si Me Dices Que Sí","['0vR2qb8m9WHeZ5ByCbimq2', '329e4yvIujISKGKz1BZZbO', '28gNT5KBp7IjEOQoevXf9N']",80,2020-02-18
+3gD4J3RUHy4OUuZ3qAiaiG,"Caramelo","['1i8SpTcr7yvPOmcqrbnVXY']",80,2020-06-11
+364dI1bYnvamSnBJ8JcNzN,"Intentions","['1uNFoZAHBGtllmzznpCI3s', '0VRj0yCOv2FXJNP47XQnx5']",80,2020-02-07
+7xbWAw3LMgRMn4omR5yVn3,"Lose Somebody","['23fqKkggKUBHNkbKtXEls4', '5Pwc4xIPtQLFEnJriah9YJ']",80,2020-05-15
+29TPjc8wxfz4XMn21O7VsZ,"Sky","['699OTQXzgjhIYAHMy9RyPD']",80,2020-12-25
+25j0Sape7qZbq6ZPLFefTT,"Buss It","['2SXhbucehn00OBVKhzxDyM']",80,2020-06-19
+4K06PO78fW4mnBVenxGNob,"Conversations","['4MCBfE4596Uoi2O4DtmEMz']",80,2020-07-10
+3QH8rQGNFX8VLbCgZ7uPTS,"Fly To My Room","['3Nrfpe0tUJi4K4DXYWgMUX']",80,2020-11-20
+7L6G0wpIUiPXuvoo7qhb06,"oops!","['2YOYua8FpudSEiB9s88IgQ']",80,2020-10-02
+3QCU8BT0zDS9LPVfEhRFEE,"ALWAYS DO","['2tIP7SsRs7vjIcLrU85W8J']",80,2020-11-06
+1qrpoAMXodY6895hGKoUpA,"You Belong With Me (Taylor’s Version)","['06HL4z0CvFAxyc27GXpf02']",80,2021-04-09
+77sMIMlNaSURUAXq5coCxE,"Fearless (Taylor’s Version)","['06HL4z0CvFAxyc27GXpf02']",80,2021-04-09
+5RmSunLqeDqNWww8LWhAiK,"WACHA","['4m6ubhNsdwF4psNf3R8kwR', '1bAftSH8umNcGZ0uyV7LMg']",80,2021-04-01
+2ufLEVbzvEcJ3subW8jBUp,"Lut Gaye","['1tqysapcCh1lWEAc9dIFpa', '4f7KfxeHq9BiylGmyXepGt', '5HcunTidTUrOaf8V0iJcvl', '44oMI9xI4kcCub3qbpYPdb']",80,2021-02-17
+4Agtk2MrapdZAVN7v6PuFO,"Roadtrip","['6LArUyIoMiHmDvvOAsE2cd', '3jeXY6LJU0ZiKhXoXa9rRw']",80,2021-02-05
+27UcQ6dAvQrgH9C880rCM3,"Love You Different (feat. BEAM)","['1uNFoZAHBGtllmzznpCI3s', '46MWeeHNVMYRIIofQBEX98']",80,2021-03-19
+3SK45LddxlEkzI8OWO9Eyo,"Ingobernable","['5TYxZTjIPqKM8K8NuP9woO', '3jc496ljiyrS3ECrD7QiqL', '6bXIjeV8nUh5pFxgzgny9P', '3pUWmkSef9vJOPDViYGZ5L']",80,2021-02-26
+2dHoVW9AxJVSRebPRyV2aA,"Gone","['3eVa5w3URK5duf6eyVDbu9']",80,2021-03-12
+1GkHyypTFkUf0QQKwYoXH4,"You (with Marshmello & Vance Joy)","['5CiGnKThu5ctn9pBxv7DGa', '64KEffDW9EtZ1y2vBYgq8T', '10exVja0key0uqUkk6LJRT']",80,2021-01-29
+3CVb6hkMrlF7eHhXi5B3PZ,"Body","['3FoFW2AoUGRHBacC6i4x4p', '7b79bQFziJFedJb75k6hFt']",80,2021-03-25
+4KrhaZm4JRkNO4HRdLvJIG,"Моя голова винтом (My head is spinning like a screw)","['3JG79Z23wJN9Q5PTPpDAEV']",80,2021-02-02
+3promGTTwsn1N5D6RzaFMV,"I'm not Pretty","['6DdbeAeBlrYj8bNToZv4TY']",80,2021-01-08
+1xMvdOFQaql3EBkHmuh2TK,"Batman","['0wHeZY93Ede0g1jXaWsiFS']",80,2021-02-12
+1eIS75JS5rfbJpSu6ZC9EO,"VOCE","['1vgQksyJ0IVz8y9XerEOy3']",80,2021-03-03
+45kgqMRkC29qjBlzeaJcad,"Street Runner","['45TgXXqMDdF8BkjA83OM7z']",80,2021-03-10
+5xrtzzzikpG3BLbo4q1Yul,"LILAC","['3HqSLMAZ3g3d5poNaI7GOU']",80,2021-03-25
+40zJaB3z53PGaxIkYyieBP,"Só de Sacanagem - Ao Vivo","['41QLxRXlc2NwfJZkHGHKid', '1JQLCxphQYlnbokiEvfB8o']",80,2021-01-29
+6rAGFY9D3ah6Lb7fUgbNNH,"Fake A Smile","['7vk5e3vY1uw9plTHJAMwjN', '3QJUFtGBGL05vo0kCJZsmT']",80,2021-02-19
+7G1o084VGIPA5TAbUSgADQ,"Te Va Bien (with Arcangel & Becky G feat. Darell)","['4QrBoWLm2WNlPdbFhmlaUZ', '4SsVbpTthjScTS7U2hmr1X', '4obzFoKoKRHIphyHzJ35G3', '1TtXnWcUs0FCkaZDPGYHdf']",80,2021-03-04
+0uRrG2jRR5tuifsYIJHEao,"Sand In My Boots","['4oUHIQIBe0LHzYfvXNW4QM']",80,2021-01-08
+3buwFfY33H32wfZ6X9poV3,"Somebody","['1uNFoZAHBGtllmzznpCI3s']",80,2021-03-19
+3SawmGBjjq8EOYZJV11cJm,"Only Wanna Be With You - Pokémon 25 Version","['246dkjvS1zLTtiykXe5h60']",80,2021-02-25
+3eZYOQO4UzKrUDYDghtnFw,"test drive","['66CXWjxzNUsdJxJ2JdwvnR']",80,2021-02-19
+6L89mwZXSOwYl76YXfX13s,"Basket Case","['7oPftvlwr6VrsViSDV7fJY']",80,1994-02-01
+3cfOd4CMv2snFaKAnMdnvK,"All Star","['2iEvnFsWxR0Syqu2JNopAd']",80,1999-06-08
+47Slg6LuqLaX0VodpSCvPt,"Just the Way You Are","['0du5cEVh5yTK9QJze8zA0C']",80,2010-10-05
+1wVuPmvt6AWvTL5W2GJnzZ,"Talking to the Moon","['0du5cEVh5yTK9QJze8zA0C']",80,2010-10-05
+0TDLuuLlV54CkRRUOahJb4,"Titanium (feat. Sia)","['1Cs0zKBU1kc0i8ypK3B9ai', '5WUlDfRSoLAfcVSX1WnrxN']",80,2012-12-07
+1yjY7rpaAQvKwpdUliHx0d,"Still into You","['74XFHRwlV6OrjEM0A2NCMF']",80,2013-04-05
+06KyNuuMOX1ROXRhj787tj,"We Don't Talk Anymore (feat. Selena Gomez)","['6VuMaDnrHyPL1p4EHjYLi7', '0C8ZW7ezQVs4URX5aX7Kqx']",80,2016-01-29
+26wLOs3ZuHJa2Ihhx6QIE6,"Teeth","['5Rl15oVamLq7FbSb0NNBNy']",80,2019-08-23
+44AyOl4qVkzS48vBsbNXaC,"Can't Help Falling in Love","['43ZHCT0cAZBISjO8DG9PnE']",79,1961-10-20
+3SdTKo2uVsxFblQjpScoHy,"Stand by Me","['3plJVWt88EqjvtuB4ZDRV3']",79,1962-08-20
+63T7DJ1AFDD6Bn8VzG6JE8,"Paint It, Black","['22bE4uQ6baNwSHPVcDxLCe']",79,1966-04-15
+4s6LhHAV5SEsOV0lC2tjvJ,"California Dreamin' - Single Version","['1bs7HoMkSyQwcobCpE9KpN']",79,1966-03
+2aoo2jlRnM3A0NyLQqMN2f,"All Along the Watchtower","['776Uo845nYHJpNaStv1Ds4']",79,1968-10-25
+2EqlS6tkEnglzr7tkKAAYD,"Come Together - Remastered 2009","['3WrFJ7ztbogyGnTHbHJFl2']",79,1969-09-26
+62AuGbAkt8Ox2IrFFb8GKV,"Sweet Caroline","['7mEIug7XUlQHikrFxjTWes']",79,1969-06-06
+20OFwXhEXf12DzwXmaV7fj,"Bad Moon Rising","['3IYUhFvPQItj6xySrBmZkd']",79,1969-08-03
+2LawezPeJhN4AWuSB0GtAU,"Have You Ever Seen The Rain","['3IYUhFvPQItj6xySrBmZkd']",79,1970-12-07
+2eF8pWbiivYsYRpbntYsnc,"Signed, Sealed, Delivered (I'm Yours)","['7guDJrEfX3qb6FEbdPA5qi']",79,1970-08-07
+7iN1s7xHE4ifF5povM6A48,"Let It Be - Remastered 2009","['3WrFJ7ztbogyGnTHbHJFl2']",79,1970-05-08
+5CQ30WqJwcep0pYcV4AMNc,"Stairway to Heaven - Remaster","['36QJpDe2go2KgaRleHCDTp']",79,1971-11-08
+7pKfPomDEeI4TPT6EOYjn9,"Imagine - Remastered 2010","['4x1nvY2FN8jxqAFA0DA02H']",79,1971-09-09
+1k1Bqnv2R0uJXQN4u6LKYt,"Ain't No Sunshine","['1ThoqLcyIYvZn7iWbj8fsj']",79,1971-05-01
+4yugZvBYaoREkJKtbG08Qr,"Take It Easy - 2013 Remaster","['0ECwFtbIWEVNwjlrfc6xoL']",79,1972
+5MxNLUsfh7uzROypsoO5qe,"Dream On","['7Ey4PD4MYsKc5I2dolUwbH']",79,1973-01-05
+5ihS6UUlyQAfmp48eSkxuQ,"Landslide","['08GQAI4eElDnROBrJRGE0X']",79,1975-07-11
+7LRMbd3LEoV5wZJvXT1Lwb,"T.N.T.","['711MCceyCBcFnzjGY4Q7Un']",79,1976-05-14
+3vkQ5DAB1qQMYO4Mr9zJN6,"Gimme! Gimme! Gimme! (A Man After Midnight)","['0LcJLqbBmaGUft1e9Mm8HV']",79,1979
+4o6BgsqLIBViaGVbx5rbRk,"You Make My Dreams (Come True)","['77tT1kLj6mCWtFNqiOmP9H']",79,1980
+4y1LsJpmMti1PfRQV9AWWe,"Girls Just Want to Have Fun","['2BTZIqw0ntH9MvilQ3ewNY']",79,1983-10-14
+5zA8vzDGqPl2AzZkEYQGKh,"Uptown Girl","['6zFYqv1mOsgBRQbae3JJ9e']",79,1983-08-08
+1JLn8RhQzHz3qDqsChcmBl,"I Want to Know What Love Is - 1999 Remaster","['6IRouO5mvvfcyxtPDKMYFN']",79,1984-12-12
+05wIrZSwuaVWhcv5FfqeH0,"Walking On Sunshine","['2TzHIUhVpeeDxyJPpQfnV3']",79,1985
+254bXAqt3zP6P50BdQvEsq,"Everywhere - 2017 Remaster","['08GQAI4eElDnROBrJRGE0X']",79,1987-04-13
+3YBZIN3rekqsKxbJc9FZko,"Paradise City","['3qm84nBOXUEQ2vnTfUTTFC']",79,1987-07-21
+1uKjQoh8JZj9ryuYRhpd7E,"Ahora Te Puedes Marchar","['2nszmSgqreHSdJA3zWPyrW']",79,1987-07-15
+2M9ro2krNb7nr7HSprkEgo,"Fast Car","['7oPgCQqMMXEXrNau5vxYZP']",79,1988-04-05
+5tVA6TkbaAH9QMITTQRrNv,"Free Fallin'","['2UZMlIwnkgAEDBsw1Rejkn']",79,1989-01-01
+3ovjw5HZZv43SxTwApooCM,"Wind Of Change","['27T030eWyCQRmDyuvr1kxY']",79,1990-01-01
+0MKGH8UMfCnq5w7nG06oM5,"Come As You Are","['6olE6TJLqED3rqDCT0FyPh']",79,1991-09-26
+59WN2psjkt1tyaxjspN8fp,"Killing In The Name","['2d0hyoQ5ynDBnkvAbJKORj']",79,1992
+2qOm7ukLyHUXWyR4ZWLwxA,"It Was A Good Day","['3Mcii5XWf6E0lrY3Uky4cA']",79,1992-11-17
+5ByAIlEEnxYdvpnezg7HTX,"Juicy - 2005 Remaster","['5me0Irg2ANcsgc93uaYrpb']",79,1994-09-13
+2g8HN35AnVGIk7B8yMucww,"Big Poppa - 2005 Remaster","['5me0Irg2ANcsgc93uaYrpb']",79,1994-09-13
+5qqabIl2vWzo9ApSC317sa,"Wonderwall - Remastered","['2DaxqgrOhkeH0fpeiQq2f4']",79,1995-10-02
+7KwZNVEaqikRSBSpyhXK2j,"Hypnotize - 2014 Remaster","['5me0Irg2ANcsgc93uaYrpb']",79,1997-03-04
+5UWwZ5lm5PKu6eKsHAGxOk,"Everlong","['7jy3rLJdDQY21OgRLCZ9sD']",79,1997-05-20
+6Qyc6fS4DsZjB2mRW9DsQs,"Iris","['2sil8z5kiy4r76CRTXxBCA']",79,1998-09-11
+4EchqUKQ3qAQuRNKmeIpnf,"The Kids Aren't Alright","['5LfGQac0EIXyAN8aUwmNAQ']",79,1998-11-16
+1BKT2I9x4RGKaKqW4up34s,"Ruff Ryders' Anthem","['1HwM5zlC5qNWhJtM00yXzG']",79,1998-05-01
+64BbK9SFKH2jk86U3dGj2P,"Otherside","['0L8ExT028jH3ddEcZwqJJ5']",79,1999-06-08
+2hKdd3qO7cWr2Jo0Bcs0MA,"Drops of Jupiter (Tell Me)","['3FUY2gzHeIiaesXtOAdB7A']",79,2001-03-27
+2MLHyLy5z5l5YRp7momlgw,"Island In The Sun","['3jOstUTkEu2JkjvRdBA5Gu']",79,2001-05-15
+5xEM5hIgJ1jjgcEBfpkt2F,"Complicated","['0p4nmQO2msCgU4IF37Wi3j']",79,2002-06-04
+0ARK753YaiJbpLUk7z5yIM,"Dilemma","['2gBjLmx6zQnFGQJCAQpRgw', '3AuMNF8rQAKOzjYppFNAoB']",79,2002-06-25

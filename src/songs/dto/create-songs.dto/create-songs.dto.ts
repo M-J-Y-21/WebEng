@@ -1,20 +1,19 @@
-import { IsAlpha, IsDate, IsNumber, Max, Min } from "class-validator";
+import { IsArray, IsDateString, IsNumber, IsString, Max, Min } from "class-validator";
 
 export class CreateSongDto {
 
-    @IsAlpha()
+    @IsString()
     title: string;
 
-    year: number;
+    @IsString({ each: true })
+    artist_ids: string[];
 
-    artist_ids?: string[];
-
-    @Max(100)
-    @Min(0)
     @IsNumber()
+    @Min(0)
+    @Max(100)
     popularity?: number;
 
-    @IsDate()
+    @IsDateString()
     release_date?: Date;
 
 }

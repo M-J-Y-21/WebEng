@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
 import { CreateSongDto } from './dto/create-songs.dto/create-songs.dto';
 import { UpdateSongDto } from './dto/update-songs.dto/update-songs.dto';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaClient } from '@prisma/client';
+const prisma = new PrismaClient();
 
 @Injectable()
 export class SongsService {
-  private prisma = new PrismaService();
 
   async retrieveSongs(
     title: string,
@@ -13,9 +13,9 @@ export class SongsService {
     limit: number,
     contentType: string
   ) {
-    const songs = await this.prisma.song.findMany({
+    const songs = await prisma.song.findMany({
       where: {
-        title: title,
+        title: { contains: title },
         release_date: {
           ...(year ? {
             gte: new Date(`${year}-01-01T00:00:00.000Z`),
@@ -31,7 +31,7 @@ export class SongsService {
   }
 
   async createSong(createSongDto: CreateSongDto) {
-    return await this.prisma.song.create({
+    return await prisma.song.create({
       data: {
         title: createSongDto.title,
         artist_ids: createSongDto.artist_ids,
@@ -42,17 +42,23 @@ export class SongsService {
   }
 
   async updateSongById(id: string, updateSongDto: UpdateSongDto) {
-    return await this.prisma.song.update({
+    console.log("id: ", id);
+    return await prisma.song.update({
       where: { id },
-      data: updateSongDto
+      data: {
+        title: updateSongDto.title,
+        artist_ids: updateSongDto.artist_ids,
+        popularity: updateSongDto.popularity,
+        release_date: updateSongDto.release_date,
+      }
     });
   }
 
   async getSongById(id: string) {
-    return await this.prisma.song.findUnique({ where: { id: id } });
+    return await prisma.song.findUnique({ where: { id } });
   }
 
   async deleteSongById(id: string) {
-    return await this.prisma.song.delete({ where: { id: id } });
+    return await prisma.song.delete({ where: { id } });
   }
 }

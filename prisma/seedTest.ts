@@ -10,7 +10,7 @@ async function main() {
   console.log('Cleared database');
 
   // seed songs
-  parseFile('data/songs.csv', { headers: true })
+  parseFile('data/songs-sample.csv', { headers: true })
     .on('error', (error) => console.error(error))
     .on('data', async row => {
       await prisma.song.upsert({
@@ -33,7 +33,7 @@ async function main() {
     .on('end', (rowCount: number) => console.log(`Parsed ${rowCount} songs`));
 
   // seed artists
-  parseFile('data/artists.csv', { headers: true })
+  parseFile('data/artists-sample.csv', { headers: true })
     .on('error', (error) => console.error(error))
     .on('data', async row => {
       await prisma.artist.upsert({
@@ -46,6 +46,7 @@ async function main() {
           name: row.name,
         },
       });
+      //console.log(artist);
     })
     .on('end', (rowCount: number) => console.log(`Parsed ${rowCount} artists`));
 }

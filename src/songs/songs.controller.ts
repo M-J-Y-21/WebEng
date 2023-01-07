@@ -8,31 +8,32 @@ import { CreateSongDto } from './dto/create-songs.dto/create-songs.dto';
 export class SongsController {
   constructor(private readonly songsService: SongsService) { }
 
-  // REQ 1
+  // REQ 1 Retrieve
   @Get(':id')
   async getSongById(@Param('id') id: string) {
     return await this.songsService.getSongById(id);
   }
 
-  // REQ 1
+  // REQ 1 Create
   @Post('')
   async createSong(@Body() createSongDto: CreateSongDto) {
-    return this.songsService.createSong(createSongDto);
+    return await this.songsService.createSong(createSongDto);
   }
 
-  // REQ 1
+  // REQ 1 Update
   @Put(':id')
-  async updateSongById(@Param('id') id, @Body() updateSongDto: UpdateSongDto) {
+  async updateSongById(@Param('id') id: string, @Body() updateSongDto: UpdateSongDto) {
+    console.log("id: ", id);
     return await this.songsService.updateSongById(id, updateSongDto);
   }
 
-  // REQ 1
+  // REQ 1 Delete
   @Delete(':id')
   async deleteSongById(@Param('id') id: string) {
     return await this.songsService.deleteSongById(id);
   }
 
-  // REQ 2
+  // REQ 2, 5
   @Get('')
   async retrieveSongs(
     @Query('title') name: string,
@@ -40,7 +41,6 @@ export class SongsController {
     @Query('limit') limit: number,
     @Query('content-type') contentType: string,
   ) {
-    console.log(name + ", " + year + ", " + limit + ", " + contentType);
     return await this.songsService.retrieveSongs(name, year, limit, contentType);
   }
 }
