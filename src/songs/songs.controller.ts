@@ -39,8 +39,7 @@ export class SongsController {
     @Query('title') name: string,
     @Query('year') year: number,
     @Query('limit') limit: number,
-    @Query('content-type') contentType: string,
   ) {
-    return await this.songsService.retrieveSongs(name, year, limit, contentType);
+    return await this.songsService.retrieveSongs(name, year, limit);
   }
 }

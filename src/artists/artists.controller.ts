@@ -5,25 +5,13 @@ import { ArtistsService } from './artists.service';
 export class ArtistsController {
   constructor(private readonly artistsService: ArtistsService) { }
 
-  // REQ 3 Retrieval, 6
-  /**
-   * Retrieves a list of songs by an artist (id or name), sorted by popularity,
-   * optionally filtered by year and limited to a number of results.
-   * Satisfies requirements 3 and 6.
-   * @param id Artist ID
-   * @param name Artist name
-   * @param year Year to filter by
-   * @param limit Number of results to limit to
-   * @returns The array of songs.
-   */
+  // REQ 3 Get
   @Get('songs')
   async getTopSongs(
     @Query('id') id: string,
     @Query('name') name: string,
-    @Query('year') year: number,
-    @Query('limit') limit: number
   ) {
-    return await this.artistsService.getTopSongsByArtist(id, name, year, limit);
+    return await this.artistsService.getSongsByArtist(id, name);
   }
 
   // REQ 3 Delete
@@ -42,5 +30,14 @@ export class ArtistsController {
     @Query('name') name: string
   ) {
     return await this.artistsService.getSummary(id, name);
+  }
+
+  // REQ 6
+  @Get('')
+  async getTopArtists(
+    @Query('year') year: number,
+    @Query('limit') limit: number
+  ) {
+    return await this.artistsService.getTopArtists(year, limit);
   }
 }

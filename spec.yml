@@ -232,28 +232,24 @@ components:
     Song:
       type: object
       required:
+        - id
         - title
-        - year
       properties:
-        songId:
+        id:
           type: integer
-          readOnly: true
           description: The ID of the song
         title:
           type: string
           description: The title of the song
-          readOnly: true
-        artist-ids:
+        artist_ids:
           type: array
           description: The IDs of the artists who wrote the song
-          readOnly: true
           items:
             type: integer
             description: The ID of one of the artists who wrote the song
         popularity:
           type: integer
           description: The popularity of the song
-          readOnly: true
           minimum: 0
           maximum: 100
         year:
@@ -264,45 +260,36 @@ components:
     Artist:
       type: object
       required:
+        - id
         - name
       properties:
         id:
           type: integer
-          readOnly: true
           description: The ID of the artist
         name:
           type: string
           description: The name of the artist
-        popularity:
-          type: integer
-          description: The popularity of the artist
-          readOnly: true
-          minimum: 0
-          maximum: 100
 
     ArtistSummary:
       type: object
       required:
-        - name
+        - artist
+        - numSongs
+        - earliestSong
+        - latestSong
+        - mostPopularSong
       properties:
-        id:
-          type: integer
-          description: The ID of the artist
-        name:
-          type: string
-          description: The name of the artist
+        artist:
+          $ref: "#/components/schemas/Artist"
         numSongs:
           type: integer
           description: The number of songs the artist has written
-        mostPopularSong:
-          type: object
-          description: The most popular song the artist has written
         earliestSong:
-          type: object
-          description: The earliest song the artist has written
+          $ref: "#/components/schemas/Song"
         latestSong:
-          type: object
-          description: The latest song the artist has written
+          $ref: "#/components/schemas/Song"
+        mostPopularSong:
+          $ref: "#/components/schemas/Song"
 
   responses:
     BadRequest:
