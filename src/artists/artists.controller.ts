@@ -33,11 +33,8 @@ export class ArtistsController {
   }
 
   // REQ 6
-  @Get('')
-  async getTopArtists(
-    @Query('year') year: number,
-    @Query('limit') limit: number
-  ) {
-    return await this.artistsService.getTopArtists(year, limit);
+  @Get()
+  async getTopArtists(@Query('year') year: number, @Query('limit') limit: number, @Query('batch') batch: number) {
+    return await this.artistsService.getTopArtists(year, limit, batch);
   }
 }

@@ -48,6 +48,7 @@ export class SongsService {
     title: string,
     year: number,
     limit: number,
+    batch: number
   ) {
     const songs = await prisma.song.findMany({
       where: {
@@ -59,6 +60,7 @@ export class SongsService {
           } : {})
         }
       },
+      skip: batch,
       take: (limit ? limit : undefined),
       orderBy: { popularity: 'desc' }
     });

@@ -15,12 +15,13 @@ paths:
     get: # get song by title or year ✔
       tags:
         - Songs
-      description: Retrieves a list of songs, filtered by title, or the list of top songs of a given year, ordered by descending popularity, with the given limit
+      description: Retrieves a list of songs, filtered by title, or the list of top songs of a given year, ordered by descending popularity, with the given limit and batch specification
       summary: Retrieve songs by title or year
       parameters:
         - $ref: "#/components/parameters/song-title"
         - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
+        - $ref: "#/components/parameters/batch-size"
         - $ref: "#/components/parameters/content-type"
       responses:
         "200":
@@ -147,16 +148,15 @@ paths:
           $ref: "#/components/responses/ServerError"
 
   /artists/songs:
-    get: # get all/top songs of an artist (desc popularity, limit)
+    get: # get top N artists given a year, limit and batch specification
       tags:
         - Artists
-      description: Retrieves a list of the (top) songs of an artist (ordered by descending popularity, with the given limit)
-      summary: Retrieve list of all/top songs of an artist
+      description: Retrieves a list of the (top) artists of a year (ordered by descending popularity, with the given limit and batch number)
+      summary: Retrieve list of top artists
       parameters:
-        - $ref: "#/components/parameters/artist-id"
-        - $ref: "#/components/parameters/artist-name"
         - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
+        - $ref: "#/components/parameters/batch-size"
         - $ref: "#/components/parameters/content-type"
       responses:
         "200":
@@ -166,12 +166,12 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Song"
+                  $ref: "#/components/schemas/Artist"
             text/csv:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Song"
+                  $ref: "#/components/schemas/Artist"
         "204":
           $ref: "#/components/responses/NoResults"
         "400":
@@ -355,6 +355,15 @@ components:
       description: The year the song was released in
       schema:
         type: integer
+    
+    batch-size:
+      name: batch
+      in: query
+      required: false
+      description: Batch number of the returned items
+      schema:
+        type: integer
+        enum: [10, 20, 50, 100]
 
     limit:
       name: limit
