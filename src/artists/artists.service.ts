@@ -78,13 +78,12 @@ export class ArtistsService {
   }
 
   // Assignment M1 Req Point 6
-  // calculate mean popularity of all songs for an artist in <year>
-  // sort this list by popularity
-  // return <limit> results
   async getTopArtists(year: number, limit: number, batch: number): Promise<Artist[]> {
+
+    // get all songs released by all artists in a given year
     const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
     const endDate = new Date(`${year}-12-31T23:59:59.999Z`);
-    // Retrieve all songs released by all artists in a given year
+    
     const songs = await prisma.song.findMany({
       where: {
         release_date: {
@@ -93,10 +92,11 @@ export class ArtistsService {
         }
       }
     });
-    // Group songs by artist
+
+    // group songs by artist
     const songsByArtist = _.groupBy(songs, (song) => _.flatten(song.artist_ids));
 
-    // Calculate mean popularity for each artist
+    // calculate mean popularity for each artist
     const artistPopularities = _.map(songsByArtist, (songs, artistId) => {
       const popularitySum = _.sumBy(songs, 'popularity');
       const numSongs = songs.length;
@@ -104,22 +104,22 @@ export class ArtistsService {
       return { artistId, popularity };
     });
 
-    // Sort artist popularities in descending order
+    // sort artist popularities in descending order
     const sortedArtistPopularities = _.sortBy(artistPopularities, 'popularity').reverse();
+    
+    // limit number of artists
+    const start = batch * limit;
+    const topArtists = _.slice(sortedArtistPopularities, start, start + limit);
 
-    // Retrieve top N artists, why does this splice function not work?
-    // doesn't return n artists when used in the following where clause
-    const topArtists = _.slice(sortedArtistPopularities, batch, batch + limit);
-
-    // Retrieve artist documents from the database
+    // get artists from the database
     const artists = await prisma.artist.findMany({
       where: {
         id: {
           in: _.map(sortedArtistPopularities, 'artistId')
         }
       },
-      skip: batch,
-      take: limit
+      take: limit ? limit : undefined,
+      skip: batch ? batch * limit : undefined
     });
 
     return artists;

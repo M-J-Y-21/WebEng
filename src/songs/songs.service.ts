@@ -60,8 +60,8 @@ export class SongsService {
           } : {})
         }
       },
-      skip: batch,
-      take: (limit ? limit : undefined),
+      take: limit ? limit : undefined,
+      skip: batch ? batch * limit : undefined,
       orderBy: { popularity: 'desc' }
     });
 

@@ -15,14 +15,13 @@ paths:
     get: # get song by title or year ✔
       tags:
         - Songs
-      description: Retrieves a list of songs, filtered by title, or the list of top songs of a given year, ordered by descending popularity, with the given limit and batch specification
+      description: Retrieves a list of songs, optionally filtered by title and/or year, ordered by descending popularity. 
       summary: Retrieve songs by title or year
       parameters:
         - $ref: "#/components/parameters/song-title"
         - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
-        - $ref: "#/components/parameters/batch-size"
-        - $ref: "#/components/parameters/content-type"
+        - $ref: "#/components/parameters/batch"
       responses:
         "200":
           description: OK
@@ -156,7 +155,7 @@ paths:
       parameters:
         - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
-        - $ref: "#/components/parameters/batch-size"
+        - $ref: "#/components/parameters/batch"
         - $ref: "#/components/parameters/content-type"
       responses:
         "200":
@@ -236,7 +235,7 @@ components:
         - title
       properties:
         id:
-          type: integer
+          type: string
           description: The ID of the song
         title:
           type: string
@@ -245,7 +244,7 @@ components:
           type: array
           description: The IDs of the artists who wrote the song
           items:
-            type: integer
+            type: string
             description: The ID of one of the artists who wrote the song
         popularity:
           type: integer
@@ -356,15 +355,6 @@ components:
       schema:
         type: integer
     
-    batch-size:
-      name: batch
-      in: query
-      required: false
-      description: Batch number of the returned items
-      schema:
-        type: integer
-        enum: [10, 20, 50, 100]
-
     limit:
       name: limit
       in: query
@@ -373,6 +363,14 @@ components:
       schema:
         type: integer
         enum: [10, 20, 50, 100]
+        
+    batch:
+      name: batch
+      in: query
+      required: false
+      description: The batch number of items to return (e.g. limit=10&batch=2 returns items 11-20)
+      schema:
+        type: integer
 
     content-type:
       name: content-type
