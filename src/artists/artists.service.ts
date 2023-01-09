@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { ConsoleLogger, Injectable } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 import { ArtistSummary } from './interfaces/artist-summary.interface';
 import { Artist } from './interfaces/artist.interface';
@@ -7,7 +7,6 @@ const prisma = new PrismaClient();
 
 @Injectable()
 export class ArtistsService {
-
   private async getArtistsByIdName(id: string, name: string) {
     const where = id ? { id } : { name };
     return await prisma.artist.findMany({ where });
@@ -30,7 +29,6 @@ export class ArtistsService {
 
   // REQ 3 Delete
   async deleteSongsByArtist(id: string, name: string) {
-
     // first, get all artists with the given id or name
     const artists = await this.getArtistsByIdName(id, name);
 
@@ -57,12 +55,9 @@ export class ArtistsService {
 
         // Calculate summary information for the artist's songs
         const numSongs = artistSongs.length;
-        const earliestRelease = artistSongs.sort(
-          (a, b) => a.release_date.getTime() - b.release_date.getTime())[0];
-        const latestRelease = artistSongs.sort(
-          (a, b) => b.release_date.getTime() - a.release_date.getTime())[0];
-        const highestPopularity = artistSongs.sort(
-          (a, b) => b.popularity - a.popularity)[0];
+        const earliestRelease = artistSongs.sort((a, b) => a.release_date.getTime() - b.release_date.getTime())[0];
+        const latestRelease = artistSongs.sort((a, b) => b.release_date.getTime() - a.release_date.getTime())[0];
+        const highestPopularity = artistSongs.sort((a, b) => b.popularity - a.popularity)[0];
 
         return {
           artist: artist,
@@ -77,13 +72,15 @@ export class ArtistsService {
     return summaries;
   }
 
-  // Assignment M1 Req Point 6
-  async getTopArtists(year: number, limit: number, batch: number): Promise<Artist[]> {
-
-    // get all songs released by all artists in a given year
+  /*
+  // REQ 6
+  // calculate mean popularity of all songs for an artist in <year>
+  // sort this list by popularity
+  // return <limit> results
+  async getTopArtists(year: number, limit: number, skip: number): Promise<Artist[]> {
     const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
     const endDate = new Date(`${year}-12-31T23:59:59.999Z`);
-    
+    // Retrieve all songs released by all artists in a given year
     const songs = await prisma.song.findMany({
       where: {
         release_date: {
@@ -93,10 +90,10 @@ export class ArtistsService {
       }
     });
 
-    // group songs by artist
-    const songsByArtist = _.groupBy(songs, (song) => _.flatten(song.artist_ids));
+    // Group songs by artist
+    const songsByArtist = _.groupBy(songs, (song) => song.artist_ids[0]);
 
-    // calculate mean popularity for each artist
+    // Calculate mean popularity for each artist
     const artistPopularities = _.map(songsByArtist, (songs, artistId) => {
       const popularitySum = _.sumBy(songs, 'popularity');
       const numSongs = songs.length;
@@ -104,22 +101,85 @@ export class ArtistsService {
       return { artistId, popularity };
     });
 
-    // sort artist popularities in descending order
+    // Sort artist popularities in descending order
     const sortedArtistPopularities = _.sortBy(artistPopularities, 'popularity').reverse();
-    
-    // limit number of artists
-    const start = batch * limit;
-    const topArtists = _.slice(sortedArtistPopularities, start, start + limit);
 
-    // get artists from the database
+    // log first 10
+    console.log(_.slice(sortedArtistPopularities, 0, 10));
+
+    // Retrieve top N artists
+    let topArtists;
+    if (!isNaN(skip) && !isNaN(limit)) {
+      topArtists = _.slice(sortedArtistPopularities, skip, skip + limit);
+    } else if (!isNaN(skip)) {
+      topArtists = _.slice(sortedArtistPopularities, skip);
+    } else if (!isNaN(limit)) {
+      topArtists = _.slice(sortedArtistPopularities, 0, limit);
+    } else {
+      topArtists = sortedArtistPopularities;
+    }
+
+    // When skip = 0 && year = 2019 0Y5tJX1MQlPlqiwlOH1tJY
+    // log first 10
+    console.log(_.slice(topArtists, 0, 10));
+
+    // Retrieve artist documents from the database
+    const artists = await prisma.artist.findMany({
+      where: {
+        id: {
+          in: _.map(topArtists, 'artistId')
+        }
+      }
+    });
+
+    return artists;
+  }
+  */
+
+  // Assignment M1 Req Point 6
+  // calculate mean popularity of all songs for an artist in <year>
+  // sort this list by popularity
+  // return <limit> results
+  async getTopArtists1(year: number, limit: number, batch: number): Promise<Artist[]> {
+    const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
+    const endDate = new Date(`${year}-12-31T23:59:59.999Z`);
+    // Retrieve all songs released by all artists in a given year
+    const songs = await prisma.song.findMany({
+      where: {
+        release_date: {
+          gte: startDate,
+          lte: endDate
+        }
+      }
+    });
+    // Group songs by artist
+    const songsByArtist = _.groupBy(songs, (song) => _.flatten(song.artist_ids));
+
+    // Calculate mean popularity for each artist
+    const artistPopularities = _.map(songsByArtist, (songs, artistId) => {
+      const popularitySum = _.sumBy(songs, 'popularity');
+      const numSongs = songs.length;
+      const popularity = numSongs > 0 ? popularitySum / numSongs : 0;
+      return { artistId, popularity };
+    });
+
+    // Sort artist popularities in descending order
+    const sortedArtistPopularities = _.sortBy(artistPopularities, 'popularity').reverse();
+    console.log(sortedArtistPopularities);
+
+    // Retrieve top N artists, why does this splice function not work?
+    // doesn't return n artists when used in the following where clause
+    const topArtists = _.slice(sortedArtistPopularities, batch, batch + limit);
+
+    // Retrieve artist documents from the database
     const artists = await prisma.artist.findMany({
       where: {
         id: {
           in: _.map(sortedArtistPopularities, 'artistId')
         }
       },
-      take: limit ? limit : undefined,
-      skip: batch ? batch * limit : undefined
+      skip: batch,
+      take: limit
     });
 
     return artists;

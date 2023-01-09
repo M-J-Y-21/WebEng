@@ -21,7 +21,7 @@ paths:
         - $ref: "#/components/parameters/song-title"
         - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
-        - $ref: "#/components/parameters/batch"
+        - $ref: "#/components/parameters/skip"
       responses:
         "200":
           description: OK
@@ -36,10 +36,6 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Song"
-        "204":
-          $ref: "#/components/responses/NoResults"
-        "400":
-          $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -66,10 +62,6 @@ paths:
             text/csv:
               schema:
                 $ref: "#/components/schemas/Song"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "409":
-          $ref: "#/components/responses/Conflict"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -94,10 +86,6 @@ paths:
             text/csv:
               schema:
                 $ref: "#/components/schemas/Song"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -124,10 +112,6 @@ paths:
             text/csv:
               schema:
                 $ref: "#/components/schemas/Song"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -139,10 +123,6 @@ paths:
       responses:
         "204":
           description: Song deleted successfully
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -155,7 +135,7 @@ paths:
       parameters:
         - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
-        - $ref: "#/components/parameters/batch"
+        - $ref: "#/components/parameters/skip"
         - $ref: "#/components/parameters/content-type"
       responses:
         "200":
@@ -171,27 +151,26 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Artist"
-        "204":
-          $ref: "#/components/responses/NoResults"
-        "400":
-          $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
     delete:
       tags:
         - Artists
-      description: Deletes all songs of an artist
+      description: Deletes all songs of an artist.
       summary: Delete all songs of an artist
       parameters:
         - $ref: "#/components/parameters/artist-id"
         - $ref: "#/components/parameters/artist-name"
-
       responses:
-        "204":
-          description: Songs deleted successfully
-        "400":
-          $ref: "#/components/responses/BadRequest"
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Song"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -218,11 +197,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/ArtistSummary"
-        "204":
-          $ref: "#/components/responses/NoResults"
-        "400":
-          $ref: "#/components/responses/BadRequest"
+                  $ref: "#/components/schemas/Artist"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -364,11 +339,11 @@ components:
         type: integer
         enum: [10, 20, 50, 100]
         
-    batch:
-      name: batch
+    skip:
+      name: skip
       in: query
       required: false
-      description: The batch number of items to return (e.g. limit=10&batch=2 returns items 11-20)
+      description: The number of items to skip
       schema:
         type: integer
 
