@@ -308,7 +308,7 @@ components:
 
     artist-id:
       name: id
-      in: path
+      in: query
       required: false
       description: ID of the artist
       schema:
@@ -316,7 +316,7 @@ components:
 
     artist-name:
       name: name
-      in: path
+      in: query
       required: false
       description: Name of the artist
       schema:
