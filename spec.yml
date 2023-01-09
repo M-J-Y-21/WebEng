@@ -15,8 +15,8 @@ paths:
     get: # get song by title or year ✔
       tags:
         - Songs
-      description: Retrieves a list of songs, optionally filtered by title and/or year, ordered by descending popularity. 
       summary: Retrieve songs by title or year
+      description: Retrieves a list of songs, optionally filtered by title and/or year, ordered by descending popularity. 
       parameters:
         - $ref: "#/components/parameters/song-title"
         - $ref: "#/components/parameters/song-year"
@@ -33,9 +33,7 @@ paths:
                   $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Song"
+                type: string
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -43,9 +41,7 @@ paths:
       tags:
         - Songs
       summary: Create a song
-      description: Creates a song with the given id
-      parameters:
-        - $ref: "#/components/parameters/content-type"
+      description: Creates a song with the given id.
       requestBody:
         required: true
         content:
@@ -54,14 +50,14 @@ paths:
               $ref: "#/components/schemas/Song"
       responses:
         "200":
-          description: "Song added, returns the new state"
+          description: "Song added, returns the created song"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                $ref: "#/components/schemas/Song"
+                type: string
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -73,9 +69,9 @@ paths:
       tags:
         - Songs
       summary: Retrieve a song
-      description: Retrieves the song with the given id
-      parameters:
-        - $ref: "#/components/parameters/content-type"
+      description: Retrieves the song with the given id.
+      #parameters:
+      #  - $ref: "#/components/parameters/song-id"
       responses:
         "200":
           description: OK
@@ -85,7 +81,7 @@ paths:
                 $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                $ref: "#/components/schemas/Song"
+                type: string
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -93,9 +89,8 @@ paths:
       tags:
         - Songs
       summary: Update a song
-      description: Updates the song with the given id
-      parameters:
-        - $ref: "#/components/parameters/content-type"
+      description: Updates the song with the given id.
+      #parameters:
       requestBody:
         required: true
         content:
@@ -104,14 +99,14 @@ paths:
               $ref: "#/components/schemas/Song"
       responses:
         "200":
-          description: "Song updated, returns the new state"
+          description: "Song updated, returns the updated song"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                $ref: "#/components/schemas/Song"
+                type: string
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -119,24 +114,23 @@ paths:
       tags:
         - Songs
       summary: Delete a song
-      description: Deletes the song with the given id
+      description: Deletes the song with the given id.
       responses:
-        "204":
-          description: Song deleted successfully
+        "200":
+          description: "Song deleted, returns the deleted song"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
   /artists/songs:
-    get: # get top N artists given a year, limit and batch specification
+    get: # get top N artists given a year, limit and skip
       tags:
         - Artists
-      description: Retrieves a list of the (top) artists of a year (ordered by descending popularity, with the given limit and batch number)
       summary: Retrieve list of top artists
+      description: Retrieves a list of the artists of a year (ordered by descending popularity, with the given limit and number of results to skip).
       parameters:
         - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
         - $ref: "#/components/parameters/skip"
-        - $ref: "#/components/parameters/content-type"
       responses:
         "200":
           description: OK
@@ -148,9 +142,7 @@ paths:
                   $ref: "#/components/schemas/Artist"
             text/csv:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Artist"
+                type: string
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -171,11 +163,14 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Song"
+            text/csv:
+              schema:
+                type: string
         "5XX":
           $ref: "#/components/responses/ServerError"
 
   /artists/summary:
-    get: # get artist summary (desc popularity, limit)
+    get: # get artist summary by id or name ✔
       tags:
         - Artists
       description: Retrieves number of songs, earliest and latest release by date, highest popularity among all songs) for a specific artist by artist ID or artist name
@@ -183,7 +178,6 @@ paths:
       parameters:
         - $ref: "#/components/parameters/artist-id"
         - $ref: "#/components/parameters/artist-name"
-        - $ref: "#/components/parameters/content-type"
       responses:
         "200":
           description: OK
@@ -195,9 +189,7 @@ paths:
                   $ref: "#/components/schemas/ArtistSummary"
             text/csv:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Artist"
+                type: string
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -266,25 +258,25 @@ components:
           $ref: "#/components/schemas/Song"
 
   responses:
-    BadRequest:
-      description: Request was not well-formed, see error details
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error-message:
-                type: string
-                description: Error message detailing the problem with the request
+    #BadRequest:
+    #  description: Request was not well-formed, see error details
+    #  content:
+    #    application/json:
+    #      schema:
+    #        type: object
+    #        properties:
+    #          error-message:
+    #            type: string
+    #            description: Error message detailing the problem with the request
 
-    NotFound:
-      description: Resource not found
+    #NotFound:
+    #  description: Resource not found
 
-    NoResults:
-      description: List empty; no results
+    #NoResults:
+    #  description: List empty; no results
 
-    Conflict:
-      description: Resource already exists
+    #Conflict:
+    #  description: Resource already exists
 
     ServerError:
       description: Server error, try again later
@@ -306,22 +298,6 @@ components:
       schema:
         type: string
 
-    artist-id:
-      name: id
-      in: path
-      required: true
-      description: ID of the artist
-      schema:
-        type: integer
-
-    artist-name:
-      name: name
-      in: path
-      required: true
-      description: Name of the artist
-      schema:
-        type: string
-
     song-year:
       name: year
       in: query
@@ -329,6 +305,22 @@ components:
       description: The year the song was released in
       schema:
         type: integer
+
+    artist-id:
+      name: id
+      in: path
+      required: false
+      description: ID of the artist
+      schema:
+        type: integer
+
+    artist-name:
+      name: name
+      in: path
+      required: false
+      description: Name of the artist
+      schema:
+        type: string
     
     limit:
       name: limit
@@ -346,11 +338,3 @@ components:
       description: The number of items to skip
       schema:
         type: integer
-
-    content-type:
-      name: content-type
-      in: query
-      description: Content type of the request
-      schema:
-        type: string
-        enum: [application/json, text/csv]
