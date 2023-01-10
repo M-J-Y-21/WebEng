@@ -26,7 +26,6 @@ export class SongsService {
 
   // REQ 1 Update
   async updateSongById(id: string, updateSongDto: UpdateSongDto) {
-    console.log("id: ", id);
     return await prisma.song.update({
       where: { id },
       data: {

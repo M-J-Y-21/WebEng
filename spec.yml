@@ -34,6 +34,8 @@ paths:
             text/csv:
               schema:
                 type: string
+        "400":
+          $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -58,20 +60,19 @@ paths:
             text/csv:
               schema:
                 type: string
+        "400":
+          $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
   /songs/{id}:
-    parameters:
-      - $ref: "#/components/parameters/song-id"
-
     get: # get song by id ✔
       tags:
         - Songs
       summary: Retrieve a song
       description: Retrieves the song with the given id.
-      #parameters:
-      #  - $ref: "#/components/parameters/song-id"
+      parameters:
+        - $ref: "#/components/parameters/song-id"
       responses:
         "200":
           description: OK
@@ -82,6 +83,8 @@ paths:
             text/csv:
               schema:
                 type: string
+        "400":
+          $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -107,6 +110,8 @@ paths:
             text/csv:
               schema:
                 type: string
+        "400":
+          $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -143,6 +148,8 @@ paths:
             text/csv:
               schema:
                 type: string
+        "400":
+          $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -166,6 +173,8 @@ paths:
             text/csv:
               schema:
                 type: string
+        "400":
+          $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -190,6 +199,8 @@ paths:
             text/csv:
               schema:
                 type: string
+        "400":
+          $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -258,16 +269,24 @@ components:
           $ref: "#/components/schemas/Song"
 
   responses:
-    #BadRequest:
-    #  description: Request was not well-formed, see error details
-    #  content:
-    #    application/json:
-    #      schema:
-    #        type: object
-    #        properties:
-    #          error-message:
-    #            type: string
-    #            description: Error message detailing the problem with the request
+    BadRequest:
+      description: Request was not well-formed, see error details
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              StatusCode:
+                type: integer
+                description: HTTP status code
+              message:
+                type: array
+                items:
+                  type: string
+                description: Error message detailing the problem with the request
+              error:
+                type: string
+                description: Error type
 
     #NotFound:
     #  description: Resource not found

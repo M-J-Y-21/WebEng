@@ -136,11 +136,11 @@ export class ArtistsService {
   }
   */
 
-  // Assignment M1 Req Point 6
+  // REQ 6
   // calculate mean popularity of all songs for an artist in <year>
   // sort this list by popularity
   // return <limit> results
-  async getTopArtists1(year: number, limit: number, batch: number): Promise<Artist[]> {
+  async getTopArtists(year: number, limit: number, batch: number): Promise<Artist[]> {
     const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
     const endDate = new Date(`${year}-12-31T23:59:59.999Z`);
     // Retrieve all songs released by all artists in a given year
@@ -152,6 +152,7 @@ export class ArtistsService {
         }
       }
     });
+    
     // Group songs by artist
     const songsByArtist = _.groupBy(songs, (song) => _.flatten(song.artist_ids));
 
@@ -165,7 +166,6 @@ export class ArtistsService {
 
     // Sort artist popularities in descending order
     const sortedArtistPopularities = _.sortBy(artistPopularities, 'popularity').reverse();
-    console.log(sortedArtistPopularities);
 
     // Retrieve top N artists, why does this splice function not work?
     // doesn't return n artists when used in the following where clause

@@ -1,39 +1,66 @@
-import { Controller, Delete, Get, Query, Header } from '@nestjs/common';
+import { Controller, Delete, Get, Query, Headers, Res } from '@nestjs/common';
 import { ArtistsService } from './artists.service';
+import { parse } from 'json2csv';
 
 @Controller('artists')
 export class ArtistsController {
-  constructor(private readonly artistsService: ArtistsService) {}
+  constructor(private readonly artistsService: ArtistsService) { }
 
+  private sendResponse(res, contentType, data) {
+    if (contentType == 'text/csv') {
+      res.header('Content-Type', 'text/csv');
+      res.send(parse(data));
+    } else {
+      res.send(data);
+    }
+  }
+  
   // REQ 3 Get
   @Get('songs')
-  async getTopSongs(@Query('id') id: string, @Query('name') name: string) {
-    return await this.artistsService.getSongsByArtist(id, name);
+  async getSongsByArtist(
+    @Query('id') id: string,
+    @Query('name') name: string,
+    @Headers('Content-Type') contentType: string,
+    @Res() res
+  ) {
+    const songs = await this.artistsService.getSongsByArtist(id, name);
+    this.sendResponse(res, contentType, songs);
   }
 
   // REQ 3 Delete
   @Delete('songs')
-  async deleteSongsByArtist(@Query('id') id: string, @Query('name') name: string) {
-    return await this.artistsService.deleteSongsByArtist(id, name);
+  async deleteSongsByArtist(
+    @Query('id') id: string,
+    @Query('name') name: string,
+    @Headers('Content-Type') contentType: string,
+    @Res() res
+  ) {
+    const songs = await this.artistsService.deleteSongsByArtist(id, name);
+    this.sendResponse(res, contentType, songs);
   }
 
   // REQ 4
   @Get('summary')
-  async getSummary(@Query('id') id: string, @Query('name') name: string) {
-    return await this.artistsService.getSummary(id, name);
+  async getSummary(
+    @Query('id') id: string,
+    @Query('name') name: string,
+    @Headers('Content-Type') contentType: string,
+    @Res() res
+  ) {
+    const summary = this.artistsService.getSummary(id, name);
+    this.sendResponse(res, contentType, summary);
   }
 
   // REQ 6
   @Get('')
-  @Header('content-type', 'application/json')
-  async getTopArtists(@Query('year') year: number, @Query('limit') limit: number, @Query('skip') skip: number) {
-    return await this.artistsService.getTopArtists1(year, limit, skip);
-  }
-  
-  // REQ 6
-  @Get('')
-  @Header('content-type', 'text/html')
-  async getTopArtists(@Query('year') year: number, @Query('limit') limit: number, @Query('skip') skip: number) {
-    return await this.artistsService.getTopArtists1(year, limit, skip).toCsv;
+  async getTopArtists(
+    @Query('year') year: number,
+    @Query('limit') limit: number,
+    @Query('skip') skip: number,
+    @Headers('Content-Type') contentType: string,
+    @Res() res
+  ) {
+    const artists = await this.artistsService.getTopArtists(year, limit, skip);
+    this.sendResponse(res, contentType, artists);
   }
 }
