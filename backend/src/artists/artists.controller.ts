@@ -4,7 +4,7 @@ import { parse } from 'json2csv';
 
 @Controller('artists')
 export class ArtistsController {
-  constructor(private readonly artistsService: ArtistsService) { }
+  constructor(private readonly artistsService: ArtistsService) {}
 
   private sendResponse(res, contentType, data) {
     if (contentType == 'text/csv') {
@@ -14,7 +14,7 @@ export class ArtistsController {
       res.send(data);
     }
   }
-  
+
   // REQ 3 Get
   @Get('songs')
   async getSongsByArtist(

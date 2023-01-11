@@ -140,7 +140,7 @@ export class ArtistsService {
   // calculate mean popularity of all songs for an artist in <year>
   // sort this list by popularity
   // return <limit> results
-  async getTopArtists(year: number, limit: number, batch: number): Promise<Artist[]> {
+  async getTopArtists(year: number, limit: number, skip: number): Promise<Artist[]> {
     const startDate = new Date(`${year}-01-01T00:00:00.000Z`);
     const endDate = new Date(`${year}-12-31T23:59:59.999Z`);
     // Retrieve all songs released by all artists in a given year
@@ -152,7 +152,7 @@ export class ArtistsService {
         }
       }
     });
-    
+
     // Group songs by artist
     const songsByArtist = _.groupBy(songs, (song) => _.flatten(song.artist_ids));
 
@@ -169,7 +169,7 @@ export class ArtistsService {
 
     // Retrieve top N artists, why does this splice function not work?
     // doesn't return n artists when used in the following where clause
-    const topArtists = _.slice(sortedArtistPopularities, batch, batch + limit);
+    const topArtists = _.slice(sortedArtistPopularities, skip, skip + limit);
 
     // Retrieve artist documents from the database
     const artists = await prisma.artist.findMany({
@@ -178,7 +178,7 @@ export class ArtistsService {
           in: _.map(sortedArtistPopularities, 'artistId')
         }
       },
-      skip: batch,
+      skip: skip,
       take: limit
     });
 
