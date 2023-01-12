@@ -17,10 +17,10 @@ function RetrieveSongs() {
 
   const betterFetchData = async () => {
     let url = `http://localhost:3000/songs?`;
-    url += params.title !== "" ? `title=${params.title}&` : '';
-    url += params.year !== 0 ? `year=${params.year}&` : '';
-    url += params.limit !== 0 ? `limit=${params.limit}&` : '';
-    url += params.skip !== 0 ? `skip=${params.skip}&` : '';
+    url += params.title ? `title=${params.title}&` : '';
+    url += params.year ? `year=${params.year}&` : '';
+    url += params.limit ? `limit=${params.limit}&` : '';
+    url += params.skip ? `skip=${params.skip}&` : '';
     url = url.slice(0, -1);
     
     try {

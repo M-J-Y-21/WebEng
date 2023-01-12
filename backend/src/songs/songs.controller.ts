@@ -19,6 +19,7 @@ export class SongsController {
 
   private sendResponse(res, contentType, data) {
     if (contentType == 'text/csv') {
+      res.header('Content-Type', 'text/csv');
       res.send(parse(data));
     } else {
       res.send(data);

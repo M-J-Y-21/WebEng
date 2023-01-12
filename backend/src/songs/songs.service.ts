@@ -42,7 +42,12 @@ export class SongsService {
   }
 
   // REQ 2, 5
-  async retrieveSongs(title: string, year: number, limit: number, skip: number) {
+  async retrieveSongs(
+    title: string,
+    year: number,
+    limit: number,
+    skip: number
+  ) {
     const songs = await prisma.song.findMany({
       where: {
         title: { contains: title },
@@ -56,7 +61,7 @@ export class SongsService {
         }
       },
       take: limit ? limit : undefined,
-      skip: skip ? skip * limit : undefined,
+      skip: skip ? skip : undefined,
       orderBy: { popularity: 'desc' }
     });
 

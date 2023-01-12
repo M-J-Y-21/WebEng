@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "axios": "^1.2.2",
-    "json2csv": "^5.0.7"
+    "json2csv": "^5.0.7",
+    "react-router-dom": "^6.6.2"
   }
 }
