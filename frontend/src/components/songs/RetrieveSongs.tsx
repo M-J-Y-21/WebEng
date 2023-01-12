@@ -1,106 +1,131 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
-import Select from 'react-select';
 
-function SongList() {
-  console.log('In here');
+function RetrieveSongs() {
+  
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  
   const [songs, setSongs] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
-  const [title, setTitle] = useState('');
-  const [year, setYear] = useState(0);
-  const [limit, setLimit] = useState(0);
-  const [skip, setSkip] = useState(0);
-
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
-    betterFetchData();
-  };
+  const [params, setParams] = useState({
+    title: "",
+    year: 0,
+    limit: 0,
+    skip: 0
+  })
 
   const betterFetchData = async () => {
-    const url = `http://localhost:3000/songs?year=${year}&limit=${limit}`;
-    const response = await axios.get(url);
-    setSongs(response.data);
-    console.log(response.data);
+    let url = `http://localhost:3000/songs?`;
+    url += params.title !== "" ? `title=${params.title}&` : '';
+    url += params.year !== 0 ? `year=${params.year}&` : '';
+    url += params.limit !== 0 ? `limit=${params.limit}&` : '';
+    url += params.skip !== 0 ? `skip=${params.skip}&` : '';
+    url = url.slice(0, -1);
+    
+    try {
+      const response = await axios.get(url);
+      setSongs(response.data);
+      console.log(response.data);
+  } catch (error) {
+      console.log(error);
+    }
+  };
+  
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    setLoading(true);
+    betterFetchData();
+    console.log(params);
+    setSubmitted(true);
+    setLoading(false);
   };
 
-  const fetchData = async () => {
-    setIsLoading(true);
-    const title = 'song title';
-    const year = 2020;
-    const limit = 10;
-    const batch = 1;
-    const url1 = `/songs?title=${title}&year=${year}&limit=${limit}&batch=${batch}`;
-    const url = 'http://localhost:3000/songs?year=2020&limit=3';
-    const response = await axios.get(url);
-    setSongs(response.data);
-    console.log(response.data);
-    setIsLoading(false);
+  const handleChange = (event: any) => {
+    const value = event.target.value;
+    setParams({
+      ...params,
+      [event.target.name]: value
+    });
   };
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
-  // useEffect(() => {
-  //   if (isLoading) {
-  //     fetchData();
-  //   }
-  // }, [isLoading]);
-
+  
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <label>title: </label>
         <input
           type="text"
+          placeholder="title"
           name="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          autoFocus={true}
+          onChange={handleChange}
         />
         <br></br>
 
         <label>year: </label>
         <input
           type="number"
+          placeholder="year"
           name="year"
-          value={year}
-          onChange={(e) => setYear(e.target.valueAsNumber)}
+          min={1900}
+          max={2021}
+          onChange={handleChange}
         />
         <br></br>
 
-        {/*<label>limit: </label>
-        <input
-          type="number"
-          name="year"
-          value={year}
-          onChange={(e) => setYear(e.target.valueAsNumber)}
-        />
+        <label>limit: </label>
         <select
           name="limit"
-          value={limit}
-          onChange={(e) => setLimit(+e.target.value)}
+          placeholder="limit"
+          onChange={handleChange}
         >
+          <option value="0">No limit</option>
           <option value="10">10</option>
           <option value="20">20</option>
           <option value="50">50</option>
           <option value="100">100</option>
         </select>
-        <br></br>*/}
+        <br></br>
+        
+        <label>skip: </label>
+        <input
+          type="number"
+          placeholder="skip"
+          name="skip"
+          min={0}
+          onChange={handleChange}
+        />
+        <br></br>
 
-        <input type="submit">Get Songs</input>
+        <input value="Retrieve Songs" type="submit"></input>
       </form>
 
-      {/*<button onClick={handleSubmit}>Songs</button>*/}
-      {/*{isLoading && <div>Loading...</div>}*/}
-      {songs.length > 0 && (
-        <ul>
-          {songs.map((song, index) => (
-            <li key={index}>{song['title']}</li>
-          ))}
-        </ul>
+      {loading && <p>Loading...</p>}
+
+      {submitted && (
+        <>
+          <h2>Results</h2>
+          {songs.length > 0 ? (
+            <ul>
+              {songs.map((song, index) => (
+                <li key={index}>
+                  <h3>{song['title']}</h3>
+                  <p>
+                    ID: {song['id']} <br></br>
+                    Artist IDs: {(song['artist_ids'] as string).toString()} <br></br>
+                    Popularity: {song['popularity']} <br></br>
+                    Release date: {new Date(song['release_date']).toLocaleDateString('nl-NL')}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p>No songs found</p>
+          )}
+        </>
       )}
     </div>
   );
 }
 
-export default SongList;
+export default RetrieveSongs;
