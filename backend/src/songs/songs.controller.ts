@@ -8,7 +8,7 @@ import {
   Res
 } from '@nestjs/common';
 import { SongsService } from './songs.service';
-import { Header, Headers, Put, Query } from '@nestjs/common/decorators';
+import { Headers, Put, Query } from '@nestjs/common/decorators';
 import { UpdateSongDto } from './dto/update-songs.dto/update-songs.dto';
 import { CreateSongDto } from './dto/create-songs.dto/create-songs.dto';
 import { parse } from 'json2csv';
@@ -40,10 +40,11 @@ export class SongsController {
   // REQ 1 Create
   @Post('')
   async createSong(
-    @Body() createSongDto: CreateSongDto,
+    @Body() createSongDto: CreateSongDto /* | CreateSongCsvDto */,
     @Headers('Content-Type') contentType: string,
     @Res() res
   ) {
+    // try catch
     const song = await this.songsService.createSong(createSongDto);
     this.sendResponse(res, contentType, song);
   }
@@ -76,7 +77,6 @@ export class SongsController {
 
   // REQ 2, 5
   @Get('')
-  @Header('Access-Control-Allow-Origin', 'http://localhost:3001')
   async retrieveSongs(
     @Query('title') name: string,
     @Query('year') year: number,

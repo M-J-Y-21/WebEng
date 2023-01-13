@@ -29,14 +29,8 @@ function CreateSong() {
       popularity: body.popularity,
       release_date: body.release_date,
     };
-    //const headers = {
-    //  'Access-Control-Allow-Origin': '*'
-    //};
     
     try {
-      //const request = axios.post(url, data, {headers: headers});
-      //request.catch((error) => { console.log(error.response) });
-      //const response = await request;
       const response = await axios.post(url, data);
       setSong(response.data);
       console.log(response.data);

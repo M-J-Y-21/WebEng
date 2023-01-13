@@ -1,5 +1,0 @@
-what we need to ask mo:
-
-- how to seed more efficiently?
-- why does sending a post request without Content-Type=application/json give 400 bad request?
-- github pages
