@@ -15,7 +15,7 @@ function RetrieveSongs() {
     skip: 0
   })
 
-  const betterFetchData = async () => {
+  const fetchData = async () => {
     let url = `http://localhost:3000/songs?`;
     url += params.title ? `title=${params.title}&` : '';
     url += params.year ? `year=${params.year}&` : '';
@@ -35,8 +35,7 @@ function RetrieveSongs() {
   const handleSubmit = (event: any) => {
     event.preventDefault();
     setLoading(true);
-    betterFetchData();
-    console.log(params);
+    fetchData();
     setSubmitted(true);
     setLoading(false);
   };
@@ -97,7 +96,7 @@ function RetrieveSongs() {
         />
         <br></br>
 
-        <input value="Retrieve Songs" type="submit"></input>
+        <input type="submit" value="Retrieve Songs"></input>
       </form>
 
       {loading && <p>Loading...</p>}

@@ -12,22 +12,22 @@ async function main() {
   // seed songs
   parseFile('data/songs.csv', { headers: true })
     .on('error', (error) => console.error(error))
-    .on('data', async row => {
+    .on('data', async (row) => {
       await prisma.song.upsert({
         where: { id: row.id },
         update: {
           title: row.title,
           artist_ids: eval(row.artist_ids),
           popularity: parseInt(row.popularity),
-          release_date: new Date(row.release_date),
+          release_date: new Date(row.release_date)
         },
         create: {
           id: row.id,
           title: row.title,
           artist_ids: eval(row.artist_ids),
           popularity: parseInt(row.popularity),
-          release_date: new Date(row.release_date),
-        },
+          release_date: new Date(row.release_date)
+        }
       });
     })
     .on('end', (rowCount: number) => console.log(`Parsed ${rowCount} songs`));
@@ -35,16 +35,16 @@ async function main() {
   // seed artists
   parseFile('data/artists.csv', { headers: true })
     .on('error', (error) => console.error(error))
-    .on('data', async row => {
+    .on('data', async (row) => {
       await prisma.artist.upsert({
         where: { id: row.id },
         update: {
-          name: row.name,
+          name: row.name
         },
         create: {
           id: row.id,
-          name: row.name,
-        },
+          name: row.name
+        }
       });
     })
     .on('end', (rowCount: number) => console.log(`Parsed ${rowCount} artists`));

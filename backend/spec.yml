@@ -7,7 +7,7 @@ info:
     It is a simple API for managing a music library.
 
 servers:
-  - url: http://localhost:3000
+  - url: http://localhost:3001
     description: Big things
 
 paths:

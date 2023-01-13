@@ -15,6 +15,7 @@ export class SongsService {
   async createSong(createSongDto: CreateSongDto) {
     return await prisma.song.create({
       data: {
+        id: createSongDto.id,
         title: createSongDto.title,
         artist_ids: createSongDto.artist_ids,
         popularity: createSongDto.popularity,
