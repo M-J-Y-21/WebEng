@@ -7,7 +7,7 @@ info:
     It is a simple API for managing a music library.
 
 servers:
-  - url: http://localhost:8080
+  - url: http://localhost:3000
     description: Big things
 
 paths:
@@ -15,13 +15,13 @@ paths:
     get: # get song by title or year ✔
       tags:
         - Songs
-      description: Retrieves a list of songs, filtered by title, or the list of top songs of a given year, ordered by descending popularity, with the given limit
       summary: Retrieve songs by title or year
+      description: Retrieves a list of songs, optionally filtered by title and/or year, ordered by descending popularity. 
       parameters:
         - $ref: "#/components/parameters/song-title"
         - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
-        - $ref: "#/components/parameters/content-type"
+        - $ref: "#/components/parameters/skip"
       responses:
         "200":
           description: OK
@@ -33,11 +33,7 @@ paths:
                   $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Song"
-        "204":
-          $ref: "#/components/responses/NoResults"
+                type: string
         "400":
           $ref: "#/components/responses/BadRequest"
         "5XX":
@@ -47,9 +43,7 @@ paths:
       tags:
         - Songs
       summary: Create a song
-      description: Creates a song with the given id
-      parameters:
-        - $ref: "#/components/parameters/content-type"
+      description: Creates a song with the given id.
       requestBody:
         required: true
         content:
@@ -58,32 +52,27 @@ paths:
               $ref: "#/components/schemas/Song"
       responses:
         "200":
-          description: "Song added, returns the new state"
+          description: "Song added, returns the created song"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                $ref: "#/components/schemas/Song"
+                type: string
         "400":
           $ref: "#/components/responses/BadRequest"
-        "409":
-          $ref: "#/components/responses/Conflict"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
   /songs/{id}:
-    parameters:
-      - $ref: "#/components/parameters/song-id"
-
     get: # get song by id ✔
       tags:
         - Songs
       summary: Retrieve a song
-      description: Retrieves the song with the given id
+      description: Retrieves the song with the given id.
       parameters:
-        - $ref: "#/components/parameters/content-type"
+        - $ref: "#/components/parameters/song-id"
       responses:
         "200":
           description: OK
@@ -93,11 +82,9 @@ paths:
                 $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                $ref: "#/components/schemas/Song"
+                type: string
         "400":
           $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -105,9 +92,8 @@ paths:
       tags:
         - Songs
       summary: Update a song
-      description: Updates the song with the given id
-      parameters:
-        - $ref: "#/components/parameters/content-type"
+      description: Updates the song with the given id.
+      #parameters:
       requestBody:
         required: true
         content:
@@ -116,18 +102,16 @@ paths:
               $ref: "#/components/schemas/Song"
       responses:
         "200":
-          description: "Song updated, returns the new state"
+          description: "Song updated, returns the updated song"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Song"
             text/csv:
               schema:
-                $ref: "#/components/schemas/Song"
+                type: string
         "400":
           $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
@@ -135,29 +119,23 @@ paths:
       tags:
         - Songs
       summary: Delete a song
-      description: Deletes the song with the given id
+      description: Deletes the song with the given id.
       responses:
-        "204":
-          description: Song deleted successfully
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "404":
-          $ref: "#/components/responses/NotFound"
+        "200":
+          description: "Song deleted, returns the deleted song"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
   /artists/songs:
-    get: # get all/top songs of an artist (desc popularity, limit)
+    get: # get top N artists given a year, limit and skip
       tags:
         - Artists
-      description: Retrieves a list of the (top) songs of an artist (ordered by descending popularity, with the given limit)
-      summary: Retrieve list of all/top songs of an artist
+      summary: Retrieve list of top artists
+      description: Retrieves a list of the artists of a year (ordered by descending popularity, with the given limit and number of results to skip).
       parameters:
-        - $ref: "#/components/parameters/artist-id"
-        - $ref: "#/components/parameters/artist-name"
         - $ref: "#/components/parameters/song-year"
         - $ref: "#/components/parameters/limit"
-        - $ref: "#/components/parameters/content-type"
+        - $ref: "#/components/parameters/skip"
       responses:
         "200":
           description: OK
@@ -166,14 +144,10 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Song"
+                  $ref: "#/components/schemas/Artist"
             text/csv:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Song"
-        "204":
-          $ref: "#/components/responses/NoResults"
+                type: string
         "400":
           $ref: "#/components/responses/BadRequest"
         "5XX":
@@ -182,22 +156,30 @@ paths:
     delete:
       tags:
         - Artists
-      description: Deletes all songs of an artist
+      description: Deletes all songs of an artist.
       summary: Delete all songs of an artist
       parameters:
         - $ref: "#/components/parameters/artist-id"
         - $ref: "#/components/parameters/artist-name"
-
       responses:
-        "204":
-          description: Songs deleted successfully
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Song"
+            text/csv:
+              schema:
+                type: string
         "400":
           $ref: "#/components/responses/BadRequest"
         "5XX":
           $ref: "#/components/responses/ServerError"
 
   /artists/summary:
-    get: # get artist summary (desc popularity, limit)
+    get: # get artist summary by id or name ✔
       tags:
         - Artists
       description: Retrieves number of songs, earliest and latest release by date, highest popularity among all songs) for a specific artist by artist ID or artist name
@@ -205,7 +187,6 @@ paths:
       parameters:
         - $ref: "#/components/parameters/artist-id"
         - $ref: "#/components/parameters/artist-name"
-        - $ref: "#/components/parameters/content-type"
       responses:
         "200":
           description: OK
@@ -217,11 +198,7 @@ paths:
                   $ref: "#/components/schemas/ArtistSummary"
             text/csv:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/ArtistSummary"
-        "204":
-          $ref: "#/components/responses/NoResults"
+                type: string
         "400":
           $ref: "#/components/responses/BadRequest"
         "5XX":
@@ -232,28 +209,24 @@ components:
     Song:
       type: object
       required:
+        - id
         - title
-        - year
       properties:
-        songId:
-          type: integer
-          readOnly: true
+        id:
+          type: string
           description: The ID of the song
         title:
           type: string
           description: The title of the song
-          readOnly: true
-        artist-ids:
+        artist_ids:
           type: array
           description: The IDs of the artists who wrote the song
-          readOnly: true
           items:
-            type: integer
+            type: string
             description: The ID of one of the artists who wrote the song
         popularity:
           type: integer
           description: The popularity of the song
-          readOnly: true
           minimum: 0
           maximum: 100
         year:
@@ -264,49 +237,36 @@ components:
     Artist:
       type: object
       required:
+        - id
         - name
       properties:
         id:
           type: integer
-          readOnly: true
           description: The ID of the artist
         name:
           type: string
           description: The name of the artist
-        songs:
-          type: array
-          items:
-            $ref: "#/components/schemas/Song"
-        popularity:
-          type: integer
-          description: The popularity of the artist
-          readOnly: true
-          minimum: 0
-          maximum: 100
 
     ArtistSummary:
       type: object
       required:
-        - name
+        - artist
+        - numSongs
+        - earliestSong
+        - latestSong
+        - mostPopularSong
       properties:
-        id:
-          type: integer
-          description: The ID of the artist
-        name:
-          type: string
-          description: The name of the artist
+        artist:
+          $ref: "#/components/schemas/Artist"
         numSongs:
           type: integer
           description: The number of songs the artist has written
-        mostPopularSong:
-          type: object
-          description: The most popular song the artist has written
         earliestSong:
-          type: object
-          description: The earliest song the artist has written
+          $ref: "#/components/schemas/Song"
         latestSong:
-          type: object
-          description: The latest song the artist has written
+          $ref: "#/components/schemas/Song"
+        mostPopularSong:
+          $ref: "#/components/schemas/Song"
 
   responses:
     BadRequest:
@@ -316,18 +276,26 @@ components:
           schema:
             type: object
             properties:
-              error-message:
-                type: string
+              StatusCode:
+                type: integer
+                description: HTTP status code
+              message:
+                type: array
+                items:
+                  type: string
                 description: Error message detailing the problem with the request
+              error:
+                type: string
+                description: Error type
 
-    NotFound:
-      description: Resource not found
+    #NotFound:
+    #  description: Resource not found
 
-    NoResults:
-      description: List empty; no results
+    #NoResults:
+    #  description: List empty; no results
 
-    Conflict:
-      description: Resource already exists
+    #Conflict:
+    #  description: Resource already exists
 
     ServerError:
       description: Server error, try again later
@@ -349,22 +317,6 @@ components:
       schema:
         type: string
 
-    artist-id:
-      name: id
-      in: path
-      required: true
-      description: ID of the artist
-      schema:
-        type: integer
-
-    artist-name:
-      name: name
-      in: path
-      required: true
-      description: Name of the artist
-      schema:
-        type: string
-
     song-year:
       name: year
       in: query
@@ -373,6 +325,22 @@ components:
       schema:
         type: integer
 
+    artist-id:
+      name: id
+      in: query
+      required: false
+      description: ID of the artist
+      schema:
+        type: integer
+
+    artist-name:
+      name: name
+      in: query
+      required: false
+      description: Name of the artist
+      schema:
+        type: string
+    
     limit:
       name: limit
       in: query
@@ -381,11 +349,11 @@ components:
       schema:
         type: integer
         enum: [10, 20, 50, 100]
-
-    content-type:
-      name: content-type
+        
+    skip:
+      name: skip
       in: query
-      description: Content type of the request
+      required: false
+      description: The number of items to skip
       schema:
-        type: string
-        enum: [application/json, text/csv]
+        type: integer

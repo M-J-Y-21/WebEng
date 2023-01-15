@@ -5,6 +5,8 @@ on:
     branches:
       - main
       - M1-API-spec
+      - New-M2-Backend
+      - M3-Frontend
   pull_request:
     branches: [ main ]
 
@@ -21,7 +23,7 @@ jobs:
 
   deploy:
     needs: validate
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/New-M2-Backend'
 
     runs-on: ubuntu-latest
     steps:
