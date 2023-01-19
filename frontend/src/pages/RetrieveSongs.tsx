@@ -15,7 +15,7 @@ function RetrieveSongs() {
     skip: 0
   })
 
-  const fetchData = async () => {
+  const get = async () => {
     let url = `http://localhost:3000/songs?`;
     url += params.title ? `title=${params.title}&` : '';
     url += params.year ? `year=${params.year}&` : '';
@@ -35,7 +35,7 @@ function RetrieveSongs() {
   const handleSubmit = (event: any) => {
     event.preventDefault();
     setLoading(true);
-    fetchData();
+    get();
     setSubmitted(true);
     setLoading(false);
   };
