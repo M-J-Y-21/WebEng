@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function RetrieveSongs() {
   
@@ -115,6 +116,7 @@ function RetrieveSongs() {
                     Popularity: {song['popularity']} <br></br>
                     Release date: {new Date(song['release_date']).toLocaleDateString('nl-NL')}
                   </p>
+                  <Link to = {`/songs/${song['id']}`}>More info</Link>
                 </li>
               ))}
             </ul>

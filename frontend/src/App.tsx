@@ -5,6 +5,7 @@ import RetrieveSongs from './pages/RetrieveSongs';
 import Header from './components/Header';
 import NoContent from './pages/NoContent';
 import './App.css';
+import { SongMain } from './song/SongHome';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/songs/:id" element = {<SongMain />} />
           <Route path="/create" element={<CreateSong />} />
           <Route path="/retrieve" element={<RetrieveSongs />} />
           <Route path="*" element={<NoContent />} />
