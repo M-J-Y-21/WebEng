@@ -7,11 +7,10 @@ services:
       POSTGRES_USER: ${DATABASE_USER:?}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD:?}
       POSTGRES_DB: ${DATABASE_NAME:?}
-    ports:
-      - ${DATABASE_PORT:?}:5432
     # volumes: ASK MO about the volumes
     #   - ./backend/data:var/lib/postgresql
     restart: always
+    container_name: postgres
   
   backend:
     image: music-api/backend
@@ -27,6 +26,7 @@ services:
       - DATABASE_PORT=${DATABASE_PORT:?}
     ports:
       - ${BACKEND_PORT:?}:3000
+    container_name: backend
 
   frontend:
     image: music-api/frontend
@@ -36,3 +36,4 @@ services:
       - backend
     ports:
       - ${FRONTEND_PORT:?}:3000
+    container_name: frontend
