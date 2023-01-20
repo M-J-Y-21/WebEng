@@ -31,8 +31,7 @@ function CreateSong() {
     };
     
     try {
-      console.log("post data:");
-      console.log(data);
+      data.popularity = parseInt(String(data.popularity)); // fuck javascript
       const response = await axios.post(url, data);
       setSong(response.data);
       console.log(response.data);
