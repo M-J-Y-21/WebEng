@@ -20,7 +20,7 @@ function SongDelete({id} : SongDeleteProp) {
         }
     }
     return (
-        <button onClick={handleDelete}>Delete SONG</button>
+        <button onClick={handleDelete}>Delete song</button>
     );
 }
 
