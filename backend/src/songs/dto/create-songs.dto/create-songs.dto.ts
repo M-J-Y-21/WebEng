@@ -13,8 +13,8 @@ export class CreateSongDto {
   @IsNumber()
   @Min(0)
   @Max(100)
-  popularity?: number;
+  popularity: number;
 
   @IsDateString()
-  release_date?: Date;
+  release_date: Date;
 }

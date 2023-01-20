@@ -20,7 +20,7 @@ function CreateSong() {
     release_date: {},
   })
   
-  const fetchData = async () => {
+  const post = async () => {
     const url = `http://localhost:3000/songs`;
     const data = {
       id: body.id,
@@ -31,6 +31,7 @@ function CreateSong() {
     };
     
     try {
+      data.popularity = parseInt(String(data.popularity)); // fuck javascript
       const response = await axios.post(url, data);
       setSong(response.data);
       console.log(response.data);
@@ -42,7 +43,7 @@ function CreateSong() {
   const handleSubmit = (event: any) => {
     event.preventDefault();
     setLoading(true);
-    fetchData();
+    post();
     setSubmitted(true);
     setLoading(false);
   };
