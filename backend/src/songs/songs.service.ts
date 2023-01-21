@@ -51,7 +51,7 @@ export class SongsService {
   ) {
     const songs = await prisma.song.findMany({
       where: {
-        title: { contains: title },
+        title: title,
         release_date: {
           ...(year
             ? {
