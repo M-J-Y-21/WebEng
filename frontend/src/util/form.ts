@@ -2,7 +2,7 @@ import { Song } from "../models/song.model";
 
 function getFormValues(formData : FormData) : Song {
     const title = formData.get('title') as string;
-    const release_date = formData.get('release') as string;
+    const release_date = formData.get('release_date') as string;
     const artist_ids = formData.get('artist_ids') as string;
     const popularity = parseInt(formData.get('popularity') as string);
 

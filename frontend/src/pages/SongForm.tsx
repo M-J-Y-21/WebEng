@@ -5,7 +5,11 @@ interface UpdateSongFormProps {
     song ? : Song,
     onSubmit: FormEventHandler<HTMLFormElement>
 }
-
+/**
+ * Form for updating 
+ * @param param0 song and onsubmit 
+ * @returns update song  
+ */
 function SongForm({song,onSubmit} : UpdateSongFormProps) {
     return(
         <form onSubmit={onSubmit}>
