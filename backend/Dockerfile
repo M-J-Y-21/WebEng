@@ -9,4 +9,5 @@ COPY . .
 ENV NODE_ENV production
 
 EXPOSE 3000
-CMD ["./startup.sh"]
+
+CMD ["sh", "./startup.sh"]
