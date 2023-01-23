@@ -12,7 +12,7 @@ type PathVariable = {
 
 function SongMain() : JSX.Element {
     const {id} = useParams<PathVariable>(); 
-    const [song,setSong] = useState<Song>()
+    const [song,setSong] = useState<Song>();
     const [loading, setLoading] = useState(false);  
 
     useEffect(() => {retrieveSongs()},[id]);

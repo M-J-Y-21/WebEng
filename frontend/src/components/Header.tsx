@@ -15,6 +15,12 @@ function Header() {
           <li>
             <Link to="/retrieve">Retrieve</Link>
           </li>
+          <li>
+            <Link to="/artists">Find Top Artists</Link>
+          </li>
+          <li>
+            <Link to="/artists/summary" >Find artist(s)</Link>
+          </li>
         </ul>
       </nav>
       
