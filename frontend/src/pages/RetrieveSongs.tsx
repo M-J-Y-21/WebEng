@@ -68,7 +68,7 @@ function RetrieveSongs() {
           placeholder="year"
           name="year"
           min={1900}
-          max={2021}
+          //max={2021}
           onChange={handleChange}
         />
         <br></br>

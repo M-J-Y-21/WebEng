@@ -17,8 +17,8 @@ import { parse } from 'json2csv';
 export class SongsController {
   constructor(private readonly songsService: SongsService) {}
 
-  private sendResponse(res, contentType, data) {
-    if (contentType == 'text/csv') {
+  private sendResponse(res, accept: string, data: any) {
+    if (accept == 'text/csv') {
       res.header('Content-Type', 'text/csv');
       res.send(parse(data));
     } else {
@@ -30,23 +30,23 @@ export class SongsController {
   @Get(':id')
   async getSongById(
     @Param('id') id: string,
-    @Headers('Content-Type') contentType: string,
+    @Headers('Accept') accept: string,
     @Res() res
   ) {
     const song = await this.songsService.getSongById(id);
-    this.sendResponse(res, contentType, song);
+    this.sendResponse(res, accept, song);
   }
 
   // REQ 1 Create
   @Post('')
   async createSong(
     @Body() createSongDto: CreateSongDto /* | CreateSongCsvDto */,
-    @Headers('Content-Type') contentType: string,
+    @Headers('Accept') accept: string,
     @Res() res
   ) {
     // try catch
     const song = await this.songsService.createSong(createSongDto);
-    this.sendResponse(res, contentType, song);
+    this.sendResponse(res, accept, song);
   }
 
   // REQ 1 Update
@@ -54,25 +54,25 @@ export class SongsController {
   async updateSongById(
     @Param('id') id: string,
     @Body() updateSongDto: UpdateSongDto,
-    @Headers('Content-Type') contentType: string,
+    @Headers('Accept') accept: string,
     @Res() res
   ) {
     const updatedSong = await this.songsService.updateSongById(
       id,
       updateSongDto
     );
-    this.sendResponse(res, contentType, updatedSong);
+    this.sendResponse(res, accept, updatedSong);
   }
 
   // REQ 1 Delete
   @Delete(':id')
   async deleteSongById(
     @Param('id') id: string,
-    @Headers('Content-Type') contentType: string,
+    @Headers('Accept') accept: string,
     @Res() res
   ) {
     const song = await this.songsService.deleteSongById(id);
-    this.sendResponse(res, contentType, song);
+    this.sendResponse(res, accept, song);
   }
 
   // REQ 2, 5
@@ -82,7 +82,7 @@ export class SongsController {
     @Query('year') year: number,
     @Query('limit') limit: number,
     @Query('skip') skip: number,
-    @Headers('Content-Type') contentType: string,
+    @Headers('Accept') accept: string,
     @Res() res
   ) {
     const songs = await this.songsService.retrieveSongs(
@@ -91,6 +91,6 @@ export class SongsController {
       limit,
       skip
     );
-    this.sendResponse(res, contentType, songs);
+    this.sendResponse(res, accept, songs);
   }
 }
