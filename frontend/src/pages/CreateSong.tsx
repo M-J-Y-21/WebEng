@@ -11,7 +11,7 @@ function CreateSong() {
     popularity: 0,
     release_date: "",
   });
-  
+
   const [body, setBody] = useState({
     id: "",
     title: "",
@@ -19,7 +19,7 @@ function CreateSong() {
     popularity: 0,
     release_date: {},
   })
-  
+
   const post = async () => {
     const url = `http://localhost:3000/songs`;
     const data = {
@@ -29,17 +29,17 @@ function CreateSong() {
       popularity: body.popularity,
       release_date: body.release_date,
     };
-    
+
     try {
       data.popularity = parseInt(String(data.popularity)); // fuck javascript
       const response = await axios.post(url, data);
       setSong(response.data);
       console.log(response.data);
-  } catch (error) {
+    } catch (error) {
       console.log(error);
     }
   };
-  
+
   const handleSubmit = (event: any) => {
     event.preventDefault();
     setLoading(true);
@@ -47,7 +47,7 @@ function CreateSong() {
     setSubmitted(true);
     setLoading(false);
   };
-  
+
   const handleChange = (event: any) => {
     const value = event.target.value;
     setBody({
@@ -68,7 +68,7 @@ function CreateSong() {
           onChange={handleChange}
         />
         <br></br>
-        
+
         <label>title:</label>
         <input
           type="text"
@@ -77,7 +77,7 @@ function CreateSong() {
           onChange={handleChange}
         />
         <br></br>
-        
+
         <label>artist_ids:</label>
         <input
           type="text"
@@ -86,7 +86,7 @@ function CreateSong() {
           onChange={handleChange}
         />
         <br></br>
-        
+
         <label>popularity:</label>
         <input
           type="number"
@@ -95,7 +95,7 @@ function CreateSong() {
           onChange={handleChange}
         />
         <br></br>
-        
+
         <label>release_date:</label>
         <input
           type="date"
@@ -107,10 +107,10 @@ function CreateSong() {
           })}
         />
         <br></br>
-        
+
         <input type="submit" value="Add Song" />
       </form>
-    
+
       {loading && <p>Loading...</p>}
 
       {submitted && (

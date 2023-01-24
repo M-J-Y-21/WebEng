@@ -1,7 +1,7 @@
 import { deleteSong } from "../../api/song";
 
 interface SongDeleteProp {
-  id?: string,
+  id?: string
 }
 
 function SongDelete({ id }: SongDeleteProp) {
@@ -20,10 +20,8 @@ function SongDelete({ id }: SongDeleteProp) {
     }
   }
   return (
-    <button onClick={handleDelete}>Delete song</button>
+    <button onClick={handleDelete}>Delete Song</button>
   );
 }
 
-export {
-  SongDelete,
-}
+export default SongDelete;

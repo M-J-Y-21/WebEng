@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Song } from "../../models/song.model";
-import { SongForm } from "../../pages/SongForm";
 import { updateSong } from "../../api/song";
 import { getFormValues } from "../../utils/form";
-import { SongResult } from "./SongResult";
+import SongResult from "./SongResult";
+import SongUpdateForm from "./SongUpdateForm";
 
 interface UpdateSongProp {
   song?: Song,
@@ -41,7 +41,7 @@ function SongUpdate({ song, id, loading }: UpdateSongProp): JSX.Element {
         </>
         :
         <>
-          <SongForm song={song} onSubmit={handleSubmit} />
+          <SongUpdateForm song={song} onSubmit={handleSubmit} />
           <button onClick={() => setFormDisabled(true)}>Cancel</button>
         </>
       }
@@ -49,6 +49,4 @@ function SongUpdate({ song, id, loading }: UpdateSongProp): JSX.Element {
   );
 }
 
-export {
-  SongUpdate
-}
+export default SongUpdate;

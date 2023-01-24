@@ -30,6 +30,4 @@ function SongResult({ song, loading }: SongResProp): JSX.Element {
   )
 }
 
-export {
-  SongResult,
-};
+export default SongResult;

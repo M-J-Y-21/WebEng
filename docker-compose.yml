@@ -28,6 +28,7 @@ services:
       - DATABASE_PORT=${DATABASE_PORT:?}
     ports:
       - ${BACKEND_PORT:?}:3000
+      - 5556:5555
     container_name: backend
 
   frontend:

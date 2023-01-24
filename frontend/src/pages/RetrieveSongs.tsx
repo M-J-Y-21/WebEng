@@ -3,10 +3,10 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function RetrieveSongs() {
-  
+
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  
+
   const [songs, setSongs] = useState([]);
 
   const [params, setParams] = useState({
@@ -23,16 +23,16 @@ function RetrieveSongs() {
     url += params.limit ? `limit=${params.limit}&` : '';
     url += params.skip ? `skip=${params.skip}&` : '';
     url = url.slice(0, -1);
-    
+
     try {
       const response = await axios.get(url);
       setSongs(response.data);
       console.log(response.data);
-  } catch (error) {
+    } catch (error) {
       console.log(error);
     }
   };
-  
+
   const handleSubmit = (event: any) => {
     event.preventDefault();
     setLoading(true);
@@ -48,7 +48,7 @@ function RetrieveSongs() {
       [event.target.name]: value
     });
   };
-  
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -86,7 +86,7 @@ function RetrieveSongs() {
           <option value="100">100</option>
         </select>
         <br></br>
-        
+
         <label>skip: </label>
         <input
           type="number"
@@ -116,7 +116,7 @@ function RetrieveSongs() {
                     Popularity: {song['popularity']} <br></br>
                     Release date: {new Date(song['release_date']).toLocaleDateString('nl-NL')}
                   </p>
-                  <Link to = {`/songs/${song['id']}`}>More info</Link>
+                  <Link to={`/songs/${song['id']}`}>More info</Link>
                 </li>
               ))}
             </ul>

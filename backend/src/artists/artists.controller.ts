@@ -47,7 +47,7 @@ export class ArtistsController {
     @Headers('Content-Type') contentType: string,
     @Res() res
   ) {
-    const summary = this.artistsService.getSummary(id, name);
+    const summary =  await this.artistsService.getSummary(id, name);
     this.sendResponse(res, contentType, summary);
   }
 

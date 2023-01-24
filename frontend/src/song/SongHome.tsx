@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getOneSong } from "../api/song";
 import { Song } from "../models/song.model";
-import { SongUpdate } from "./component/SongUpdate";
-import { SongDelete } from "./component/SongDelete";
+import SongUpdate from "./component/SongUpdate";
+import SongDelete from "./component/SongDelete";
 
 type PathVariable = {
   id: string,
 }
 
-function SongMain(): JSX.Element {
+function SongHome(): JSX.Element {
   const { id } = useParams<PathVariable>();
   const [song, setSong] = useState<Song>()
   const [loading, setLoading] = useState(false);
@@ -48,6 +48,4 @@ function SongMain(): JSX.Element {
   )
 }
 
-export {
-  SongMain,
-}
+export default SongHome;

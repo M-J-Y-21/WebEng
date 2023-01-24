@@ -1,16 +1,17 @@
 import { FormEventHandler } from "react";
-import { Song } from "../models/song.model";
+import { Song } from "../../models/song.model";
 
 interface UpdateSongFormProps {
   song?: Song,
   onSubmit: FormEventHandler<HTMLFormElement>
 }
+
 /**
  * Form for updating 
  * @param param0 song and onsubmit 
  * @returns update song  
  */
-function SongForm({ song, onSubmit }: UpdateSongFormProps) {
+function SongUpdateForm({ song, onSubmit }: UpdateSongFormProps) {
   return (
     <form onSubmit={onSubmit}>
       <label htmlFor="title">Title</label>
@@ -29,6 +30,4 @@ function SongForm({ song, onSubmit }: UpdateSongFormProps) {
   );
 }
 
-export {
-  SongForm
-};
+export default SongUpdateForm;
