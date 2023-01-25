@@ -4,6 +4,7 @@ import { RetrieveSongArtist } from './artists/RetrieveSongArtist';
 import { RetrieveTopArtists } from './artists/RetrieveTopArtists';
 import { Header } from './components/Header';
 import { CreateSong } from './pages/CreateSong';
+import { FindSongById } from './pages/FindSongById';
 import { Home } from './pages/Home';
 import { NoContent } from './pages/NoContent';
 import { RetrieveSongs } from './pages/RetrieveSongs';
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/songs/:id" element={<SongHome />} />
           <Route path="/create" element={<CreateSong />} />
+          <Route path="/retrieveById" element={<FindSongById />} />
           <Route path="/retrieve" element={<RetrieveSongs />} />
           <Route path="/artists" element={<RetrieveTopArtists />} />
           <Route path="/artists/summary" element={<FindArtistSummary />} />

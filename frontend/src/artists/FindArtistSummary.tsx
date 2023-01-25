@@ -36,7 +36,7 @@ function FindArtistSummary() {
     <div>
       <h3>Find Artist</h3>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="id">Id</label>
+        <label htmlFor="id">ID: </label>
         <input
           type="text"
           id="id"
@@ -45,7 +45,9 @@ function FindArtistSummary() {
             setId(e.currentTarget.value);
           }}
         />
-        <label htmlFor="name">Name</label>
+        <br></br>
+
+        <label htmlFor="name">Name: </label>
         <input
           type="text"
           id="name"
@@ -54,6 +56,8 @@ function FindArtistSummary() {
             setName(e.currentTarget.value);
           }}
         />
+        <br></br>
+
         <button type="submit">Search</button>
       </form>
       <ArtistSummary artists={artistSummary} loading={loading} />

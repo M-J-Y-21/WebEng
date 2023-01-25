@@ -34,7 +34,7 @@ For our backend we decided to use [NestJS](https://nestjs.org), a framework for 
 * Having good documentation
 * Improvements on the [Express](https://expressjs.com) framework like dependency injection
 * Approachable syntax and structure, thanks to our experience with Java
-* Provides a powerful CLI tool for generating and scaffolding code, making development faster and more efficient
+* A powerful CLI tool for generating and scaffolding code, making development faster and more efficient
 
 All of these reasons made us choose NestJS as our backend framework. Moreover another point why we ended up choosing NestJS is because of its good seperation of concerns. In fact, NestJS is built on the principles of separation of concerns, which promotes the separation of different aspects of the application into distinct, modular components. This makes it easy to manage and maintain the codebase, and also improves code reusability.
 
@@ -121,10 +121,11 @@ The distribution of work among us was as follows:
 ## Discussion on our REST API Maturity level
 
 <p align="center">
-  <img src="Rest.png" width=500>
+  <img src="images/Rest.png" width=500>
 </p>
 
 When analyzing what level our REST api falls into it easy to see that is level 2 at the very least. This is because we use:
+
 * Resource identification through URIs
 * Uniform interface with correct use of HTTP methods
 * Self-descriptive messages
@@ -142,13 +143,13 @@ private sendResponse(res, accept: string, data: any) {
       res.send(data);
     }
   }
-
 ```
+
 As can be seen in the code snippet above we have a method to check what type of response the client wants so we can always deliver a response it can easily understand i.e. self describing messages. Hence it's clear our REST API is at least level 2.
 
 We pretty match do a kind of content-type swapping as can be seen in the scientific diagram below.
 <p align="center">
-  <img src="contentType.jpg"
+  <img src="images/contentType.jpg"
   width=500>
 </p>
 
@@ -159,10 +160,10 @@ In practical terms this means that the server includes links (dynamically genera
 Knowing these facts we can see that we've also adhered to HATEOAS in our application this can be seen in the following pictures of our application.
 
 <p align="center">
-  <img src="YellowGet.png" width=800>
+  <img src="images/YellowGet.png" width=800>
   <br>
   <br>
-  <img src="YellowMoreInfo.png" width=800>
+  <img src="images/YellowMoreInfo.png" width=800>
 </p>
 
 As can be seen in the pictures above we have a link to the more info page of Yellow. This link is dynamically generated based on the initial response. This allows the client to navigate through the application's state by following hypermedia links, rather than having to construct URLs or make arbitrary HTTP requests.
@@ -172,7 +173,7 @@ Furthermore we also adhere to stateless interactions as we don't store any clien
 Therefore we can conclude that our REST API is level 3.
 
 <p align="center">
-  <img src="Join.jpg" width=800>
+  <img src="images/Join.jpg" width=800>
 </p>
 
 ```
@@ -184,10 +185,10 @@ Darth Vader: You underestimate my power.
 
 -- Luke Skywalker/Us and Darth Vader fight, Vader proceeds to use some despicable tactics --
 ```
-<p align="center">
-  <img src="choke.jpg" width=800>
-</p>
 
+<p align="center">
+  <img src="images/choke.jpg" width=800>
+</p>
 
 # So let us ask you...
 

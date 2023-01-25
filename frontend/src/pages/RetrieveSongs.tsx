@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Song } from '../models/song.model';
 
 function RetrieveSongs() {
   const [submitted, setSubmitted] = useState(false);
@@ -102,18 +103,18 @@ function RetrieveSongs() {
           <h2>Results</h2>
           {songs.length > 0 ? (
             <ul>
-              {songs.map((song, index) => (
-                <li key={index}>
-                  <h3>{song['title']}</h3>
+              {songs.map((song: Song) => (
+                <li key={song.id}>
+                  <h3>{song.title}</h3>
                   <p>
-                    ID: {song['id']} <br></br>
-                    Artist IDs: {(song['artist_ids'] as string).toString()}{' '}
-                    <br></br>
-                    Popularity: {song['popularity']} <br></br>
+                    ID: {song.id} <br></br>
+                    Artist IDs: {song.artist_ids.join(', ')} <br></br>
+                    Popularity: {song.popularity} <br></br>
                     Release date:{' '}
-                    {new Date(song['release_date']).toLocaleDateString('nl-NL')}
+                    {new Date(song.release_date).toLocaleDateString('nl-NL')}
+                    <br></br>
+                    <Link to={`/songs/${song.id}`}>More info</Link>
                   </p>
-                  <Link to={`/songs/${song['id']}`}>More info</Link>
                 </li>
               ))}
             </ul>

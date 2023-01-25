@@ -56,8 +56,12 @@ function RetrieveTopArtists() {
             setYear(parseInt(e.currentTarget.value));
           }}
         />
+        <br></br>
         <Pagination {...paginationProps} />
+        <br></br>
+        
         <input type="submit" value="Retrieve Artists"></input>
+        
       </form>
       {loading ? (
         <p>Loading ...</p>

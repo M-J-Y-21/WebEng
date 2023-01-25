@@ -13,6 +13,9 @@ function Header() {
             <Link to="/create">Create</Link>
           </li>
           <li>
+            <Link to="/retrieveById">Retrieve by ID</Link>
+          </li>
+          <li>
             <Link to="/retrieve">Retrieve</Link>
           </li>
           <li>

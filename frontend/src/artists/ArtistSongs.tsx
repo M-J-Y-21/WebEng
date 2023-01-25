@@ -23,13 +23,16 @@ function ArtistSongs({ songs, loading }: SongsResultProps) {
           <ul>
             {songs.map((song: Song) => (
               <li key={song.id}>
-                <h1>Title : {song.title}</h1>
+                <h3>{song.title}</h3>
                 <p>
-                  Release Date : {new Date(song.release_date).toISOString()}
+                  ID: {song.id} <br></br>
+                  Artist IDs: {song.artist_ids.join(', ')} <br></br>
+                  Popularity: {song.popularity} <br></br>
+                  Release date:{' '}
+                  {new Date(song.release_date).toLocaleDateString('nl-NL')}
+                  <br></br>
+                  <Link to={`/songs/${song.id}`}>More info</Link>
                 </p>
-                <p>Artist Ids : {song.artist_ids}</p>
-                <p>Popularity : {song.popularity}</p>
-                <Link to={`/songs/${song['id']}`}>More info</Link>
               </li>
             ))}
           </ul>

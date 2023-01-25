@@ -25,7 +25,7 @@ export class ArtistsController {
   /**
    * REQ 3 Get Portion
    * To retrieve all songs for a specific artist by artist ID or artist name
-   * @param id ID of artist 
+   * @param id ID of artist
    * @param name Name of artist
    * @param contentType Desired response format
    * @param res Response object
@@ -44,7 +44,7 @@ export class ArtistsController {
   /**
    * REQ 3 Delete Portion
    * To delete all songs for a specific artist by artist ID or artist name
-   * @param id ID of artist 
+   * @param id ID of artist
    * @param name Name of artist
    * @param contentType Desired response format
    * @param res Response object
@@ -77,7 +77,7 @@ export class ArtistsController {
     @Headers('Content-Type') contentType: string,
     @Res() res
   ) {
-    const summary =  await this.artistsService.getSummary(id, name);
+    const summary = await this.artistsService.getSummary(id, name);
     this.sendResponse(res, contentType, summary);
   }
 
