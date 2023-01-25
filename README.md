@@ -184,6 +184,11 @@ The client then communicates with our backend through the REST API. This allows 
 
 ## Guidlines on running
 
+After making a clean clone of the repo you will need to create 2 new files. Firstly in the root of the project called `.env` and a `.env` file in the backend folder. For the `.env` in the root simply copy over the file from the `.env.example` file in the root to it. For the `.env` in the backend folder copy over the contents of the `.env.example` file (in the backend folder) to it. Edit the contents of the `.env` file in the backend directory to only contain the last line and uncomment it i.e. it should contain something like this to start
+```
+DATABASE_URL="postgresql://postgres:123@postgres:5432/nest?schema=public"
+```
+
 When running the application you will need to have [docker](https://docker.com) installed. You can then simply run the following command to get the application running:
 
 ```bash
