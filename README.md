@@ -41,7 +41,7 @@ All of these reasons made us choose NestJS as our backend framework. Moreover an
 One way in which NestJS achieves separation of concerns is through the use of services and controllers.
 
 <p align="center">
-  <a href="https://docs.nestjs.com/controllers" target="blank"><img src="https://docs.nestjs.com/assets/Controllers_1.png" width="600" alt="Controller diagram" /></a>
+  <a href="https://docs.nestjs.com/controllers" target="blank"><img src="https://docs.nestjs.com/assets/Controllers_1.png" width="800" alt="Controller diagram" /></a>
 </p>
 
 Services are responsible for handling business logic and data processing, while controllers are responsible for handling the incoming requests and returning the appropriate responses. This separation allows for a clear division of responsibilities, making it easy to understand and maintain the codebase.
@@ -118,8 +118,79 @@ The distribution of work among us was as follows:
 * **M2** - Matan did most of the initial backend including initial docker/prisma setup, Jasper finished and refined backend
 * **M3** - Jasper and Alex handled most of the frontend, Jasper led the dockerisation of the application with some help from Matan
 
+## Discussion on our REST API Maturity level
+
+<p align="center">
+  <img src="Rest.png" width=500>
+</p>
+
+When analyzing what level our REST api falls into it easy to see that is level 2 at the very least. This is because we use:
+* Resource identification through URIs
+* Uniform interface with correct use of HTTP methods
+* Self-descriptive messages
+
+The self descriptive messages might require a bit more discussion. Self descriptive messages means that the messages that are exchanged between the client and server contain all of the information necessary for the client to understand the message and the state of the request. This includes information such as the type of request being made and the format of the data being sent. This allows for a more flexible and decoupled communication between the client and server, as the client does not need to rely on any external documentation or configuration to understand the messages. 
+
+With the following code snippet it is also clear that we are using self descriptive messages. The response contains the status code, the message and the data. This allows the client to understand the status of the request and the data that is being sent back.
+
+```typescript
+private sendResponse(res, accept: string, data: any) {
+    if (accept == 'text/csv') {
+      res.header('Content-Type', 'text/csv');
+      res.send(parse(data));
+    } else {
+      res.send(data);
+    }
+  }
+
+```
+As can be seen in the code snippet above we have a method to check what type of response the client wants so we can always deliver a response it can easily understand i.e. self describing messages. Hence it's clear our REST API is at least level 2.
+
+We pretty match do a kind of content-type swapping as can be seen in the scientific diagram below.
+<p align="center">
+  <img src="contentType.jpg"
+  width=500>
+</p>
+
+Now when checking if is our REST api could be considered for level 3 we need to see that it adheres to the following HATEOAS (Hypermedia as the engine of application state). HATEOAS is a principle of RESTful web architecture that states that a client can navigate through the application's state by following hypermedia links, rather than having to construct URLs or make arbitrary HTTP requests.
+
+In practical terms this means that the server includes links (dynamically generated based on initial response) to other resources in the responses it sends to the client, and the client can use these links to discover and navigate to other parts of the application.
+
+Knowing these facts we can see that we've also adhered to HATEOAS in our application this can be seen in the following pictures of our application.
+
+<p align="center">
+  <img src="YellowGet.png" width=800>
+  <br>
+  <br>
+  <img src="YellowMoreInfo.png" width=800>
+</p>
+
+As can be seen in the pictures above we have a link to the more info page of Yellow. This link is dynamically generated based on the initial response. This allows the client to navigate through the application's state by following hypermedia links, rather than having to construct URLs or make arbitrary HTTP requests.
+
+Furthermore we also adhere to stateless interactions as we don't store any client state like sessions or cookies on the server. This means that the server does not need to keep track of the state of the client. This allows for a more scalable and fault tolerant application as the server does not need to keep track of the state of the client.
+
+Therefore we can conclude that our REST API is level 3.
+
+<p align="center">
+  <img src="Join.jpg" width=800>
+</p>
+
+```
+Darth Vader: Join me, and together we can rule the galaxy with your level 3 REST API.
+
+Luke Skywalker/Us: I'll never join you, our API was made for jedis only not for sith scum like you.
+
+Darth Vader: You underestimate my power.
+
+-- Luke Skywalker/Us and Darth Vader fight, Vader proceeds to use some despicable tactics --
+```
+<p align="center">
+  <img src="choke.jpg" width=800>
+</p>
+
+
 # So let us ask you...
 
 <p align="center">
-  <img src="https://media.giphy.com/media/d7mMzaGDYkz4ZBziP6/giphy.gif">
+  <img src="https://media.giphy.com/media/d7mMzaGDYkz4ZBziP6/giphy.gif" width=800>
 </p>
