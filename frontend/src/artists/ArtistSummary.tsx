@@ -10,7 +10,11 @@ interface Loading {
 }
 
 type ArtistResultProps = ArtistResults & Loading;
-
+/**
+ * Function which shows the summary of multiple artists 
+ * @param param0 the artists and loading param 
+ * @returns the artist summary JSX element 
+ */
 function ArtistSummary({ artists, loading }: ArtistResultProps): JSX.Element {
 
   function fromSong(song: Song): JSX.Element {

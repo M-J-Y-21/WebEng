@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Song } from "../models/song.model";
 import { getArtistSongs } from "../api/artists";
 import ArtistSongs from "./ArtistSongs";
+import DeleteArtistSong from "./DeleteArtistSong";
 
 
 function ReceiveSongArtist() {
@@ -41,6 +42,7 @@ function ReceiveSongArtist() {
         <input type="text" id="name" name="name" onChange={(e) => { setName(e.currentTarget.value); }} />
         <button type="submit">Search</button>
       </form>
+      <DeleteArtistSong id={id} name={name} />
       <ArtistSongs songs={songs} loading={loading} />
     </div>
   );
