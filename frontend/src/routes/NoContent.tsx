@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-
+/**
+ * Returns no content. 
+ */
 function NoContent() {
   return (
     <div>

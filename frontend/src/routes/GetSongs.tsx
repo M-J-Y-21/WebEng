@@ -3,7 +3,10 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { Song } from '../models/song.model';
 
-function RetrieveSongs() {
+/**
+ * Funtion uses a form to retrieve multiple songs.
+ */
+function GetSongs() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -127,4 +130,4 @@ function RetrieveSongs() {
   );
 }
 
-export { RetrieveSongs };
+export { GetSongs };

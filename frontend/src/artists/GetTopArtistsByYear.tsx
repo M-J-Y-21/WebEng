@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Artist } from '../models/artist.model';
 import { getTopArtists } from '../api/artists';
-import { Pagination } from '../pages/Pagination';
+import { Pagination } from '../routes/Pagination';
 /**
  * Retrieve top artist songs after selecting an year
- * @returns the top artist songs 
+ * @returns the top artist songs
  */
-function RetrieveTopArtists() {
+function GetTopArtistsByYear() {
   const [results, setResults] = useState([] as Artist[]);
   const [loading, setLoading] = useState(false);
   const [year, setYear] = useState(0);
@@ -55,6 +55,7 @@ function RetrieveTopArtists() {
           name="year"
           min={1900}
           max={2021}
+          required={true}
           onChange={(e) => {
             setYear(parseInt(e.currentTarget.value));
           }}
@@ -62,9 +63,8 @@ function RetrieveTopArtists() {
         <br></br>
         <Pagination {...paginationProps} />
         <br></br>
-        
+
         <input type="submit" value="Retrieve Artists"></input>
-        
       </form>
       {loading ? (
         <p>Loading ...</p>
@@ -83,4 +83,4 @@ function RetrieveTopArtists() {
   );
 }
 
-export { RetrieveTopArtists };
+export { GetTopArtistsByYear };

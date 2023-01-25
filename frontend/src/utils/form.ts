@@ -1,5 +1,7 @@
 import { Song } from '../models/song.model';
-
+/**
+ * Utility function used for geting data from a form. 
+ */
 function getFormValues(formData: FormData): Song {
   const title = formData.get('title') as string;
   const release_date = formData.get('release_date') as string;

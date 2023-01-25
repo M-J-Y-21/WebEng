@@ -4,6 +4,7 @@ import { updateSong } from '../../api/song';
 import { getFormValues } from '../../utils/form';
 import { SongResult } from './SongResult';
 import { UpdateSongForm } from './UpdateSongForm';
+import { useNavigate } from 'react-router-dom';
 
 interface UpdateSongProp {
   song?: Song;
@@ -11,8 +12,12 @@ interface UpdateSongProp {
   loading: boolean;
 }
 
+/**
+ * Component used to update a song on submiting a form with the new information.
+ */
 function UpdateSong({ song, id, loading }: UpdateSongProp): JSX.Element {
   const [formDisabled, setFormDisabled] = useState(true);
+  const navigate = useNavigate();
 
   async function handleSubmit(
     event: React.FormEvent<HTMLFormElement>
@@ -27,6 +32,8 @@ function UpdateSong({ song, id, loading }: UpdateSongProp): JSX.Element {
 
     try {
       await updateSong(id, body);
+      alert('Song updated.');
+      window.location.reload(); // duct tape
     } catch (error) {
       alert('Error while updating');
       console.error(error);

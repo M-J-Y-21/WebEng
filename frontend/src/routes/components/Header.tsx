@@ -10,22 +10,22 @@ function Header() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/create">Create</Link>
+            <Link to="/create-song">Create song</Link>
           </li>
           <li>
-            <Link to="/retrieveById">Retrieve by ID</Link>
+            <Link to="/get-song-by-id">Retrieve songs by ID</Link>
           </li>
           <li>
-            <Link to="/retrieve">Retrieve</Link>
+            <Link to="/songs">Retrieve, update or delete songs by title or year</Link>
           </li>
           <li>
-            <Link to="/artists">Find Top Artists</Link>
+            <Link to="/top-artists-by-year">Retrieve top artists by year</Link>
           </li>
           <li>
-            <Link to="/artists/summary">Find artist(s)</Link>
+            <Link to="/artist-summary">Retrieve artist summary</Link>
           </li>
           <li>
-            <Link to="/artists/songs">Find what songs an artist wrote</Link>
+            <Link to="/songs-by-artist">Retrieve or delete songs by artist</Link>
           </li>
         </ul>
       </nav>

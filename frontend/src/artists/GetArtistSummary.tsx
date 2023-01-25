@@ -6,7 +6,7 @@ import { ArtistSummary } from './ArtistSummary';
  * Function that renders the find artist summary form and on submit gets the artist summary.
  * @returns the artist summary element  
  */
-function FindArtistSummary()  {
+function GetArtistSummary()  {
   const [loading, setLoading] = useState(false);
   const [artistSummary, setArtistSummary] = useState([] as ArtistSummaryType[]);
   const [id, setId] = useState('');
@@ -68,4 +68,4 @@ function FindArtistSummary()  {
   );
 }
 
-export { FindArtistSummary };
+export { GetArtistSummary };

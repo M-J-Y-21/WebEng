@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { FindArtistSummary } from './artists/FindArtistSummary';
-import { RetrieveSongArtist } from './artists/RetrieveSongArtist';
-import { RetrieveTopArtists } from './artists/RetrieveTopArtists';
-import { Header } from './components/Header';
-import { CreateSong } from './pages/CreateSong';
-import { FindSongById } from './pages/FindSongById';
-import { Home } from './pages/Home';
-import { NoContent } from './pages/NoContent';
-import { RetrieveSongs } from './pages/RetrieveSongs';
-import { SongHome } from './song/SongHome';
+import { GetArtistSummary } from './artists/GetArtistSummary';
+import { GetSongsByArtist } from './artists/GetSongsByArtist';
+import { GetTopArtistsByYear } from './artists/GetTopArtistsByYear';
+import { Header } from './routes/components/Header';
+import { CreateSong } from './routes/CreateSong';
+import { GetSongById } from './routes/GetSongById';
+import { Home } from './routes/Home';
+import { NoContent } from './routes/NoContent';
+import { GetSongs } from './routes/GetSongs';
+import { SongHome } from './routes/songs/SongHome';
 
 function App() {
   return (
@@ -20,13 +20,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/songs/:id" element={<SongHome />} />
-          <Route path="/create" element={<CreateSong />} />
-          <Route path="/retrieveById" element={<FindSongById />} />
-          <Route path="/retrieve" element={<RetrieveSongs />} />
-          <Route path="/artists" element={<RetrieveTopArtists />} />
-          <Route path="/artists/summary" element={<FindArtistSummary />} />
-          <Route path="/artists/songs" element={<RetrieveSongArtist />} />
-          <Route path="*" element={<NoContent />} />
+          <Route path="/create-song" element={<CreateSong />} />
+          <Route path="/get-song-by-id" element={<GetSongById />} />
+          <Route path="/songs" element={<GetSongs />} />
+          <Route
+            path="/top-artists-by-year"
+            element={<GetTopArtistsByYear />}
+          />
+          <Route path="/artist-summary" element={<GetArtistSummary />} />
+          <Route path="/songs-by-artist" element={<GetSongsByArtist />} />
+          <Route path="/*" element={<NoContent />} />
         </Routes>
       </BrowserRouter>
     </div>

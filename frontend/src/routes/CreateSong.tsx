@@ -59,26 +59,28 @@ function CreateSong() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>id:</label>
+        <label>id: </label>
         <input
           type="text"
           placeholder="id"
           name="id"
           autoFocus={true}
+          required={true}
           onChange={handleChange}
         />
         <br></br>
 
-        <label>title:</label>
+        <label>title: </label>
         <input
           type="text"
           placeholder="title"
           name="title"
+          required={true}
           onChange={handleChange}
         />
         <br></br>
 
-        <label>artist_ids:</label>
+        <label>artist_ids: </label>
         <input
           type="text"
           placeholder="artist_ids"
@@ -87,7 +89,7 @@ function CreateSong() {
         />
         <br></br>
 
-        <label>popularity:</label>
+        <label>popularity: </label>
         <input
           type="number"
           placeholder="popularity"
@@ -96,11 +98,12 @@ function CreateSong() {
         />
         <br></br>
 
-        <label>release_date:</label>
+        <label>release_date: </label>
         <input
           type="date"
           placeholder="release_date"
           name="release_date"
+          required={true}
           onChange={(event) =>
             setBody({
               ...body,
