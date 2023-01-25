@@ -6,8 +6,9 @@ import Header from './components/Header';
 import NoContent from './pages/NoContent';
 import './App.css';
 import SongHome from './song/SongHome';
-import ReceiveTopArtists from './artists/getTopArtists';
+import ReceiveTopArtists from './artists/RetrieveTopArtists';
 import FindArtistSummary from './artists/FindArtistSummary';
+import ReceiveSongArtist from './artists/ReceiveSongArtist';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/retrieve" element={<RetrieveSongs />} />
           <Route path='/artists' element={<ReceiveTopArtists />} />
           <Route path='/artists/summary' element={<FindArtistSummary />} />
+          <Route path='/artists/songs' element={<ReceiveSongArtist/>}/>
           <Route path="*" element={<NoContent />} />
         </Routes>
       </BrowserRouter>

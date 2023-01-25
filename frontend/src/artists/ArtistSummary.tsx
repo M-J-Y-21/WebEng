@@ -29,7 +29,7 @@ function ArtistSummary({ artists, loading }: ArtistResultProps): JSX.Element {
         artists.length === 0 ? <p>No results</p> :
           <ul>
             {artists.map((artist: ArtistSummaryType) =>
-              <li>
+              <li key = {artist.artist.id}>
                 <p>{artist.artist.name}</p>
                 <p>Num songs:{artist.numSongs}</p>
                 <p>Earliest song:</p>

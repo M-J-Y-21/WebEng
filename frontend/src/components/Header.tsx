@@ -21,6 +21,9 @@ function Header() {
           <li>
             <Link to="/artists/summary" >Find artist(s)</Link>
           </li>
+          <li>
+            <Link to="/artists/songs" >Find what songs an artist wrote</Link>
+          </li>
         </ul>
       </nav>
       
