@@ -6,7 +6,11 @@ interface PaginationProps {
   limit: number;
   skip: number;
 }
-
+/**
+ * The pagination function which deals with the pagination in RetrieveTopArtists. 
+ * @param param0 Pagination parameters 
+ * @returns a but for pagination
+ */
 function Pagination({ setSkip, setLimit, limit, skip }: PaginationProps) {
   /**
    * Handle the next button
