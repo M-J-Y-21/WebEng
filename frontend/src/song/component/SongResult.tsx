@@ -5,20 +5,26 @@ interface SongResProp {
   loading: boolean;
 }
 
+/**
+ * Component that renders one song.
+ */
 function SongResult({ song, loading }: SongResProp): JSX.Element {
   if (!song) {
     return <h1>No song found </h1>;
   }
+  
   function fromSong(): JSX.Element {
     if (!song) {
       return <h1>No song found</h1>;
     }
     return (
       <div>
-        <h1>Title : {song.title}</h1>
-        <p>Release Date : {new Date(song.release_date).toISOString()}</p>
-        <p>Artist Ids : {song.artist_ids}</p>
-        <p>Popularity : {song.popularity}</p>
+        <h1>{song.title}</h1>
+        <p>
+          Release date: {new Date(song.release_date).toLocaleDateString('nl-NL')} <br></br>
+          Artist IDs: {song.artist_ids.join(', ')} <br></br>
+          Popularity: {song.popularity}
+        </p>
       </div>
     );
   }

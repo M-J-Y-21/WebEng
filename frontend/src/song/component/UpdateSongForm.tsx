@@ -14,38 +14,43 @@ interface UpdateSongFormProps {
 function UpdateSongForm({ song, onSubmit }: UpdateSongFormProps) {
   return (
     <form onSubmit={onSubmit}>
-      <label htmlFor="title">Title</label>
+      <label htmlFor="title">title: </label>
       <input
         defaultValue={song && song.title}
         type="text"
         name="title"
         id="title"
       />
+      <br></br>
 
-      <label htmlFor="artists_id">Artist id</label>
+      <label htmlFor="artists_id">artist_ids: </label>
       <input
         defaultValue={song && song.artist_ids}
         type="text"
         name="artist_ids"
         id="artist_ids"
       />
+      <br></br>
 
-      <label htmlFor="release_date">Song release_date</label>
+      <label htmlFor="release_date">release_date: </label>
       <input
-        defaultValue={song && new Date(song.release_date).toISOString()}
+        defaultValue={song && new Date(song.release_date).toLocaleDateString('en-CA')} // en-CA returns yyyy-mm-dd
         type="date"
         name="release_date"
         id="release_date"
       />
+      <br></br>
 
-      <label htmlFor="popularity">Popularity</label>
+      <label htmlFor="popularity">popularity: </label>
       <input
         defaultValue={song && song.popularity}
         type="number"
         name="popularity"
         id="popularity"
       />
-      <button type="submit">Update Movie</button>
+      <br></br>
+      
+      <input type="submit" value="Update Song"></input>
     </form>
   );
 }

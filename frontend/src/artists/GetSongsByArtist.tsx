@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import { Song } from '../models/song.model';
 import { getArtistSongs } from '../api/artists';
-import { ArtistSongs } from './ArtistSongs';
-import DeleteArtistSong from './DeleteArtistSong';
+import { SongsByArtist } from './SongsByArtist';
 
 /**
  * Makes a form and on submit returns the song artists.
- * @returns an element rendering an artist's songs  
+ * @returns an element rendering an artist's songs
  */
-function RetrieveSongArtist() {
+function GetSongsByArtist() {
   const [loading, setLoading] = useState(false);
   const [songs, setSongs] = useState([] as Song[]);
   const [id, setId] = useState('');
@@ -39,9 +38,8 @@ function RetrieveSongArtist() {
 
   return (
     <div>
-      <h3>Find The songs an artist wrote</h3>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="id">Id</label>
+        <label htmlFor="id">id: </label>
         <input
           type="text"
           id="id"
@@ -50,7 +48,9 @@ function RetrieveSongArtist() {
             setId(e.currentTarget.value);
           }}
         />
-        <label htmlFor="name">Name</label>
+        <br></br>
+        
+        <label htmlFor="name">name: </label>
         <input
           type="text"
           id="name"
@@ -59,11 +59,13 @@ function RetrieveSongArtist() {
             setName(e.currentTarget.value);
           }}
         />
-        <button type="submit">Search</button>
+        <br></br>
+        
+        <input type="submit" value="Search"></input>
       </form>
-      <DeleteArtistSong id={id} name={name}/>
-      <ArtistSongs songs={songs} loading={loading} />
+      <SongsByArtist songs={songs} loading={loading} id={id} name={name} />
     </div>
   );
 }
-export { RetrieveSongArtist };
+
+export { GetSongsByArtist };

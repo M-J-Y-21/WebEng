@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getOneSong } from '../api/song';
-import { Song } from '../models/song.model';
-import { UpdateSong } from './component/UpdateSong';
-import { SongDelete } from './component/DeleteSong';
+import { getOneSong } from '../../api/song';
+import { Song } from '../../models/song.model';
+import { UpdateSong } from '../../song/component/UpdateSong';
+import { SongDelete } from '../../song/component/DeleteSong';
 
 type PathVariable = {
   id: string;
 };
+
 /**
- * Main song 
- * @returns 
+ * Main song page used to update and delete a song.
+ * @returns a JSX component rendering the page.
  */
 function SongHome(): JSX.Element {
   const { id } = useParams<PathVariable>();

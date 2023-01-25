@@ -1,7 +1,7 @@
 import { Artist } from '../models/artist.model';
-import { ArtistsPaginationQuery } from '../models/pagination';
+import { ArtistPaginationQuery } from '../models/artist-query.model';
 
-function constructUrl(url: string, props: ArtistsPaginationQuery | Artist) {
+function constructUrl(url: string, props: ArtistPaginationQuery | Artist) {
   let newUrl = new URL(url);
 
   const params = new URLSearchParams();
