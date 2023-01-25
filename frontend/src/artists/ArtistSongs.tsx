@@ -10,7 +10,11 @@ interface Loading {
 }
 
 type SongsResultProps = SongResults & Loading;
-
+/**
+ * Function that renders the artist songs. 
+ * @param param0 songs and loading used for the JSX
+ * @returns the JSX element for rendering the element 
+ */
 function ArtistSongs({ songs, loading }: SongsResultProps) {
   return (
     <div>

@@ -7,7 +7,11 @@ interface DeleteArtistSongsProps {
   id : string,
   name : string
 };
-
+/**
+ * Function that renders the deleting 
+ * @param param0 the id and names props 
+ * @returns a but that on submit deletes the all songs for an artist 
+ */
 function DeleteArtistSong({id,name}: DeleteArtistSongsProps) {
   
   async function handleDelete(): Promise<void> {

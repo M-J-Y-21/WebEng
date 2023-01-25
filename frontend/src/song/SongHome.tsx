@@ -8,7 +8,10 @@ import { SongDelete } from './component/DeleteSong';
 type PathVariable = {
   id: string;
 };
-
+/**
+ * Main song 
+ * @returns 
+ */
 function SongHome(): JSX.Element {
   const { id } = useParams<PathVariable>();
   const [song, setSong] = useState<Song>();

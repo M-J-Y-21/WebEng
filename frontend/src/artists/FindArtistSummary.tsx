@@ -2,8 +2,11 @@ import { useState } from 'react';
 import { ArtistSummaryType } from '../models/artist-summary.model';
 import { getSummary } from '../api/artists';
 import { ArtistSummary } from './ArtistSummary';
-
-function FindArtistSummary() {
+/**
+ * Function that renders the find artist summary form and on submit gets the artist summary.
+ * @returns the artist summary element  
+ */
+function FindArtistSummary()  {
   const [loading, setLoading] = useState(false);
   const [artistSummary, setArtistSummary] = useState([] as ArtistSummaryType[]);
   const [id, setId] = useState('');

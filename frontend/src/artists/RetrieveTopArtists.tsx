@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 import { Artist } from '../models/artist.model';
 import { getTopArtists } from '../api/artists';
 import { Pagination } from '../pages/Pagination';
-
+/**
+ * Retrieve top artist songs after selecting an year
+ * @returns the top artist songs 
+ */
 function RetrieveTopArtists() {
   const [results, setResults] = useState([] as Artist[]);
   const [loading, setLoading] = useState(false);

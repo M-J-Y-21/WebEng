@@ -27,7 +27,7 @@ const ToggleItem = ({ song }: ToggleItemProps) => {
 };
 
 /**
- * Function which shows the summary of multiple artists 
+ * Function which shows the summary of multiple artists.
  * @param param0 the artists and loading param 
  * @returns the artist summary JSX element 
  */

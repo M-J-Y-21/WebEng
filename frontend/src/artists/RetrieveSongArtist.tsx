@@ -4,6 +4,10 @@ import { getArtistSongs } from '../api/artists';
 import { ArtistSongs } from './ArtistSongs';
 import DeleteArtistSong from './DeleteArtistSong';
 
+/**
+ * Makes a form and on submit returns the song artists.
+ * @returns an element rendering an artist's songs  
+ */
 function RetrieveSongArtist() {
   const [loading, setLoading] = useState(false);
   const [songs, setSongs] = useState([] as Song[]);
