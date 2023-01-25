@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Song } from '../models/song.model';
 import { getArtistSongs } from '../api/artists';
-import ArtistSongs from './ArtistSongs';
+import { ArtistSongs } from './ArtistSongs';
 
 function RetrieveSongArtist() {
   const [loading, setLoading] = useState(false);
@@ -60,4 +60,4 @@ function RetrieveSongArtist() {
     </div>
   );
 }
-export default RetrieveSongArtist;
+export { RetrieveSongArtist };

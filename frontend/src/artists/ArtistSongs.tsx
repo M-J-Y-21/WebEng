@@ -38,4 +38,4 @@ function ArtistSongs({ songs, loading }: SongsResultProps) {
     </div>
   );
 }
-export default ArtistSongs;
+export { ArtistSongs };

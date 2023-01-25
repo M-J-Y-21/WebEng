@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ArtistSummaryType } from '../models/artist-summary.model';
 import { getSummary } from '../api/artists';
-import ArtistSummary from './ArtistSummary';
+import { ArtistSummary } from './ArtistSummary';
 
 function FindArtistSummary() {
   const [loading, setLoading] = useState(false);
@@ -61,4 +61,4 @@ function FindArtistSummary() {
   );
 }
 
-export default FindArtistSummary;
+export { FindArtistSummary };

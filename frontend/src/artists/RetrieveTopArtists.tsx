@@ -76,4 +76,4 @@ function RetrieveTopArtists() {
   );
 }
 
-export default RetrieveTopArtists;
+export { RetrieveTopArtists };
