@@ -175,6 +175,7 @@ We decided that we want to have a relatively small amount of functionality shipp
 </p>
 
 This means that we would have a client that would be responsible for the following:
+
 * UI events
 * UI rendering
 * UI state management
@@ -182,18 +183,18 @@ This means that we would have a client that would be responsible for the followi
 
 The client then communicates with our backend through the REST API. This allows us to have a very simple client that is easy to maintain and extend. It leaves room for us to add more features to the client in the future while still allowing us to some interesting things on the client that a static application could not do such as UI state management.
 
-## Guidlines on running
+## Guidelines on running
 
-After making a clean clone of the repo you will need to create 2 new files. Firstly in the root of the project called `.env` and a `.env` file in the backend folder. For the `.env` in the root simply copy over the file from the `.env.example` file in the root to it. For the `.env` in the backend folder copy over the contents of the `.env.example` file (in the backend folder) to it. Edit the contents of the `.env` file in the backend directory to only contain the last line and uncomment it i.e. it should contain something like this to start
-```
-DATABASE_URL="postgresql://postgres:123@postgres:5432/nest?schema=public"
-```
+After making a clean clone of the repo you will need to create 2 new files. Firstly in the root of the project called `.env` and a `.env` file in the backend folder. For the `.env` in the root simply copy over the file from the `.env.example` file in the root to it. For the `.env` in the backend folder copy over the contents of the `.env.example` file (in the backend folder) to it.
+
+Also, when cloning the repository on Windows, git will automatically change the line endings to `CRLF`. This will cause problems when running the application in docker however. To change this, simply open the [startup script](backend/startup.sh) in VS Code, and change the line endings to `LF` by clicking the `CRLF` button in the bottom right corner.
 
 When running the application you will need to have [docker](https://docker.com) installed. You can then simply run the following command to get the application running:
 
 ```bash
 docker compose up
 ```
+
 Wait until the application has started up and you should be able to access the application on <http://localhost:3001>.
 
 If you want you can have a look at the database to make sure you get the correct data to search with. In our docker setup we have made sure to run prisma studio on port 5556. So when you have started the app you can simply go to <http://localhost:5556> to view the database.
@@ -228,6 +229,7 @@ private sendResponse(res, accept: string, data: any) {
 As can be seen in the code snippet above we have a method to check what type of response the client wants so we can always deliver a response it can easily understand i.e. self describing messages. Hence it's clear our REST API is at least level 2.
 
 We pretty match do a kind of content-type swapping as can be seen in the scientific diagram below.
+
 <p align="center">
   <img src="images/contentType.jpg"
   width=500>
