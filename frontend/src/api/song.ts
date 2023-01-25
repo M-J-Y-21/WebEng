@@ -1,10 +1,10 @@
-import axios from "axios"
-import { Song } from "../models/song.model"
+import axios from 'axios';
+import { Song } from '../models/song.model';
 
 /**
  * Gets one song with the id
- * @param id the id of the song 
- * @returns the song fetched 
+ * @param id the id of the song
+ * @returns the song fetched
  */
 async function getOneSong(id: string): Promise<Song> {
   const res = await axios.get(`http://localhost:3000/songs/${id}`);
@@ -21,8 +21,4 @@ async function deleteSong(id: string) {
   return res.data;
 }
 
-export {
-  getOneSong,
-  updateSong,
-  deleteSong
-};
+export { getOneSong, updateSong, deleteSong };

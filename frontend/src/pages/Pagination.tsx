@@ -1,4 +1,4 @@
-import { ChangeEvent } from "react";
+import { ChangeEvent } from 'react';
 
 interface PaginationProps {
   setSkip: React.Dispatch<React.SetStateAction<number>>;
@@ -10,22 +10,21 @@ interface PaginationProps {
 function Pagination({ setSkip, setLimit, limit, skip }: PaginationProps) {
   /**
    * Handle the next button
-  */
+   */
   function handleNext(): void {
     setSkip((currentSkip) => currentSkip + limit);
   }
 
   /**
    * handles the previous button
-    */
+   */
   function handlePrevious(): void {
     setSkip((currentSkip) => currentSkip - limit);
   }
 
-
   /**
    * Handles the results per page select
-   * 
+   *
    * @param event the change event coming from the select
    */
   function handleResultsChange(event: ChangeEvent<HTMLSelectElement>): void {
@@ -37,8 +36,12 @@ function Pagination({ setSkip, setLimit, limit, skip }: PaginationProps) {
   return (
     // the <> </> is a fragment, it is used to wrap multiple elements without adding a div to the DOM
     <>
-      <button disabled={skip <= 0} type="button" onClick={handlePrevious}>Previous</button>
-      <button type="button" onClick={handleNext}>Next</button>
+      <button disabled={skip <= 0} type="button" onClick={handlePrevious}>
+        Previous
+      </button>
+      <button type="button" onClick={handleNext}>
+        Next
+      </button>
 
       <label htmlFor="results">Results Per Page</label>
       <select id="results" name="results" onChange={handleResultsChange}>
@@ -51,4 +54,4 @@ function Pagination({ setSkip, setLimit, limit, skip }: PaginationProps) {
   );
 }
 
-export default Pagination;
+export { Pagination };

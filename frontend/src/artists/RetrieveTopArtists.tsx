@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
-import { Artist } from "../models/artist.model";
-import { getTopArtists } from "../api/artists";
-import Pagination from "../pages/Pagination";
+import { useEffect, useState } from 'react';
+import { Artist } from '../models/artist.model';
+import { getTopArtists } from '../api/artists';
+import { Pagination } from '../pages/Pagination';
 
 function RetrieveTopArtists() {
   const [results, setResults] = useState([] as Artist[]);
@@ -10,8 +10,9 @@ function RetrieveTopArtists() {
   const [limit, setLimit] = useState(10);
   const [skip, setSkip] = useState(0);
 
-
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>): Promise<void> {
+  async function handleSubmit(
+    event: React.FormEvent<HTMLFormElement>
+  ): Promise<void> {
     event.preventDefault();
     await retrieveArtists();
   }
@@ -31,20 +32,19 @@ function RetrieveTopArtists() {
 
   useEffect(() => {
     retrieveArtists();
-  }, [limit, skip])
+  }, [limit, skip]);
 
   const paginationProps = {
     setSkip,
     setLimit,
     limit,
-    skip,
-  }
+    skip
+  };
 
   return (
     <div>
       <h3>Find Top Artist</h3>
       <form onSubmit={handleSubmit}>
-
         <label>year: </label>
         <input
           type="number"
@@ -53,24 +53,25 @@ function RetrieveTopArtists() {
           min={1900}
           max={2021}
           onChange={(e) => {
-            setYear(parseInt(e.currentTarget.value))
+            setYear(parseInt(e.currentTarget.value));
           }}
         />
         <Pagination {...paginationProps} />
         <input type="submit" value="Retrieve Artists"></input>
       </form>
-      {loading ? <p>Loading ...</p> :
-        results.length === 0 ? <p>No results</p> :
-          <ul>
-            {
-              results.map((artist: Artist) => (
-                <li key={artist.id}>
-                  <p>{artist.name}</p>
-                </li>
-              ))
-            }
-          </ul>
-      }
+      {loading ? (
+        <p>Loading ...</p>
+      ) : results.length === 0 ? (
+        <p>No results</p>
+      ) : (
+        <ul>
+          {results.map((artist: Artist) => (
+            <li key={artist.id}>
+              <p>{artist.name}</p>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

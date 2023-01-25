@@ -1,14 +1,13 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import CreateSong from './pages/CreateSong';
-import RetrieveSongs from './pages/RetrieveSongs';
-import Header from './components/Header';
-import NoContent from './pages/NoContent';
-import './App.css';
-import SongHome from './song/SongHome';
-import ReceiveTopArtists from './artists/RetrieveTopArtists';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import FindArtistSummary from './artists/FindArtistSummary';
-import ReceiveSongArtist from './artists/ReceiveSongArtist';
+import RetrieveSongArtist from './artists/RetrieveSongArtist';
+import RetrieveTopArtists from './artists/RetrieveTopArtists';
+import Header from './components/Header';
+import { CreateSong } from './pages/CreateSong';
+import { Home } from './pages/Home';
+import { NoContent } from './pages/NoContent';
+import { RetrieveSongs } from './pages/RetrieveSongs';
+import { SongHome } from './song/SongHome';
 
 function App() {
   return (
@@ -22,9 +21,9 @@ function App() {
           <Route path="/songs/:id" element={<SongHome />} />
           <Route path="/create" element={<CreateSong />} />
           <Route path="/retrieve" element={<RetrieveSongs />} />
-          <Route path='/artists' element={<ReceiveTopArtists />} />
-          <Route path='/artists/summary' element={<FindArtistSummary />} />
-          <Route path='/artists/songs' element={<ReceiveSongArtist/>}/>
+          <Route path="/artists" element={<RetrieveTopArtists />} />
+          <Route path="/artists/summary" element={<FindArtistSummary />} />
+          <Route path="/artists/songs" element={<RetrieveSongArtist />} />
           <Route path="*" element={<NoContent />} />
         </Routes>
       </BrowserRouter>

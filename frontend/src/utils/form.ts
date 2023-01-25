@@ -1,4 +1,4 @@
-import { Song } from "../models/song.model";
+import { Song } from '../models/song.model';
 
 function getFormValues(formData: FormData): Song {
   const title = formData.get('title') as string;
@@ -13,11 +13,9 @@ function getFormValues(formData: FormData): Song {
     artist_ids: artist_ids_array,
     release_date: new Date(release_date),
     popularity: popularity
-  }
+  };
 
   return body;
 }
 
-export {
-  getFormValues,
-}
+export { getFormValues };

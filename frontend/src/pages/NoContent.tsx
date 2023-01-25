@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function NoContent() {
   return (
@@ -12,4 +12,4 @@ function NoContent() {
   );
 }
 
-export default NoContent;
+export { NoContent };

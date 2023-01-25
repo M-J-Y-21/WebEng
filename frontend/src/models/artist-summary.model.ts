@@ -1,5 +1,5 @@
-import { Artist } from "./artist.model";
-import { Song } from "./song.model";
+import { Artist } from './artist.model';
+import { Song } from './song.model';
 
 interface ArtistSummaryType {
   artist: Artist;
@@ -9,6 +9,4 @@ interface ArtistSummaryType {
   mostPopularSong: Song;
 }
 
-export type {
-  ArtistSummaryType,
-}
+export type { ArtistSummaryType };

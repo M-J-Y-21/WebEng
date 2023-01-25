@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { ArtistSummaryType } from '../models/artist-summary.model';
-import { getSummary } from '../api/artists';
-import ArtistSummary from './ArtistSummary';
+import { Song } from '../models/song.model';
+import { getArtistSongs } from '../api/artists';
+import ArtistSongs from './ArtistSongs';
 
-function FindArtistSummary() {
+function RetrieveSongArtist() {
   const [loading, setLoading] = useState(false);
-  const [artistSummary, setArtistSummary] = useState([] as ArtistSummaryType[]);
+  const [songs, setSongs] = useState([] as Song[]);
   const [id, setId] = useState('');
   const [name, setName] = useState('');
 
@@ -13,18 +13,18 @@ function FindArtistSummary() {
     event: React.FormEvent<HTMLFormElement>
   ): Promise<void> {
     event.preventDefault();
-    await retrieveArtistSummaries();
+    await retrieveArtistSongs();
   }
 
-  async function retrieveArtistSummaries(): Promise<void> {
+  async function retrieveArtistSongs(): Promise<void> {
     setLoading(true);
     try {
       const artist = {
         name: name,
         id: id
       };
-      const data = await getSummary(artist);
-      setArtistSummary(data);
+      const data = await getArtistSongs(artist);
+      setSongs(data);
     } catch (error) {
       console.error(error);
     }
@@ -34,7 +34,7 @@ function FindArtistSummary() {
 
   return (
     <div>
-      <h3>Find Artist</h3>
+      <h3>Find The songs an artist wrote</h3>
       <form onSubmit={handleSubmit}>
         <label htmlFor="id">Id</label>
         <input
@@ -56,9 +56,8 @@ function FindArtistSummary() {
         />
         <button type="submit">Search</button>
       </form>
-      <ArtistSummary artists={artistSummary} loading={loading} />
+      <ArtistSongs songs={songs} loading={loading} />
     </div>
   );
 }
-
-export default FindArtistSummary;
+export default RetrieveSongArtist;

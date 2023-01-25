@@ -1,24 +1,26 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { getOneSong } from "../api/song";
-import { Song } from "../models/song.model";
-import SongUpdate from "./component/SongUpdate";
-import SongDelete from "./component/SongDelete";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { getOneSong } from '../api/song';
+import { Song } from '../models/song.model';
+import { UpdateSong } from './component/UpdateSong';
+import { SongDelete } from './component/DeleteSong';
 
 type PathVariable = {
-  id: string,
-}
+  id: string;
+};
 
 function SongHome(): JSX.Element {
   const { id } = useParams<PathVariable>();
-  const [song, setSong] = useState<Song>()
+  const [song, setSong] = useState<Song>();
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => { retrieveSongs() }, [id]);
+  useEffect(() => {
+    retrieveSongs();
+  }, [id]);
 
   async function retrieveSongs(): Promise<void> {
     if (id === undefined) {
-      return
+      return;
     }
     setLoading(true);
 
@@ -35,17 +37,18 @@ function SongHome(): JSX.Element {
 
   return (
     <div>
-      {
-        song ?
-          <>
-            <SongUpdate song={song} id={id} loading={loading} />
-            <SongDelete id={id} />
-          </>
-          :
-          loading ? <p>Loading...</p> : <p>Song not found</p>
-      }
+      {song ? (
+        <>
+          <UpdateSong song={song} id={id} loading={loading} />
+          <SongDelete id={id} />
+        </>
+      ) : loading ? (
+        <p>Loading...</p>
+      ) : (
+        <p>Song not found</p>
+      )}
     </div>
-  )
+  );
 }
 
-export default SongHome;
+export { SongHome };

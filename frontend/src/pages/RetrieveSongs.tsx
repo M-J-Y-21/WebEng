@@ -3,18 +3,17 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function RetrieveSongs() {
-
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const [songs, setSongs] = useState([]);
 
   const [params, setParams] = useState({
-    title: "",
+    title: '',
     year: 0,
     limit: 0,
     skip: 0
-  })
+  });
 
   const get = async () => {
     let url = `http://localhost:3000/songs?`;
@@ -74,11 +73,7 @@ function RetrieveSongs() {
         <br></br>
 
         <label>limit: </label>
-        <select
-          name="limit"
-          placeholder="limit"
-          onChange={handleChange}
-        >
+        <select name="limit" placeholder="limit" onChange={handleChange}>
           <option value="0">No limit</option>
           <option value="10">10</option>
           <option value="20">20</option>
@@ -112,9 +107,11 @@ function RetrieveSongs() {
                   <h3>{song['title']}</h3>
                   <p>
                     ID: {song['id']} <br></br>
-                    Artist IDs: {(song['artist_ids'] as string).toString()} <br></br>
+                    Artist IDs: {(song['artist_ids'] as string).toString()}{' '}
+                    <br></br>
                     Popularity: {song['popularity']} <br></br>
-                    Release date: {new Date(song['release_date']).toLocaleDateString('nl-NL')}
+                    Release date:{' '}
+                    {new Date(song['release_date']).toLocaleDateString('nl-NL')}
                   </p>
                   <Link to={`/songs/${song['id']}`}>More info</Link>
                 </li>
@@ -129,4 +126,4 @@ function RetrieveSongs() {
   );
 }
 
-export default RetrieveSongs;
+export { RetrieveSongs };

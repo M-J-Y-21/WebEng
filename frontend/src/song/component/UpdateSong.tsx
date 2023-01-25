@@ -1,21 +1,22 @@
-import { useState } from "react";
-import { Song } from "../../models/song.model";
-import { updateSong } from "../../api/song";
-import { getFormValues } from "../../utils/form";
-import SongResult from "./SongResult";
-import SongUpdateForm from "./SongUpdateForm";
+import { useState } from 'react';
+import { Song } from '../../models/song.model';
+import { updateSong } from '../../api/song';
+import { getFormValues } from '../../utils/form';
+import { SongResult } from './SongResult';
+import { UpdateSongForm } from './UpdateSongForm';
 
 interface UpdateSongProp {
-  song?: Song,
-  id?: string,
-  loading: boolean,
+  song?: Song;
+  id?: string;
+  loading: boolean;
 }
 
-function SongUpdate({ song, id, loading }: UpdateSongProp): JSX.Element {
-
+function UpdateSong({ song, id, loading }: UpdateSongProp): JSX.Element {
   const [formDisabled, setFormDisabled] = useState(true);
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>): Promise<void> {
+  async function handleSubmit(
+    event: React.FormEvent<HTMLFormElement>
+  ): Promise<void> {
     event.preventDefault();
     if (!id || !song) {
       return;
@@ -34,19 +35,19 @@ function SongUpdate({ song, id, loading }: UpdateSongProp): JSX.Element {
 
   return (
     <div>
-      {formDisabled ?
+      {formDisabled ? (
         <>
           <SongResult song={song} loading={loading} />
           <button onClick={() => setFormDisabled(false)}>Edit Song</button>
         </>
-        :
+      ) : (
         <>
-          <SongUpdateForm song={song} onSubmit={handleSubmit} />
+          <UpdateSongForm song={song} onSubmit={handleSubmit} />
           <button onClick={() => setFormDisabled(true)}>Cancel</button>
         </>
-      }
+      )}
     </div>
   );
 }
 
-export default SongUpdate;
+export { UpdateSong };

@@ -1,24 +1,24 @@
-import axios from "axios";
-import { useState } from "react";
+import axios from 'axios';
+import { useState } from 'react';
 
 function CreateSong() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [song, setSong] = useState({
-    id: "",
-    title: "",
+    id: '',
+    title: '',
     artist_ids: [],
     popularity: 0,
-    release_date: "",
+    release_date: ''
   });
 
   const [body, setBody] = useState({
-    id: "",
-    title: "",
+    id: '',
+    title: '',
     artist_ids: [],
     popularity: 0,
-    release_date: {},
-  })
+    release_date: {}
+  });
 
   const post = async () => {
     const url = `http://localhost:3000/songs`;
@@ -27,7 +27,7 @@ function CreateSong() {
       artist_ids: body.artist_ids,
       title: body.title,
       popularity: body.popularity,
-      release_date: body.release_date,
+      release_date: body.release_date
     };
 
     try {
@@ -54,7 +54,7 @@ function CreateSong() {
       ...body,
       [event.target.name]: value
     });
-  }
+  };
 
   return (
     <div>
@@ -101,10 +101,12 @@ function CreateSong() {
           type="date"
           placeholder="release_date"
           name="release_date"
-          onChange={event => setBody({
-            ...body,
-            release_date: new Date(event.target.value).toISOString()
-          })}
+          onChange={(event) =>
+            setBody({
+              ...body,
+              release_date: new Date(event.target.value).toISOString()
+            })
+          }
         />
         <br></br>
 
@@ -121,9 +123,10 @@ function CreateSong() {
               <h3>{song.title}</h3>
               <p>
                 ID: {song.id} <br></br>
-                Artist IDs: {(song.artist_ids).toString()} <br></br>
+                Artist IDs: {song.artist_ids.toString()} <br></br>
                 Popularity: {song.popularity} <br></br>
-                Release date: {new Date(song.release_date).toLocaleDateString('nl-NL')}
+                Release date:{' '}
+                {new Date(song.release_date).toLocaleDateString('nl-NL')}
               </p>
             </>
           )}
@@ -133,4 +136,4 @@ function CreateSong() {
   );
 }
 
-export default CreateSong;
+export { CreateSong };

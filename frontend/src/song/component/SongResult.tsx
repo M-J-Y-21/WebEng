@@ -1,8 +1,8 @@
-import { Song } from "../../models/song.model";
+import { Song } from '../../models/song.model';
 
 interface SongResProp {
-  song?: Song,
-  loading: boolean,
+  song?: Song;
+  loading: boolean;
 }
 
 function SongResult({ song, loading }: SongResProp): JSX.Element {
@@ -11,7 +11,7 @@ function SongResult({ song, loading }: SongResProp): JSX.Element {
   }
   function fromSong(): JSX.Element {
     if (!song) {
-      return <h1>No song found</h1>
+      return <h1>No song found</h1>;
     }
     return (
       <div>
@@ -23,11 +23,7 @@ function SongResult({ song, loading }: SongResProp): JSX.Element {
     );
   }
 
-  return (
-    <div>
-      {loading ? <p>Loading...</p> : fromSong()}
-    </div>
-  )
+  return <div>{loading ? <p>Loading...</p> : fromSong()}</div>;
 }
 
-export default SongResult;
+export { SongResult };

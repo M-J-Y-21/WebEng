@@ -1,6 +1,5 @@
-import { Artist } from "../models/artist.model";
-import { ArtistsPaginationQuery } from "../models/pagination";
-
+import { Artist } from '../models/artist.model';
+import { ArtistsPaginationQuery } from '../models/pagination';
 
 function constructUrl(url: string, props: ArtistsPaginationQuery | Artist) {
   let newUrl = new URL(url);
@@ -16,6 +15,4 @@ function constructUrl(url: string, props: ArtistsPaginationQuery | Artist) {
   return newUrl + params.toString();
 }
 
-export {
-  constructUrl
-}
+export { constructUrl };

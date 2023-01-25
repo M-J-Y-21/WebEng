@@ -1,27 +1,24 @@
-import { deleteSong } from "../../api/song";
+import { deleteSong } from '../../api/song';
 
 interface SongDeleteProp {
-  id?: string
+  id?: string;
 }
 
 function SongDelete({ id }: SongDeleteProp) {
-
   async function handleDelete(): Promise<void> {
     if (!id) {
-      alert("No song provided");
+      alert('No song provided');
       return;
     }
     try {
       await deleteSong(id);
-      alert("Song deleted");
+      alert('Song deleted');
     } catch (error) {
-      alert("Error when deleting song");
+      alert('Error when deleting song');
       console.error(error);
     }
   }
-  return (
-    <button onClick={handleDelete}>Delete Song</button>
-  );
+  return <button onClick={handleDelete}>Delete Song</button>;
 }
 
-export default SongDelete;
+export { SongDelete };
