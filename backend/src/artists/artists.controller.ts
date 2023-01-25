@@ -61,16 +61,12 @@ export class ArtistsController {
    * @param res Response object
    */
   @Get('summary')
-<<<<<<< HEAD:backend/src/artists/artists.controller.ts
   async getSummary(
     @Query('id') id: string,
     @Query('name') name: string,
     @Headers('Content-Type') contentType: string,
     @Res() res
   ) {
-=======
-  async getSummary(@Query('id') id: string, @Query('name') name: string, @Headers('Content-Type') contentType: string, @Res() res) {
->>>>>>> 85b0944049e296d112d7a27ac68e7b29312b26f0:src/artists/artists.controller.ts
     const summary = await this.artistsService.getSummary(id, name);
     this.sendResponse(res, contentType, summary);
   }
