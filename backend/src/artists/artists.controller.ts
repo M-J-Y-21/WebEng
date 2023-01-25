@@ -31,12 +31,7 @@ export class ArtistsController {
    * @param res Response object
    */
   @Get('songs')
-  async getSongsByArtist(
-    @Query('id') id: string,
-    @Query('name') name: string,
-    @Headers('Content-Type') contentType: string,
-    @Res() res
-  ) {
+  async getSongsByArtist(@Query('id') id: string, @Query('name') name: string, @Headers('Content-Type') contentType: string, @Res() res) {
     const songs = await this.artistsService.getSongsByArtist(id, name);
     this.sendResponse(res, contentType, songs);
   }
@@ -50,12 +45,7 @@ export class ArtistsController {
    * @param res Response object
    */
   @Delete('songs')
-  async deleteSongsByArtist(
-    @Query('id') id: string,
-    @Query('name') name: string,
-    @Headers('Content-Type') contentType: string,
-    @Res() res
-  ) {
+  async deleteSongsByArtist(@Query('id') id: string, @Query('name') name: string, @Headers('Content-Type') contentType: string, @Res() res) {
     const songs = await this.artistsService.deleteSongsByArtist(id, name);
     this.sendResponse(res, contentType, songs);
   }
@@ -71,12 +61,16 @@ export class ArtistsController {
    * @param res Response object
    */
   @Get('summary')
+<<<<<<< HEAD:backend/src/artists/artists.controller.ts
   async getSummary(
     @Query('id') id: string,
     @Query('name') name: string,
     @Headers('Content-Type') contentType: string,
     @Res() res
   ) {
+=======
+  async getSummary(@Query('id') id: string, @Query('name') name: string, @Headers('Content-Type') contentType: string, @Res() res) {
+>>>>>>> 85b0944049e296d112d7a27ac68e7b29312b26f0:src/artists/artists.controller.ts
     const summary = await this.artistsService.getSummary(id, name);
     this.sendResponse(res, contentType, summary);
   }
@@ -92,13 +86,7 @@ export class ArtistsController {
    * @param res Response object
    */
   @Get('')
-  async getTopArtists(
-    @Query('year') year: number,
-    @Query('limit') limit: number,
-    @Query('skip') skip: number,
-    @Headers('Content-Type') contentType: string,
-    @Res() res
-  ) {
+  async getTopArtists(@Query('year') year: number, @Query('limit') limit: number, @Query('skip') skip: number, @Headers('Content-Type') contentType: string, @Res() res) {
     const artists = await this.artistsService.getTopArtists(year, limit, skip);
     this.sendResponse(res, contentType, artists);
   }
